@@ -16,7 +16,6 @@ resource "azurerm_public_ip" "public_ip_addr" {
   depends_on          = [azurerm_resource_group.rg]
 }
 
-
 resource "azurerm_network_security_group" "apim_sg" {
   name                = lookup(var.nsg_ids, "apim", "apim-sg")
   location            = var.location
@@ -52,7 +51,7 @@ module "vnet" {
   #private_endpoint_network_policies_enabled
   subnet_enforce_private_link_service_network_policies = {
     "sbus" = true,
-    "apps" = true
+    "apps" = false
   }
   tags       = local.common_tags
   depends_on = [azurerm_resource_group.rg, module.nsg-config]
@@ -66,21 +65,21 @@ module "apim" {
   common_tags          = local.common_tags
   vnet                 = module.vnet.vnet_name
   subnet               = var.subnet_names[0]
-  public_ip_address_id = azurerm_public_ip.public_ip_addr.id
-  depends_on           = [module.vnet, azurerm_public_ip.public_ip_addr, module.apps]
+  # public_ip_address_id = azurerm_public_ip.public_ip_addr.id
+  depends_on           = [module.vnet, module.apps]
 }
 
-module "sb" {
-  source                       = "./modules/service-bus"
-  sb_name                      = local.sb_name
-  apim_name                    = local.apim_name
-  resource_group_name          = azurerm_resource_group.rg.name
-  location                     = azurerm_resource_group.rg.location
-  common_tags                  = local.common_tags
-  open_api_spec_content_value  = var.swagger-json-url
-  open_api_spec_content_format = var.swagger-json
-  depends_on                   = [module.vnet, module.apim]
-}
+# module "sb" {
+#   source                       = "./modules/service-bus"
+#   sb_name                      = local.sb_name
+#   apim_name                    = local.apim_name
+#   resource_group_name          = azurerm_resource_group.rg.name
+#   location                     = azurerm_resource_group.rg.location
+#   common_tags                  = local.common_tags
+#   open_api_spec_content_value  = var.swagger-json-url
+#   open_api_spec_content_format = var.swagger-json
+#   depends_on                   = [module.vnet, module.apim]
+# }
 
 module "apps" {
   source                = "./modules/apps"

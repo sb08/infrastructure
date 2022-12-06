@@ -13,7 +13,7 @@ resource "azurerm_api_management" "apim" {
   notification_sender_email     = "stephen.boulter@cki.com.au"
   sku_name            = "Developer_1"
   virtual_network_type      = var.virtual_network_type
-  public_ip_address_id = var.public_ip_address_id
+  # public_ip_address_id = var.public_ip_address_id
   virtual_network_configuration {
     subnet_id = data.azurerm_subnet.apim.id
 }
@@ -23,7 +23,7 @@ resource "azurerm_api_management" "apim" {
     <policies>
     <inbound>
         <validate-jwt header-name="Authorization" failed-validation-httpcode="401" failed-validation-error-message="Unauthorized. Access token is missing or invalid.">
-            <openid-config url="https://ltf-id-42901-dev.azurewebsites.net/.well-known/openid-configuration" />
+            <openid-config url="https://destin-id-42901-dev.azurewebsites.net/.well-known/openid-configuration" />
             <required-claims>
                 <claim name="aud">
                     <value>{"apim"}</value>

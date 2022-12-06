@@ -19,7 +19,7 @@ variable "resource_group_name" {
 variable "virtual_network_type" {
     description = "The vNet networking model."
     type        = string
-    default     = "External"
+    default     = "Internal"
 }
 
 variable "apis" {
@@ -32,10 +32,10 @@ variable "vnet" {
     description = "name of the virtual network"
 }
 
-variable "public_ip_address_id" {
-    description = "The Virtual Network public ip identifier."
-    type        = string
-}
+# variable "public_ip_address_id" {
+#     description = "The Virtual Network public ip identifier."
+#     type        = string
+# }
 
 variable "subnet" {
     description = "The vnet subnet configuted for api management."

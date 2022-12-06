@@ -1,23 +1,23 @@
 variable "naming_prefix" {
   type        = string
   description = "Naming prefix for resources"
-  default     = "ltf"
+  default     = "destin"
 }
 
 variable "company" {
   type        = string
   description = "Company name for resource tagging"
-  default     = "LatrobeFinancial"
+  default     = "destin"
 }
 
 variable "resource_group_name" {
   type    = string
-  default = "ltf-rg"
+  default = "destin-rg"
 }
 
 variable "sp_name" {
   type    = string
-  default = "ltf-sp"
+  default = "sb-sp"
 }
 
 variable "storageAccountSku" {
@@ -36,7 +36,7 @@ variable "swagger-json" {
 
 variable "swagger-json-url" {
   type    = string
-  default = "https://ltf-api-42091-dev.azurewebsites.net/swagger/v1/swagger.json\n\n"
+  default = "https://sb-api-42091-dev.azurewebsites.net/swagger/v1/swagger.json\n\n"
 }
 
 variable "location" {
@@ -47,7 +47,7 @@ variable "location" {
 variable "project" {
   type        = string
   description = "Project name for resource tagging"
-  default     = "infra"
+  default     = "infrastructure"
 }
 
 resource "random_id" "id" {
