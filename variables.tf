@@ -7,12 +7,12 @@ variable "naming_prefix" {
 variable "company" {
   type        = string
   description = "Company name for resource tagging"
-  default     = "LatrobeFinancial"
+  default     = "destin"
 }
 
 variable "resource_group_name" {
   type    = string
-  default = "ltf-rg"
+  default = "infra"
 }
 
 variable "sp_name" {
