@@ -7,12 +7,17 @@ variable "naming_prefix" {
 variable "company" {
   type        = string
   description = "Company name for resource tagging"
-  default     = "destin"
+  default     = "LatrobeFinancial"
 }
 
-variable "rg" {
+variable "resource_group_name" {
   type    = string
-  default = "rg"
+  default = "ltf-rg"
+}
+
+variable "sp_name" {
+  type    = string
+  default = "ltf-sp"
 }
 
 variable "storageAccountSku" {
@@ -22,21 +27,36 @@ variable "storageAccountSku" {
   }
 }
 
+variable "swagger-json" {
+  type    = string
+  default = "openapi+json"
+  # other values: "swagger-link-json"
+  # turn this into a map(string)
+}
+
+variable "swagger-json-url" {
+  type    = string
+  default = "https://ltf-api-42091-dev.azurewebsites.net/swagger/v1/swagger.json\n\n"
+}
+
 variable "location" {
-  type = string
+  type    = string
   default = "australiaeast"
-  # default = "centralus"
 }
 
 variable "project" {
   type        = string
   description = "Project name for resource tagging"
-  default     = "az-infrastructure"
+  default     = "infra"
 }
 
-# resource "random_id" "id" {
-#   byte_length = 4
-# }
+resource "random_id" "id" {
+  byte_length = 4
+}
+
+variable "vnet_cidr_range" {
+  type = list(any)
+}
 
 variable "sku_name" {
   description = "Service plan and hardware selection definition. Defaults to basic."
@@ -51,10 +71,6 @@ variable "subnets" {
   type = list(string)
 }
 
-variable "vnet_cidr_range" {
-  type = list(string)
-}
-
 variable "subnet_count" {
   type = number
 }
@@ -66,10 +82,4 @@ variable "nsg_ids" {
 variable "sbConnectionString" {
   description = "Service bus connection string."
   type        = string
-}
-
-variable "apim_pip_name" {
-  description = "public ip for ami management."
-  type        = string
-  default     = "ltf-apimpip"
 }

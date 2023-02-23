@@ -1,4 +1,4 @@
-variable "sb_name" {
+variable "apim_name" {
   description = "The prefix which should be used for all resources in this example"
 }
 
@@ -16,8 +16,10 @@ variable "resource_group_name" {
   description = "Name of the resource group service is assigned to."
 }
 
-variable "apim_name" {
-  description = "Name of the resource group service is assigned to."
+variable "virtual_network_type" {
+    description = "The vNet networking model."
+    type        = string
+    default     = "External"
 }
 
 variable "apis" {
@@ -26,10 +28,17 @@ variable "apis" {
   default     = ["registration", "message"]
 }
 
-# variable "open_api_spec_content_value" {
-#     description = "swagger json url"
-# }
-#
-# variable "open_api_spec_content_format" {
-#     description = "open api doc comes from url"
-# }
+variable "vnet" {
+    description = "name of the virtual network"
+}
+
+variable "public_ip_address_id" {
+    description = "The Virtual Network public ip identifier."
+    type        = string
+}
+
+variable "subnet" {
+    description = "The vnet subnet configuted for api management."
+    type        = string
+    default     = "apim"
+}

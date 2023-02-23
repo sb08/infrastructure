@@ -35,7 +35,7 @@ data "azurerm_api_management" "apim" {
 }
 
 data "external" "generate-servicebus-sas" {
-  program = ["Powershell.exe", "Set-ExecutionPolicy Bypass -Scope Process -Force; C://bitbucket//infrastructure//gensas.ps1"]
+  program = ["Powershell.exe", "Set-ExecutionPolicy Bypass -Scope Process -Force; C://bitbucket//azure.apigateway//src//terraform//gensas.ps1"]
 
   query = {
     servicebusUri = "${azurerm_servicebus_namespace.sb.name}.servicebus.windows.net"
@@ -48,18 +48,17 @@ data "external" "generate-servicebus-sas" {
 
 # Create an apim api which sends a message to service bus.
 resource "azurerm_api_management_api" "registration" {
-  name                = "service-bus"
+  name                = "registration"
   resource_group_name = var.resource_group_name
   api_management_name = data.azurerm_api_management.apim.name
   revision            = "1"
-  display_name        = "servicebus-direct"
-  path                = "service-bus"
+  display_name        = "registration"
+  path                = "registration"
   protocols           = ["https"]
-  subscription_required = false
-  description         = "registration request direct to service bus."
+  description         = "registration"
   service_url         = "https://${azurerm_servicebus_namespace.sb.name}.servicebus.windows.net"
   import {
-    content_format = "openapi+json"
+    content_format = var.open_api_spec_content_format
     content_value  = "${jsonencode(
     {
       "openapi": "3.0.1",
@@ -70,16 +69,16 @@ resource "azurerm_api_management_api" "registration" {
       },
       "servers": [
           {
-              "url": "${data.azurerm_api_management.apim.gateway_url}/service-bus"
+              "url": "${data.azurerm_api_management.apim.gateway_url}/registration"
           }
       ],
       "paths": {
           "/registration": {
               "post": {
-                  "summary": "to registration topic",
-                  "operationId": "post-to-registration-topic",
+                  "summary": "to registration",
+                  "operationId": "post-to-registration",
                   "responses": {
-                      "202": {
+                      "201": {
                           "description": null
                       }
                   }
@@ -113,7 +112,7 @@ resource "azurerm_api_management_api" "registration" {
 }
 
 resource "azurerm_api_management_api_policy" "apiPolicy" {
-  api_name            = "service-bus"
+  api_name            = "registration"
   api_management_name = data.azurerm_api_management.apim.name
   resource_group_name = var.resource_group_name
 
@@ -142,10 +141,10 @@ resource "azurerm_api_management_api_policy" "apiPolicy" {
 }
 
 resource "azurerm_api_management_api_operation_policy" "operationPolicyRegistration" {
-  api_name            = "service-bus"
+  api_name            = "registration"
   api_management_name = data.azurerm_api_management.apim.name
   resource_group_name = var.resource_group_name
-  operation_id        = "post-to-registration-topic"
+  operation_id        = "post-to-registration"
 
   xml_content = <<-XML
     <policies>

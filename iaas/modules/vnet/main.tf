@@ -1,92 +1,127 @@
-data "azurerm_network_security_group" "apim_sg" {
-  name                = var.nsg_name
+resource "azurerm_network_security_group" "apim_sg" {
+  name                = "apim-security-group"
+  location            = var.location
   resource_group_name = var.resource_group_name
+
+  # could the rules be added here with a foreach?
+  # security_rule {
+  #   name                       = "test123"
+  #   priority                   = 100
+  #   direction                  = "Inbound"
+  #   access                     = "Allow"
+  #   protocol                   = "Tcp"
+  #   source_port_range          = "*"
+  #   destination_port_range     = "*"
+  #   source_address_prefix      = "*"
+  #   destination_address_prefix = "*"
+  # }
+
 }
 
 resource "azurerm_network_security_rule" "rule-1" {
   access                      = "Allow"
   description                 = "Client communication to API Management"
   destination_address_prefix  = "VirtualNetwork"
-  destination_port_ranges     = ["80"]
+  destination_port_ranges     = ["443", "80"]
   direction                   = "Inbound"
-  name                        = "Client_communication_to_API_Management"
-  network_security_group_name = data.azurerm_network_security_group.apim_sg.name
+  name                        = "InboundTcpInternet"
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
   priority                    = 100
   protocol                    = "Tcp"
   resource_group_name         = var.resource_group_name
   source_address_prefix       = "Internet"
   source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg
+  ]
 }
 
 resource "azurerm_network_security_rule" "rule-2" {
   access                      = "Allow"
   destination_address_prefix  = "VirtualNetwork"
-  destination_port_range      = "443"
-  direction                   = "Inbound"
-  name                        = "Secure_Client_communication_to_API_Management"
-  network_security_group_name = data.azurerm_network_security_group.apim_sg.name
-  priority                    = 110
-  protocol                    = "Tcp"
-  resource_group_name         = var.resource_group_name
-  source_address_prefix       = "Internet"
-  source_port_range           = "*"
-}
-
-resource "azurerm_network_security_rule" "rule-3" {
-  access                      = "Allow"
-  description                 = "Management endpoint for Azure portal and PowerShell"
-  destination_address_prefix  = "VirtualNetwork"
-  destination_port_ranges     = ["3443"]
-  direction                   = "Inbound"
-  name                        = "Management_endpoint_for_Azure_portal_and_Powershell"
-  network_security_group_name = data.azurerm_network_security_group.apim_sg.name
-  priority                    = 120
-  protocol                    = "Tcp"
-  resource_group_name         = var.resource_group_name
-  source_address_prefix       = "ApiManagement"
-  source_port_range           = "*"
-}
-
-resource "azurerm_network_security_rule" "rule-4" {
-  access                      = "Allow"
-  destination_address_prefix  = "VirtualNetwork"
   destination_port_range      = "6381-6383"
   direction                   = "Inbound"
   name                        = "Dependency_on_Redis_Cache"
-  network_security_group_name = data.azurerm_network_security_group.apim_sg.name
-  priority                    = 130
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
+  priority                    = 150
   protocol                    = "Tcp"
   resource_group_name         = var.resource_group_name
   source_address_prefix       = "VirtualNetwork"
   source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg,
+  ]
 }
 
-resource "azurerm_network_security_rule" "rule-5" {
+resource "azurerm_network_security_rule" "rule-3" {
   access                      = "Allow"
   destination_address_prefix  = "VirtualNetwork"
   destination_port_range      = "4290"
   direction                   = "Inbound"
   name                        = "Dependency_to_sync_Rate_Limit_Inbound"
-  network_security_group_name = data.azurerm_network_security_group.apim_sg.name
-  priority                    = 135
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
+  priority                    = 200
   protocol                    = "Tcp"
   resource_group_name         = var.resource_group_name
   source_address_prefix       = "VirtualNetwork"
   source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg,
+  ]
 }
 
-resource "azurerm_network_security_rule" "rule-6" {
+resource "azurerm_network_security_rule" "rule-4" {
   access                      = "Allow"
   destination_address_prefix  = "VirtualNetwork"
   destination_port_range      = "6390"
   direction                   = "Inbound"
   name                        = "Azure_Infrastructure_Load_Balancer"
-  network_security_group_name = data.azurerm_network_security_group.apim_sg.name
-  priority                    = 180
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
+  priority                    = 250
   protocol                    = "Tcp"
   resource_group_name         = var.resource_group_name
   source_address_prefix       = "AzureLoadBalancer"
   source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg,
+  ]
+}
+
+resource "azurerm_network_security_rule" "rule-5" {
+  access                      = "Allow"
+  description                 = "Management endpoint for Azure portal and PowerShell"
+  destination_address_prefix  = "VirtualNetwork"
+  destination_port_ranges     = ["3443"]
+  direction                   = "Inbound"
+  name                        = "InboundApiManagement"
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
+  priority                    = 300
+  protocol                    = "Tcp"
+  resource_group_name         = var.resource_group_name
+  source_address_prefix       = "ApiManagement"
+  source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg
+  ]
+}
+
+# required for Premium service tier
+resource "azurerm_network_security_rule" "rule-6" {
+  access                      = "Allow"
+  description                 = "Azure Infrastructure Load Balancer"
+  destination_address_prefix  = "VirtualNetwork"
+  destination_port_ranges     = ["6390"]
+  direction                   = "Inbound"
+  name                        = "InboundLoadBalancer"
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
+  priority                    = 350
+  protocol                    = "Tcp"
+  resource_group_name         = var.resource_group_name
+  source_address_prefix       = "AzureLoadBalancer"
+  source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg
+  ]
 }
 
 resource "azurerm_network_security_rule" "rule-7" {
@@ -96,41 +131,50 @@ resource "azurerm_network_security_rule" "rule-7" {
   destination_port_ranges     = ["443"]
   direction                   = "Outbound"
   name                        = "Azure_Storage"
-  network_security_group_name = data.azurerm_network_security_group.apim_sg.name
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
   priority                    = 100
   protocol                    = "Tcp"
   resource_group_name         = var.resource_group_name
   source_address_prefix       = "VirtualNetwork"
   source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg
+  ]
 }
 
 resource "azurerm_network_security_rule" "rule-8" {
   access                      = "Allow"
   description                 = "Access to Azure SQL endpoints"
-  destination_address_prefix  = "Sql"
+  destination_address_prefix  = "SQL"
   destination_port_ranges     = ["1433"]
   direction                   = "Outbound"
-  name                        = "Dependency_on_Azure_SQL"
-  network_security_group_name = data.azurerm_network_security_group.apim_sg.name
-  priority                    = 140
+  name                        = "OutboundSql"
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
+  priority                    = 150
   protocol                    = "Tcp"
   resource_group_name         = var.resource_group_name
   source_address_prefix       = "VirtualNetwork"
   source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg
+  ]
 }
 
-resource "azurerm_network_security_rule" "rule-9" {
+resource "azurerm_network_security_rule" "rule9" {
   access                      = "Allow"
   destination_address_prefix  = "EventHub"
   destination_port_range      = "5671"
   direction                   = "Outbound"
   name                        = "Dependency_for_Log_to_event_Hub_policy"
-  network_security_group_name = data.azurerm_network_security_group.apim_sg.name
-  priority                    = 150
-  protocol                    = "*"
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
+  priority                    = 200
+  protocol                    = "Tcp"
   resource_group_name         = var.resource_group_name
   source_address_prefix       = "VirtualNetwork"
   source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg
+  ]
 }
 
 resource "azurerm_network_security_rule" "rule-10" {
@@ -139,12 +183,15 @@ resource "azurerm_network_security_rule" "rule-10" {
   destination_port_range      = "6381-6383"
   direction                   = "Outbound"
   name                        = "Dependency_on_Redis_Cache_outbound"
-  network_security_group_name = data.azurerm_network_security_group.apim_sg.name
-  priority                    = 160
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
+  priority                    = 250
   protocol                    = "Tcp"
   resource_group_name         = var.resource_group_name
   source_address_prefix       = "VirtualNetwork"
   source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg
+  ]
 }
 
 resource "azurerm_network_security_rule" "rule-11" {
@@ -153,12 +200,15 @@ resource "azurerm_network_security_rule" "rule-11" {
   destination_port_range      = "4290"
   direction                   = "Outbound"
   name                        = "Depenedency_To_sync_RateLimit_Outbound"
-  network_security_group_name = data.azurerm_network_security_group.apim_sg.name
-  priority                    = 165
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
+  priority                    = 300
   protocol                    = "Tcp"
   resource_group_name         = var.resource_group_name
   source_address_prefix       = "VirtualNetwork"
   source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg
+  ]
 }
 
 resource "azurerm_network_security_rule" "rule-12" {
@@ -167,12 +217,15 @@ resource "azurerm_network_security_rule" "rule-12" {
   destination_port_range      = "445"
   direction                   = "Outbound"
   name                        = "Dependency_on_Azure_File_Share_for_GIT"
-  network_security_group_name = data.azurerm_network_security_group.apim_sg.name
-  priority                    = 170
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
+  priority                    = 350
   protocol                    = "Tcp"
   resource_group_name         = var.resource_group_name
   source_address_prefix       = "VirtualNetwork"
   source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg
+  ]
 }
 
 resource "azurerm_network_security_rule" "rule-13" {
@@ -182,12 +235,15 @@ resource "azurerm_network_security_rule" "rule-13" {
   destination_port_ranges     = ["12000", "1886", "443"]
   direction                   = "Outbound"
   name                        = "Publish_DiagnosticLogs_And_Metrics"
-  network_security_group_name = data.azurerm_network_security_group.apim_sg.name
-  priority                    = 185
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
+  priority                    = 400
   protocol                    = "Tcp"
   resource_group_name         = var.resource_group_name
   source_address_prefix       = "VirtualNetwork"
   source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg
+  ]
 }
 
 resource "azurerm_network_security_rule" "rule-14" {
@@ -197,12 +253,15 @@ resource "azurerm_network_security_rule" "rule-14" {
   destination_port_ranges     = ["25", "25028", "587"]
   direction                   = "Outbound"
   name                        = "Connect_To_SMTP_Relay_For_SendingEmails"
-  network_security_group_name = data.azurerm_network_security_group.apim_sg.name
-  priority                    = 190
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
+  priority                    = 450
   protocol                    = "Tcp"
   resource_group_name         = var.resource_group_name
   source_address_prefix       = "VirtualNetwork"
   source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg
+  ]
 }
 
 resource "azurerm_network_security_rule" "rule-15" {
@@ -212,41 +271,69 @@ resource "azurerm_network_security_rule" "rule-15" {
   destination_port_ranges     = ["443", "80"]
   direction                   = "Outbound"
   name                        = "Authenticate_To_Azure_Active_Directory"
-  network_security_group_name = data.azurerm_network_security_group.apim_sg.name
-  priority                    = 200
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
+  priority                    = 500
   protocol                    = "Tcp"
   resource_group_name         = var.resource_group_name
   source_address_prefix       = "VirtualNetwork"
   source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg
+  ]
 }
 
-resource "azurerm_network_security_rule" "res-16" {
+resource "azurerm_network_security_rule" "rule-16" {
   access                      = "Allow"
-  destination_address_prefix  = "AzureCloud"
-  destination_port_range      = "443"
+  description                 = "API Management logs and metrics for consumption by admins and your IT team are all part of the management plane"
+  destination_address_prefix  = "AzureMonitor"
+  destination_port_ranges     = ["12000", "1886", "443"]
   direction                   = "Outbound"
-  name                        = "Publish_Monitoring_Logs"
-  network_security_group_name = data.azurerm_network_security_group.apim_sg.name
-  priority                    = 300
+  name                        = "Publish_DiagnosticLogs_And_Metrics"
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
+  priority                    = 550
   protocol                    = "Tcp"
   resource_group_name         = var.resource_group_name
   source_address_prefix       = "VirtualNetwork"
   source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg
+  ]
 }
 
 resource "azurerm_network_security_rule" "rule-17" {
+  access                      = "Allow"
+  description                 = "Connect to Azure Active Directory for developer Portal authentication or for OAuth 2 flow during any proxy authentication"
+  destination_address_prefix  = "AzureActiveDirectory"
+  destination_port_ranges     = ["443", "80"]
+  direction                   = "Outbound"
+  name                        = "Authenticate_To_Azure_Active_Directory"
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
+  priority                    = 600
+  protocol                    = "Tcp"
+  resource_group_name         = var.resource_group_name
+  source_address_prefix       = "VirtualNetwork"
+  source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg,
+  ]
+}
+
+resource "azurerm_network_security_rule" "rule-18" {
   access                      = "Allow"
   description                 = "Allow API Management service control plane access to Azure Key Vault to refresh secrets"
   destination_address_prefix  = "AzureKeyVault"
   destination_port_ranges     = ["433"]
   direction                   = "Outbound"
   name                        = "Access_KeyVault"
-  network_security_group_name = data.azurerm_network_security_group.apim_sg.name
-  priority                    = 350
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
+  priority                    = 650
   protocol                    = "Tcp"
   resource_group_name         = var.resource_group_name
   source_address_prefix       = "VirtualNetwork"
   source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg
+  ]
 }
 
 resource "azurerm_network_security_rule" "rule-999" {
@@ -255,10 +342,56 @@ resource "azurerm_network_security_rule" "rule-999" {
   destination_port_range      = "*"
   direction                   = "Outbound"
   name                        = "Deny_All_Internet_Outbound"
-  network_security_group_name = data.azurerm_network_security_group.apim_sg.name
+  network_security_group_name = azurerm_network_security_group.apim_sg.name
   priority                    = 999
   protocol                    = "Tcp"
   resource_group_name         = var.resource_group_name
   source_address_prefix       = "VirtualNetwork"
   source_port_range           = "*"
+  depends_on = [
+    azurerm_network_security_group.apim_sg
+  ]
+}
+
+resource "azurerm_virtual_network" "vnet" {
+  name                = "${var.vnet_name}"
+  location            = var.location
+  resource_group_name = var.resource_group_name
+  address_space       = ["10.0.0.0/16"]
+  # dns_servers         = ["10.0.0.4", "10.0.0.5"]
+  # subnet {
+  #   name           = "subnet1"
+  #   address_prefix = "10.0.1.0/24"
+  # }
+  #
+  # subnet {
+  #   name           = "apim"
+  #   address_prefix = "10.0.2.0/24"
+  #   security_group = azurerm_network_security_group.apim_sg.id
+  # }
+  #
+  # subnet {
+  #   name           = "subnet3"
+  #   address_prefix = "10.0.3.0/24"
+  #   security_group = azurerm_network_security_group.apim_sg.id
+  # }
+
+  tags = var.common_tags
+}
+
+resource "azurerm_subnet" "apim" {
+  name                 = "apim"
+  resource_group_name = var.resource_group_name
+  address_prefixes     = ["10.0.0.0/24"]
+  service_endpoints    = ["Microsoft.EventHub", "Microsoft.Sql", "Microsoft.Storage"]
+  virtual_network_name = azurerm_virtual_network.vnet.name
+
+  depends_on = [
+    azurerm_virtual_network.vnet
+  ]
+}
+
+resource "azurerm_subnet_network_security_group_association" "example" {
+  subnet_id                 = azurerm_subnet.apim.id
+  network_security_group_id = azurerm_network_security_group.apim_sg.id
 }

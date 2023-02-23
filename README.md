@@ -42,6 +42,7 @@ terraform validate
 * Make cloud environment changes
 ```bash
 terraform plan -out [fileName].tfplan
+terraform plan -out infra.tfplan
 ```
 ```bash
 terraform apply [fileName].tfplan
@@ -77,16 +78,20 @@ Importing (ie manual change in portal)
 3. Construct the terraform import command: terraform import --var-file="[optional file].tfvars" [tf id] [resource id from portal]
 
 Examples
-terraform import --var-file="terraform.tfvars" azurerm_resource_group.rg /subscriptions/2621f205-e4c6-463a-9c55-da7913b7ca0d/resourceGroups/ltf-rg
+terraform import --var-file="terraform.tfvars" azurerm_resource_group.rg /subscriptions/40a5e2e7-59d3-4a14-853e-008df80f7ce5/resourceGroups/rg-ltf-dev-australiaeast
 
 terraform state rm azurerm_public_ip.public_ip2
 terraform import --var-file="terraform.tfvars" azurerm_public_ip.public_ip2 /subscriptions/2621f205-e4c6-463a-9c55-da7913b7ca0d/resourceGroups/ltf-rg/providers/Microsoft.Network/publicIPAddresses/myPublicIp
-terraform import module.apim.azurerm_api_management.apim /subscriptions/2621f205-e4c6-463a-9c55-da7913b7ca0d/resourceGroups/ltf-rg/providers/Microsoft.ApiManagement/service/ltf-api-management-42901-dev
+terraform import module.apim.azurerm_api_management.apim /subscriptions/40a5e2e7-59d3-4a14-853e-008df80f7ce5/resourceGroups/rg-ltf-dev-australiaeast/providers/Microsoft.ApiManagement/service/apim-ltf-dev-australiaeast
 ```
 
 Notes:
 Manual step required. Azure portal was required to add the vnet configuration to api management. correct terraform import and plan worked as expected after.
-Created a sas policy via portal for service bus to get connection string
+
+Manual step required - currently need to delete apim api reference and re-add swagger definition via portal.
+
+Create a sas policy via portal for service bus to get connection string until ps script can be executed via dev ops
+
 ### Resources & Documentation
 * Azure [cli](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
 * Terraform [docs](https://developer.hashicorp.com/terraform/intro), [registry](https://registry.terraform.io/)

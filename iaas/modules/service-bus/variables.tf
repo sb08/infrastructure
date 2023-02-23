@@ -26,10 +26,10 @@ variable "apis" {
   default     = ["registration", "message"]
 }
 
-# variable "open_api_spec_content_value" {
-#     description = "swagger json url"
-# }
-#
-# variable "open_api_spec_content_format" {
-#     description = "open api doc comes from url"
-# }
+variable "open_api_spec_content_value" {
+    description = "swagger json url"
+}
+
+variable "open_api_spec_content_format" {
+    description = "open api doc comes from url"
+}
