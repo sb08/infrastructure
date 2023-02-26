@@ -30,7 +30,7 @@ variable "resource_group_name" {
 }
 
 variable "app_service_plan_name" {
-    description = "Application service plan, specifies azure plan selected."
+    description = "Service plan for app services."
 }
 
 variable "sbConnectionString" {
