@@ -34,3 +34,5 @@ override.tf.json
 terraform.rc
 
 *.tfplan
+azure.conf
+env.ps1
