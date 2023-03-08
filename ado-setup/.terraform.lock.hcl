@@ -61,7 +61,7 @@ provider "registry.terraform.io/hashicorp/random" {
 
 provider "registry.terraform.io/microsoft/azuredevops" {
   version     = "0.3.0"
-  constraints = ">= 0.3.0"
+  constraints = ">= 0.1.0"
   hashes = [
     "h1:66jQ08ybCwia2kxqsdbRawTIlVpR99hFQmka4SK6hng=",
     "zh:20726e735a78d8557c502d8802325f920374cab65fa28cf2742d9d50631c42ce",
