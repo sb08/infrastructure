@@ -78,7 +78,7 @@ resource "azuredevops_build_definition" "infra" {
     repo_type             = "GitHub"
     repo_id               = var.ado_github_repo
     branch_name           = "azure-yaml-pipeline"
-    yml_path              = var.ado_pipeline_yaml_path_1
+    yml_path              = "src/azure-pipelines.yml" # var.ado_pipeline_yaml_path_1
     service_connection_id = azuredevops_serviceendpoint_github.serviceendpoint_github.id
   }
 

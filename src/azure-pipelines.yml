@@ -1,7 +1,7 @@
 
 variables:
-  - group: kv-destindev
-  
+  - group: infrastructure
+
 trigger:
   branches:
     include:
@@ -15,43 +15,53 @@ pool:
 
   variables:
     - name: dir
-      value: 'src/'
+      value: 'src'
 
 steps:
-- task: CopyFiles@2
-  displayName: 'Copy Terraform files to artifacts'
+- task: AzureKeyVault@2
   inputs:
-    SourceFolder: $(dir)
-    TargetFolder: '$(build.artifactstagingdirectory)/Terraform'
+    ConnectedServiceName: $(service_name)
+    keyVaultName: $(key_vault_name)
+    SecretsFilter: '*'
+    RunAsPreJob: false
 
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact'
-  inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
-    ArtifactName: 'drop'
+- bash:
+    terraform workspace new dev
+  displayName: 'Terraform Workspce'
 
-# - bash: terraform init -backend-config=azure.conf
-- bash: 
-    terraform init \
-      -backend-config="storage_account_name=$TF_STATE_BLOB_ACCOUNT_NAME" \
-      -backend-config="container_name=$TF_STATE_BLOB_CONTAINER_NAME" \
-      -backend-config="key=$TF_STATE_BLOB_FILE" \
-      -backend-config="access_key=$TF_STATE_BLOB_ACCESS_KEY"
+- bash:
+    terraform init -backend-config="storage_account_name=$TF_STATE_BLOB_ACCOUNT_NAME" -backend-config="container_name=$TF_STATE_BLOB_CONTAINER_NAME" -backend-config="key=$TF_STATE_BLOB_FILE" -backend-config="sas_token=$TF_SAS_TOKEN"
   displayName: 'Terraform Init'
+  workingDirectory: '$(System.DefaultWorkingDirectory)/src'
   env:
-    TF_STATE_BLOB_ACCOUNT_NAME:   $(kv-tf-state-blob-account)
-    TF_STATE_BLOB_CONTAINER_NAME: $(kv-tf-state-blob-container)
-    TF_STATE_BLOB_FILE:           $(kv-tf-state-blob-file)
-    TF_STATE_BLOB_ACCESS_KEY:      $(kv-tf-state-access-token)
+    TF_WORKSPACE: Dev
+    TF_STATE_BLOB_ACCOUNT_NAME:   $(storageaccount)
+    TF_STATE_BLOB_CONTAINER_NAME: $(container-name)
+    TF_STATE_BLOB_FILE:           $(key)
+    TF_SAS_TOKEN: $(sas-token)
 
 - bash: terraform plan -out deployment.tfplan
   displayName: 'Terraform Plan'
-
-- bash: terraform apply -auto-approve deployment.tfplan
-  displayName: Terraform Apply
+  workingDirectory: '$(System.DefaultWorkingDirectory)/src'
   env:
-    ARM_SUBSCRIPTION_ID: $(kv-arm-subscription-id)
-    ARM_CLIENT_ID:       $(kv-arm-client-id)
-    ARM_CLIENT_SECRET:   $(kv-arm-client-secret)
-    ARM_TENANT_ID:       $(kv-arm-tenant-id)
+    TF_WORKSPACE: Dev
+    ARM_SAS_TOKEN: $(sas-token)
+    ARM_SUBSCRIPTION_ID: $(az-subscription)
+    ARM_CLIENT_ID:       $(az-client-id)
+    ARM_CLIENT_SECRET:   $(az-client-secret)
+    ARM_TENANT_ID:       $(az-tenant)
 
+- bash:
+    ls -l
+  displayName: 'list'
+  workingDirectory: '$(System.DefaultWorkingDirectory)/src'
+
+- bash: terraform apply -auto-approve
+  displayName: Terraform Apply
+  workingDirectory: '$(System.DefaultWorkingDirectory)/src'
+  env:
+    TF_WORKSPACE: Dev
+    ARM_SUBSCRIPTION_ID: $(az-subscription)
+    ARM_CLIENT_ID:       $(az-client-id)
+    ARM_CLIENT_SECRET:   $(az-client-secret)
+    ARM_TENANT_ID:       $(az-tenant)

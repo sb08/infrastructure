@@ -33,7 +33,7 @@ Azure services - Storage/Containers/Blobs, AAD, Key Vault,
 * Azure DevOps Organization
 * Git code repository
 
-**Terraform Variables (used locally or in TF Cloud)**
+### Environment Variables (used locally or in TF Cloud) for initial one off execution ###
 
 * `ado_org_service_url` - Azure DevOPs Org service url
 * `ado_github_repo` - Name of the repository in the format `<GitHub Org>/<RepoName>`. You'll need to fork my repo and use your own.
@@ -49,18 +49,19 @@ Azure services - Storage/Containers/Blobs, AAD, Key Vault,
 
 ### Solution Components ###
 AAD - 2 Service Principles
-* Connect to KV with permissions to get secrets for pipeline run
+* Connect to KV with access policy to grant the pipeline access to [get,list] secrets from the KV
 * Used in pipeline to create resources in the same or another subscription or restrict to specific resource group (ie Dev, Test, Prod)
 
 KV
-Access Policy with full Access
-Access policy with get and list access Policy
-Secrets to be used in pipeline from variables.tf
+* Access policy to grant the pipeline access to [get,list] secrets from the KV
+* Access policy with get and list access Policy
+* List of secrets from Terraform Cloud or EVs
 
 ADO
 project
 github service endpoint
-azurerm connection service endpoint to connect to KV
+variable group with variables to connect to KV
+build definition (ie pipeline)
 
 Storage Account with container, blobs configuration for tfplan
 
@@ -70,3 +71,8 @@ Utilize Terraform Cloud for tf backend
 Add more folders to solution for mono repo, each folder could be a microservice
 Add code scanning to the process using Checkov
 initial local set up, populate and run env.ps1. do not check in.
+
+### Local dev commands for testing purposes ###
+```bash
+terraform plan -out infra.tfplan
+```
