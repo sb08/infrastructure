@@ -1,4 +1,3 @@
-
 variables:
   - group: infrastructure
 
@@ -65,3 +64,4 @@ steps:
     ARM_CLIENT_ID:       $(az-client-id)
     ARM_CLIENT_SECRET:   $(az-client-secret)
     ARM_TENANT_ID:       $(az-tenant)
+
