@@ -1,19 +1,67 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+variables:
+  - group: infrastructure
 
 trigger:
-- master
+  branches:
+    include:
+    - azure-yaml-pipeline
+  paths:
+    include:
+    - src
 
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+  variables:
+    - name: dir
+      value: 'src'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+steps:
+- task: AzureKeyVault@2
+  inputs:
+    ConnectedServiceName: $(service_name)
+    keyVaultName: $(key_vault_name)
+    SecretsFilter: '*'
+    RunAsPreJob: false
+
+- bash:
+    terraform workspace new dev
+  displayName: 'Terraform Workspce'
+
+- bash:
+    terraform init -backend-config="storage_account_name=$TF_STATE_BLOB_ACCOUNT_NAME" -backend-config="container_name=$TF_STATE_BLOB_CONTAINER_NAME" -backend-config="key=$TF_STATE_BLOB_FILE" -backend-config="sas_token=$TF_SAS_TOKEN"
+  displayName: 'Terraform Init'
+  workingDirectory: '$(System.DefaultWorkingDirectory)/src'
+  env:
+    TF_WORKSPACE: Dev
+    TF_STATE_BLOB_ACCOUNT_NAME:   $(storageaccount)
+    TF_STATE_BLOB_CONTAINER_NAME: $(container-name)
+    TF_STATE_BLOB_FILE:           $(key)
+    TF_SAS_TOKEN: $(sas-token)
+
+- bash: terraform plan -out deployment.tfplan
+  displayName: 'Terraform Plan'
+  workingDirectory: '$(System.DefaultWorkingDirectory)/src'
+  env:
+    TF_WORKSPACE: Dev
+    ARM_SAS_TOKEN: $(sas-token)
+    ARM_SUBSCRIPTION_ID: $(az-subscription)
+    ARM_CLIENT_ID:       $(az-client-id)
+    ARM_CLIENT_SECRET:   $(az-client-secret)
+    ARM_TENANT_ID:       $(az-tenant)
+
+- bash:
+    ls -l
+  displayName: 'list'
+  workingDirectory: '$(System.DefaultWorkingDirectory)/src'
+
+- bash: terraform apply -auto-approve
+  displayName: Terraform Apply
+  workingDirectory: '$(System.DefaultWorkingDirectory)/src'
+  env:
+    TF_WORKSPACE: Dev
+    ARM_SUBSCRIPTION_ID: $(az-subscription)
+    ARM_CLIENT_ID:       $(az-client-id)
+    ARM_CLIENT_SECRET:   $(az-client-secret)
+    ARM_TENANT_ID:       $(az-tenant)
+

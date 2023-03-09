@@ -74,17 +74,17 @@ module "vnet" {
   depends_on = [azurerm_resource_group.rg, module.nsg-config]
 }
 
-module "apim" {
-  source               = "./modules/apim"
-  resource_group_name  = azurerm_resource_group.rg.name
-  location             = azurerm_resource_group.rg.location
-  apim_name            = local.apim_name
-  common_tags          = local.common_tags
-  vnet                 = module.vnet.vnet_name
-  subnet               = var.subnet_names[0]
-  public_ip_address_id = azurerm_public_ip.public_ip_addr.id
-  depends_on           = [module.vnet, azurerm_public_ip.public_ip_addr]
-}
+# module "apim" {
+#   source               = "./modules/apim"
+#   resource_group_name  = azurerm_resource_group.rg.name
+#   location             = azurerm_resource_group.rg.location
+#   apim_name            = local.apim_name
+#   common_tags          = local.common_tags
+#   vnet                 = module.vnet.vnet_name
+#   subnet               = var.subnet_names[0]
+#   public_ip_address_id = azurerm_public_ip.public_ip_addr.id
+#   depends_on           = [module.vnet, azurerm_public_ip.public_ip_addr]
+# }
 
 # module "sb" {
 #   source              = "./modules/service-bus"
