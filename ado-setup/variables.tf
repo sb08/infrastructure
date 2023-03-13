@@ -59,14 +59,14 @@ resource "random_integer" "suffix" {
 }
 
 locals {
-  ado_project_name        = "${var.prefix}-X"
+  ado_project_name        = "${var.prefix}"
   ado_project_description = "Project for ${var.prefix}"
   ado_project_visibility  = "private"
   ado_pipeline_name_1     = "${var.prefix}-pipeline-1"
 
-  az_resource_group_name  = "rg-${var.prefix}-${terraform.workspace}-${var.az_location}"
-  az_storage_account_name = "sa${lower(var.prefix)}${terraform.workspace}"
-  az_key_vault_name       = "kv-${var.prefix}${terraform.workspace}"
+  az_resource_group_name  = "rg-${var.prefix}-${terraform.workspace}"
+  az_storage_account_name = "sa${lower(var.prefix)}"
+  az_key_vault_name       = "kv-destin-dev" #${terraform.workspace}"
 
   pipeline_variables = {
     storageaccount   = azurerm_storage_account.sa.name
