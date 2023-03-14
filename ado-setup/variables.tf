@@ -8,15 +8,9 @@ variable "ado_github_repo" {
   description = "Name of the repository in the format <GitHub Org>/<RepoName>"
 }
 
-variable "ado_pipeline_yaml_path_1" {
+variable "ado_pipeline_yaml_path" {
   type        = string
   description = "Path to the yaml for the first pipeline"
-}
-
-variable "ado_pat" {
-  type        = string
-  description = "Personal authentication token for GitHub repo"
-  sensitive   = true
 }
 
 variable "ado_github_pat" {

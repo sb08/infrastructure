@@ -15,13 +15,12 @@ terraform {
       source  = "hashicorp/azuread"
       version = "~> 1.0"
     }
-  }  
+  }
   cloud {
     organization = "destin"
 
     workspaces {
-      name = "destin-infrastructure-australiaeast-dev"
+      name = "destin-dev"
     }
   }
 }
-
