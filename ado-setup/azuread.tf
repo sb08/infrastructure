@@ -1,12 +1,4 @@
-# The pipeline needs a service principal to use for an AzureRM service connection
-# It will need access to the Azure Key Vault
-
-# You also need a service principal to use for creating resources in an AzureRM sub
-
-# I don't think those should be the same SP. The KV might be in a different sub than the place
-# you want to create resources. So we'll create two SPs.
-
-# Create SP for service connection in pipeline. Will be used to access KV.
+# Create SP for service connection in pipeline, used to access KV.
 
 resource "azuread_application" "service_connection" {
   display_name = local.azad_service_connection_sp_name
@@ -25,8 +17,7 @@ resource "azuread_service_principal_password" "service_connection" {
   value                = random_password.service_connection.result
 }
 
-# Create SP for creation of Azure resources in selected subscription.
-# These credentials will be written to the Key Vault and retrieved during pipeline run
+# Create SP for creation of Azure resources in selected subscription, credentials will be written to the Key Vault and retrieved during pipeline run
 
 resource "azuread_application" "resource_creation" {
   display_name = local.azad_resource_creation_sp_name

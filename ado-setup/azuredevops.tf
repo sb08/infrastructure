@@ -1,6 +1,3 @@
-# this does not work. try a separtate terraform folder...otherwise devops portal works. time to configure the yaml file.
-# Create ADO objects for pipeline
-
 provider "azuredevops" {
 }
 

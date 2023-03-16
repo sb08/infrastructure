@@ -13,7 +13,6 @@ resource "azurerm_key_vault" "setup" {
 }
 
 # Set access policies
-# Grant yourself full access (probably could be restricted to just secret_permissions)
 resource "azurerm_key_vault_access_policy" "you" {
   key_vault_id = azurerm_key_vault.setup.id
 
