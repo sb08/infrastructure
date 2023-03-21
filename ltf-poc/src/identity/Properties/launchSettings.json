@@ -1,0 +1,18 @@
+{
+  "profiles": {
+    "identity": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "BffRedirectUri": "https://localhost:5003/signin-oidc",
+        "BffPostLogoutRedirectUris": "https://localhost:5003/signout-callback-oidc",
+        "BffBackChannelLogoutUri": "https://localhost:5003/bff/backchannel",
+        "JsRedirectUri": "http://localhost:4200",
+        "JsPostLogoutRedirectUris": "http://localhost:4200",
+        "JsAllowedCorsOrigin": "http://localhost:4200"
+      },
+      "applicationUrl": "https://localhost:5001"
+    }
+  }
+}

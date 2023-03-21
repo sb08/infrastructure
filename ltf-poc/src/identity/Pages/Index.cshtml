@@ -1,0 +1,41 @@
+@page
+@model identity.Pages.Home.Index
+
+<div class="welcome-page">
+    <div>
+        <div class="row">
+            <div col-sm-6>
+            <ul>
+                <li>
+                    This site is an OAuth 2.0 authorisation server built using Asp.net core <small class="text-muted">(version @Model.DotnetCoreVersion)</small> and Duende Identity Server
+                    <small class="text-muted">(version @Model.Version)</small>
+                </li>
+                @*        <li>
+                Click <a href="~/diagnostics">here</a> to see the claims for your current session.
+                </li>
+                <li>
+                Click <a href="~/grants">here</a> to manage your stored grants.
+                </li>
+                <li>
+                Click <a href="~/serversidesessions">here</a> to view the server side sessions.
+                </li>
+                <li>
+                Click <a href="~/ciba/all">here</a> to view your pending CIBA login requests.
+                </li>*@
+                <li>
+                    See Duende Identity Server
+                    <a href="https://github.com/duendesoftware/IdentityServer">source code repository</a>,
+                    and <a href="https://github.com/duendesoftware/samples">code samples</a>.
+                </li>
+@*                <li>
+                    OAuth 2.0 <a href="https://www.rfc-editor.org/rfc/rfc6749">rfc6749</a>, the source of truth.
+                </li>*@
+            </ul>
+        </div>
+            <div col-sm-6>
+            <a href="~/.well-known/openid-configuration" class="btn btn-lg btn-block btn-outline-primary">Discovery Document</a>
+            <a href="~/Account/Login" class="btn btn-lg btn-block btn-outline-primary">Login</a>
+        </div>
+        </div>
+    </div>
+</div>

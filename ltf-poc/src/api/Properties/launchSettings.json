@@ -1,0 +1,19 @@
+﻿{
+  "profiles": {
+    "api": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "SbConnectionString": "Endpoint=sb://ltf-sb-42901-dev.servicebus.windows.net/;SharedAccessKeyName=messagebus-policy;SharedAccessKey=BkMZGWVf2Eiwxs+kRhLL+q0IY28gZRle8t+2HGdOz7Y=",
+        "Authority": "https://localhost:5001",
+        "ApimUri": "https://ltf-api-management-42901-dev.azure-api.net",
+        "AllowedCorsOrigins": "https://ltf-apim-8605-dev.azure-api.net http://localhost:4200"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:5002"
+    }
+  },
+  "$schema": "https://json.schemastore.org/launchsettings.json"
+}

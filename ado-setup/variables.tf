@@ -57,10 +57,11 @@ locals {
   ado_project_description = "Project for ${var.prefix}"
   ado_project_visibility  = "private"
   ado_pipeline_name_1     = "${var.prefix}-pipeline-1"
+  ado_identity_pipeline     = "${var.prefix}-identity"
 
   az_resource_group_name  = "rg-${var.prefix}-${terraform.workspace}"
   az_storage_account_name = "sa${lower(var.prefix)}"
-  az_key_vault_name       = "kv-destin-dev" #${terraform.workspace}"
+  az_key_vault_name       = "kv-destin-dev"
 
   pipeline_variables = {
     storageaccount   = azurerm_storage_account.sa.name

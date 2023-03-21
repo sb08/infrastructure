@@ -1,0 +1,91 @@
+variables:
+  - group: infrastructure
+
+trigger:
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - src/ltf-poc/api
+
+pool:
+  vmImage: ubuntu-latest
+
+  variables:
+    - name: dir
+      value: 'src'
+
+# note: app service should already be created
+# steps to do:
+# get dotnet project from scr
+# build
+# deploy to az
+# run tf to update open api in apim
+
+steps:
+- task: AzureKeyVault@2
+  inputs:
+    ConnectedServiceName: $(service_name)
+    keyVaultName: $(key_vault_name)
+    SecretsFilter: '*'
+    RunAsPreJob: false
+
+- bash:
+    ls -l
+  displayName: 'list'
+  workingDirectory: '$(System.DefaultWorkingDirectory)/dir'
+  
+- script: dotnet build --configuration $(buildConfiguration)/dir
+  displayName: 'dotnet build $(buildConfiguration)'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: $(az-subscription)
+    appType: 'webAppLinux'
+    appName: 'identity'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    
+    
+# this is for any open api/apim update    
+- bash:
+    terraform workspace new dev
+  displayName: 'Terraform Workspace'
+
+- bash:
+    terraform init -backend-config="storage_account_name=$TF_STATE_BLOB_ACCOUNT_NAME" -backend-config="container_name=$TF_STATE_BLOB_CONTAINER_NAME" -backend-config="key=$TF_STATE_BLOB_FILE" -backend-config="sas_token=$TF_SAS_TOKEN"
+  displayName: 'Terraform Init'
+  workingDirectory: '$(System.DefaultWorkingDirectory)/dir/Terraform'
+  env:
+    TF_WORKSPACE: Dev
+    TF_STATE_BLOB_ACCOUNT_NAME:   $(storageaccount)
+    TF_STATE_BLOB_CONTAINER_NAME: $(container-name)
+    TF_STATE_BLOB_FILE:           $(key)
+    TF_SAS_TOKEN: $(sas-token)
+
+- bash: terraform plan -out identity.tfplan
+  displayName: 'Terraform Plan'
+  workingDirectory: '$(System.DefaultWorkingDirectory)/dir/Terraform'
+  env:
+    TF_WORKSPACE: Dev
+    ARM_SAS_TOKEN: $(sas-token)
+    ARM_SUBSCRIPTION_ID: $(az-subscription)
+    ARM_CLIENT_ID:       $(az-client-id)
+    ARM_CLIENT_SECRET:   $(az-client-secret)
+    ARM_TENANT_ID:       $(az-tenant)
+
+- bash: terraform apply -auto-approve
+  displayName: Terraform Apply
+  workingDirectory: '$(System.DefaultWorkingDirectory)//dir/Terraform'
+  env:
+    TF_WORKSPACE: Dev
+    ARM_SUBSCRIPTION_ID: $(az-subscription)
+    ARM_CLIENT_ID:       $(az-client-id)
+    ARM_CLIENT_SECRET:   $(az-client-secret)
+    ARM_TENANT_ID:       $(az-tenant)
+
+    

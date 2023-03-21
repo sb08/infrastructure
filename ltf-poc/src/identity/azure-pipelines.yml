@@ -1,0 +1,47 @@
+variables:
+  - group: infrastructure
+
+trigger:
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - src/ltf-poc/identity
+
+pool:
+  vmImage: ubuntu-latest
+
+  variables:
+    - name: dir
+      value: 'src'
+
+steps:
+- task: AzureKeyVault@2
+  inputs:
+    ConnectedServiceName: $(service_name)
+    keyVaultName: $(key_vault_name)
+    SecretsFilter: '*'
+    RunAsPreJob: false
+
+- bash:
+    ls -l
+  displayName: 'list'
+  workingDirectory: '$(System.DefaultWorkingDirectory)'
+  
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: 'dotnet build $(buildConfiguration)'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: $(az-subscription)
+    appType: 'webAppLinux'
+    appName: 'identity'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+
+
+    

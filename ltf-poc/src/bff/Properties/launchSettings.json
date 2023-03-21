@@ -1,0 +1,16 @@
+﻿{
+  "profiles": {
+    "bff": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:5003",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "Authority": "https://localhost:5001",
+        "RemoteUri": "https://localhost:5002",
+        "ApimUri": "https://localhost:5002" //"https://ltf-api-management-42901-dev.azure-api.net"
+      }
+    }
+  }
+}

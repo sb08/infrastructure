@@ -1,0 +1,12 @@
+2023-01-19 16:34:21.898 +11:00 [INF] Starting up
+2023-01-19 16:34:23.327 +11:00 [INF] ApimUri is https://localhost:5002
+2023-01-19 17:02:22.802 +11:00 [INF] Starting up
+2023-01-19 17:02:23.757 +11:00 [INF] ApimUri is https://localhost:5002
+2023-01-20 11:22:54.668 +11:00 [INF] Starting up
+2023-01-20 11:22:55.648 +11:00 [INF] ApimUri is https://localhost:5002
+2023-01-20 11:45:22.117 +11:00 [INF] Starting up
+2023-01-20 11:45:22.967 +11:00 [INF] ApimUri is https://localhost:5002
+2023-01-20 11:47:24.316 +11:00 [INF] Starting up
+2023-01-20 11:47:25.090 +11:00 [INF] ApimUri is https://localhost:5002
+2023-02-14 13:01:56.202 +11:00 [INF] Starting up
+2023-02-14 13:01:57.773 +11:00 [INF] ApimUri is https://localhost:5002

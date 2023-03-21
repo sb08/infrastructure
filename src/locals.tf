@@ -1,8 +1,3 @@
-# resource "random_integer" "rand" {
-#   min = 1000
-#   max = 9999
-# }
-
 locals {
   common_tags = {
     company     = var.company
@@ -10,7 +5,6 @@ locals {
     environment = terraform.workspace
   }
 
-  # random_integer      = random_integer.rand.result
   name_prefix         = var.naming_prefix
   resource_group_name = lower("rg-${local.name_prefix}-${terraform.workspace}-${var.location}")
   storageAccountName  = lower("sa${local.name_prefix}${terraform.workspace}${var.location}")
@@ -18,4 +12,9 @@ locals {
   apim_name           = lower("apim-${local.name_prefix}-${terraform.workspace}-${var.location}")
   sb_name             = lower("sb-${local.name_prefix}-${terraform.workspace}-${var.location}")
   public_ip           = lower("publicip-${local.name_prefix}-${terraform.workspace}-${var.location}")
+  # webapp infrustructure
+  sp_name             = lower("sp${local.name_prefix}${terraform.workspace}${var.location}")
+  api_name            = lower("api-${local.name_prefix}-${terraform.workspace}")
+  auth_name           = lower("id-${local.name_prefix}-${terraform.workspace}")
+  js_name             = lower("bff-${local.name_prefix}-${terraform.workspace}")
 }
