@@ -1,7 +1,7 @@
 variable "naming_prefix" {
   type        = string
   description = "Naming prefix for resources"
-  default     = "ltf"
+  default     = "destin"
 }
 
 variable "company" {
