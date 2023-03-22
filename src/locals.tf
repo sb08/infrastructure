@@ -9,7 +9,7 @@ locals {
   resource_group_name = lower("rg-${local.name_prefix}-${terraform.workspace}-${var.location}")
   storageAccountName  = lower("sa${local.name_prefix}${terraform.workspace}${var.location}")
   vnet                = lower("vnet-${local.name_prefix}-${terraform.workspace}-${var.location}")
-  apim_name           = lower("apim-${local.name_prefix}-${terraform.workspace}-${var.location}")
+  apim_name           = lower("am-${local.name_prefix}-${terraform.workspace}-${var.location}")
   sb_name             = lower("sb-${local.name_prefix}-${terraform.workspace}-${var.location}")
   public_ip           = lower("pip-${local.name_prefix}-${terraform.workspace}-${var.location}")
   # webapp infrustructure
