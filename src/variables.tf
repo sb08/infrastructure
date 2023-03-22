@@ -79,3 +79,7 @@ variable "apim_pip_name" {
   type        = string
   default     = "ltf-apimpip"
 }
+
+variable "app_service_plan_name" {
+    description = "Common service plan for app services."
+}

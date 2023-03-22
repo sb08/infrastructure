@@ -1,0 +1,126 @@
+2023-02-14 13:01:58.357 +11:00 [WRN] You do not have a valid license key for the Duende software. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please start a conversation with us: https://duendesoftware.com/contact
+2023-02-14 13:01:58.406 +11:00 [INF] RemoteUri is https://localhost:5002
+2023-02-14 13:01:58.462 +11:00 [INF] User profile is available. Using 'C:\Users\sboulter\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-02-14 13:01:58.494 +11:00 [WRN] BFF session cleanup is enabled, but no IUserSessionStoreCleanup is registered in DI. BFF session cleanup will not run.
+2023-02-14 13:01:58.821 +11:00 [INF] Now listening on: https://localhost:5003
+2023-02-14 13:01:58.831 +11:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-14 13:01:58.834 +11:00 [INF] Hosting environment: Development
+2023-02-14 13:01:58.837 +11:00 [INF] Content root path: C:\bitbucket\ltf-poc\src\bff
+2023-02-14 13:02:00.403 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/ - -
+2023-02-14 13:02:00.473 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-02-14 13:02:00.478 +11:00 [INF] ***** Authorization 
+2023-02-14 13:02:00.641 +11:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'C:\bitbucket\ltf-poc\src\bff\wwwroot\index.html'
+2023-02-14 13:02:00.646 +11:00 [INF] HTTP GET /index.html responded 200 in 168.4674 ms
+2023-02-14 13:02:00.652 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 18 Jan 2023 03:32:36 GMT
+Content-Length: 697
+2023-02-14 13:02:00.732 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/ - - - 200 - text/html 332.0580ms
+2023-02-14 13:02:00.749 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-02-14 13:02:00.749 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-02-14 13:02:00.749 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/app.js - -
+2023-02-14 13:02:00.753 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /app.js
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-02-14 13:02:00.756 +11:00 [INF] ***** Authorization 
+2023-02-14 13:02:00.800 +11:00 [INF] Sending file. Request path: '/app.js'. Physical path: 'C:\bitbucket\ltf-poc\src\bff\wwwroot\app.js'
+2023-02-14 13:02:00.801 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 52.2151ms
+2023-02-14 13:02:00.803 +11:00 [INF] HTTP GET /app.js responded 200 in 47.0032 ms
+2023-02-14 13:02:00.805 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/javascript
+Date: Tue, 14 Feb 2023 02:02:00 GMT
+Server: Kestrel
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Sun, 22 Jan 2023 23:25:21 GMT
+Content-Length: 5247
+2023-02-14 13:02:00.807 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/app.js - - - 200 5247 text/javascript 57.8918ms
+2023-02-14 13:02:00.811 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-02-14 13:02:00.814 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-02-14 13:02:00.815 +11:00 [INF] ***** Authorization 
+2023-02-14 13:02:00.856 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 107.4371ms
+2023-02-14 13:02:00.891 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/favicon.ico - -
+2023-02-14 13:02:00.893 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /favicon.ico
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-02-14 13:02:00.894 +11:00 [INF] ***** Authorization 
+2023-02-14 13:02:01.052 +11:00 [INF] HTTP GET /favicon.ico responded 404 in 157.3362 ms
+2023-02-14 13:02:01.054 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-02-14 13:02:01.056 +11:00 [INF] Response:
+StatusCode: 404
+2023-02-14 13:02:01.059 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/favicon.ico - - - 404 0 - 168.4995ms
+2023-02-14 13:02:01.061 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-02-14 13:02:01.062 +11:00 [INF] HTTP GET /bff/user responded 401 in 247.1317 ms
+2023-02-14 13:02:01.064 +11:00 [INF] Response:
+StatusCode: 401
+2023-02-14 13:02:01.065 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 401 0 - 253.8467ms

@@ -1,0 +1,2609 @@
+2023-01-19 09:12:08.998 +11:00 [WRN] You do not have a valid license key for the Duende software. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please start a conversation with us: https://duendesoftware.com/contact
+2023-01-19 09:12:09.028 +11:00 [INF] RemoteUri is https://localhost:5002
+2023-01-19 09:12:09.070 +11:00 [INF] User profile is available. Using 'C:\Users\sboulter\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-19 09:12:09.096 +11:00 [WRN] BFF session cleanup is enabled, but no IUserSessionStoreCleanup is registered in DI. BFF session cleanup will not run.
+2023-01-19 09:12:09.326 +11:00 [INF] Now listening on: https://localhost:5003
+2023-01-19 09:12:09.328 +11:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-19 09:12:09.329 +11:00 [INF] Hosting environment: Development
+2023-01-19 09:12:09.329 +11:00 [INF] Content root path: C:\bitbucket\ltf-poc\src\bff
+2023-01-19 09:12:14.700 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/ - -
+2023-01-19 09:12:14.764 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:12:14.769 +11:00 [INF] ***** Authorization 
+2023-01-19 09:12:14.907 +11:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'C:\bitbucket\ltf-poc\src\bff\wwwroot\index.html'
+2023-01-19 09:12:14.913 +11:00 [INF] HTTP GET /index.html responded 200 in 143.3511 ms
+2023-01-19 09:12:14.921 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 18 Jan 2023 03:32:36 GMT
+Content-Length: 697
+2023-01-19 09:12:15.053 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/ - - - 200 - text/html 354.4120ms
+2023-01-19 09:12:15.076 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 09:12:15.076 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 09:12:15.076 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/app.js - -
+2023-01-19 09:12:15.080 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /app.js
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+If-Modified-Since: [Redacted]
+If-None-Match: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:12:15.089 +11:00 [INF] ***** Authorization 
+2023-01-19 09:12:15.095 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 19.7966ms
+2023-01-19 09:12:15.109 +11:00 [INF] Sending file. Request path: '/app.js'. Physical path: 'C:\bitbucket\ltf-poc\src\bff\wwwroot\app.js'
+2023-01-19 09:12:15.111 +11:00 [INF] HTTP GET /app.js responded 200 in 22.0394 ms
+2023-01-19 09:12:15.115 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/javascript
+Date: Wed, 18 Jan 2023 22:12:14 GMT
+Server: Kestrel
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 18 Jan 2023 03:34:42 GMT
+Content-Length: 5184
+2023-01-19 09:12:15.116 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/app.js - - - 200 5184 text/javascript 40.7628ms
+2023-01-19 09:12:15.123 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 09:12:15.127 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:12:15.130 +11:00 [INF] ***** Authorization 
+2023-01-19 09:12:15.148 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 72.0852ms
+2023-01-19 09:12:15.241 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/favicon.ico - -
+2023-01-19 09:12:15.243 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /favicon.ico
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:12:15.244 +11:00 [INF] ***** Authorization 
+2023-01-19 09:12:15.368 +11:00 [INF] HTTP GET /favicon.ico responded 404 in 124.2030 ms
+2023-01-19 09:12:15.370 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:12:15.370 +11:00 [INF] Response:
+StatusCode: 404
+2023-01-19 09:12:15.374 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/favicon.ico - - - 404 0 - 132.7146ms
+2023-01-19 09:12:15.376 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:12:15.377 +11:00 [INF] HTTP GET /bff/user responded 401 in 246.8572 ms
+2023-01-19 09:12:15.379 +11:00 [INF] Response:
+StatusCode: 401
+2023-01-19 09:12:15.380 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 401 0 - 256.6441ms
+2023-01-19 09:13:04.226 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/login - -
+2023-01-19 09:13:04.238 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/login
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:13:04.239 +11:00 [INF] ***** Authorization 
+2023-01-19 09:13:04.244 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/login'
+2023-01-19 09:13:05.256 +11:00 [INF] AuthenticationScheme: oidc was challenged.
+2023-01-19 09:13:05.259 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/login'
+2023-01-19 09:13:05.260 +11:00 [INF] HTTP GET /bff/login responded 302 in 1021.0505 ms
+2023-01-19 09:13:05.262 +11:00 [INF] Response:
+StatusCode: 302
+Location: https://localhost:5001/connect/authorize?client_id=js-host&redirect_uri=https%3A%2F%2Flocalhost%3A5003%2Fsignin-oidc&response_type=code&scope=openid%20profile%20api1%20apim%20registration%20offline_access&code_challenge=wBuPffdkdhMg8G86I-we0TpA0Mop99FVn2_Lh57Qac0&code_challenge_method=S256&nonce=638096767852498642.OGQzMTIwNWUtNzkyNi00NTRkLWI1ZTYtN2ZhY2I1ODdhODJmYzg1ZmM3ZDMtYjNjMC00YTE5LTgzNDgtODNkNWQ4ZDE3NGQy&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2zCbHSRnDKZYCt9PlCS8fl0rsHQHLsxXyEC623AfmgltxSrPq72bRzpBamxYgiov0Z_3JDQIZPXZQcBnc_NqvLiNoySKXblr0fy4rKe___m2AGemMvxA3VakE9pVmbtbainExrsIGPynqkCYpt2CRluRQ-cH-zvntKRf0rk9AFjuHa7cCQDMU4h-Vs9qbfTMZyJUj3dTWD7HcdMnpubfcUbDXeS89-5Z-boYAsJB2-MaJHWeNodJM7E_uOldO8L2YW9YkN9iKa6DdzWvZNXswFlpYaseEnsM-5Kl9lExpOOr2jTTywGOqFbXTcCivYPI0q-KU-eUVMTtX8DULg7wBnn_LNkirwf0Z_wAtyoHQDB-g&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.15.1.0
+Set-Cookie: [Redacted]
+2023-01-19 09:13:05.263 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/login - - - 302 0 - 1037.2214ms
+2023-01-19 09:13:13.776 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/signin-oidc?code=297C4823295EA8D282C1FE32F0E6746FDBF4C93602BA45BBC05F45F1760574EB-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2zCbHSRnDKZYCt9PlCS8fl0rsHQHLsxXyEC623AfmgltxSrPq72bRzpBamxYgiov0Z_3JDQIZPXZQcBnc_NqvLiNoySKXblr0fy4rKe___m2AGemMvxA3VakE9pVmbtbainExrsIGPynqkCYpt2CRluRQ-cH-zvntKRf0rk9AFjuHa7cCQDMU4h-Vs9qbfTMZyJUj3dTWD7HcdMnpubfcUbDXeS89-5Z-boYAsJB2-MaJHWeNodJM7E_uOldO8L2YW9YkN9iKa6DdzWvZNXswFlpYaseEnsM-5Kl9lExpOOr2jTTywGOqFbXTcCivYPI0q-KU-eUVMTtX8DULg7wBnn_LNkirwf0Z_wAtyoHQDB-g&session_state=8vttMUKLQ37ZmeRdSHX0KmQqZsSRewIMru4ztgMa-Lo.3F4B78CE05E99B324F550A19820494F1&iss=https%3A%2F%2Flocalhost%3A5001 - -
+2023-01-19 09:13:13.778 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /signin-oidc
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cache-Control: max-age=0
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+2023-01-19 09:13:13.780 +11:00 [INF] ***** Authorization 
+2023-01-19 09:13:14.342 +11:00 [INF] AuthenticationScheme: Cookies signed in.
+2023-01-19 09:13:14.346 +11:00 [INF] HTTP GET /signin-oidc responded 302 in 566.0537 ms
+2023-01-19 09:13:14.347 +11:00 [INF] Response:
+StatusCode: 302
+Cache-Control: [Redacted]
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: /
+Pragma: [Redacted]
+Set-Cookie: [Redacted]
+2023-01-19 09:13:14.348 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/signin-oidc?code=297C4823295EA8D282C1FE32F0E6746FDBF4C93602BA45BBC05F45F1760574EB-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2zCbHSRnDKZYCt9PlCS8fl0rsHQHLsxXyEC623AfmgltxSrPq72bRzpBamxYgiov0Z_3JDQIZPXZQcBnc_NqvLiNoySKXblr0fy4rKe___m2AGemMvxA3VakE9pVmbtbainExrsIGPynqkCYpt2CRluRQ-cH-zvntKRf0rk9AFjuHa7cCQDMU4h-Vs9qbfTMZyJUj3dTWD7HcdMnpubfcUbDXeS89-5Z-boYAsJB2-MaJHWeNodJM7E_uOldO8L2YW9YkN9iKa6DdzWvZNXswFlpYaseEnsM-5Kl9lExpOOr2jTTywGOqFbXTcCivYPI0q-KU-eUVMTtX8DULg7wBnn_LNkirwf0Z_wAtyoHQDB-g&session_state=8vttMUKLQ37ZmeRdSHX0KmQqZsSRewIMru4ztgMa-Lo.3F4B78CE05E99B324F550A19820494F1&iss=https%3A%2F%2Flocalhost%3A5001 - - - 302 0 - 571.5910ms
+2023-01-19 09:13:14.352 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/ - -
+2023-01-19 09:13:14.353 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cache-Control: max-age=0
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+2023-01-19 09:13:14.354 +11:00 [INF] ***** Authorization 
+2023-01-19 09:13:14.367 +11:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'C:\bitbucket\ltf-poc\src\bff\wwwroot\index.html'
+2023-01-19 09:13:14.368 +11:00 [INF] HTTP GET /index.html responded 200 in 14.1345 ms
+2023-01-19 09:13:14.369 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 18 Jan 2023 03:32:36 GMT
+Content-Length: 697
+2023-01-19 09:13:14.371 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/ - - - 200 - text/html 19.5861ms
+2023-01-19 09:13:14.385 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 09:13:14.385 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 09:13:14.385 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 09:13:14.388 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 3.1045ms
+2023-01-19 09:13:14.397 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:13:14.403 +11:00 [INF] ***** Authorization 
+2023-01-19 09:13:14.433 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 48.5310ms
+2023-01-19 09:13:14.434 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:13:14.444 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:13:14.445 +11:00 [INF] HTTP GET /bff/user responded 200 in 42.5061 ms
+2023-01-19 09:13:14.448 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json
+Date: Wed, 18 Jan 2023 22:13:13 GMT
+Server: Kestrel
+2023-01-19 09:13:14.449 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 200 - application/json 63.6316ms
+2023-01-19 09:13:16.622 +11:00 [INF] Request starting HTTP/2 POST https://localhost:5003/apim/registration application/json 133
+2023-01-19 09:13:16.625 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /apim/registration
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 133
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:13:16.627 +11:00 [INF] ***** Authorization 
+2023-01-19 09:13:16.629 +11:00 [INF] Executing endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:13:16.657 +11:00 [INF] Proxying to https://localhost:5002/registration HTTP/2 RequestVersionOrLower no-streaming
+2023-01-19 09:13:16.964 +11:00 [INF] Received HTTP/2.0 response 500.
+2023-01-19 09:13:16.972 +11:00 [INF] Executed endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:13:16.974 +11:00 [ERR] HTTP POST /apim/registration responded 500 in 346.8801 ms
+2023-01-19 09:13:16.976 +11:00 [INF] Response:
+StatusCode: 500
+Content-Type: text/plain; charset=utf-8
+Date: Wed, 18 Jan 2023 22:13:16 GMT
+Server: Kestrel
+2023-01-19 09:13:16.977 +11:00 [INF] Request finished HTTP/2 POST https://localhost:5003/apim/registration application/json 133 - 500 - text/plain;+charset=utf-8 355.1354ms
+2023-01-19 09:13:28.707 +11:00 [INF] Request starting HTTP/2 POST https://localhost:5003/apim/registration application/json 133
+2023-01-19 09:13:28.709 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /apim/registration
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 133
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:13:28.710 +11:00 [INF] ***** Authorization 
+2023-01-19 09:13:28.712 +11:00 [INF] Executing endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:13:28.715 +11:00 [INF] Proxying to https://localhost:5002/registration HTTP/2 RequestVersionOrLower no-streaming
+2023-01-19 09:13:28.729 +11:00 [INF] Received HTTP/2.0 response 500.
+2023-01-19 09:13:28.731 +11:00 [INF] Executed endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:13:28.732 +11:00 [ERR] HTTP POST /apim/registration responded 500 in 21.8499 ms
+2023-01-19 09:13:28.733 +11:00 [INF] Response:
+StatusCode: 500
+Content-Type: text/plain; charset=utf-8
+Date: Wed, 18 Jan 2023 22:13:28 GMT
+Server: Kestrel
+2023-01-19 09:13:28.734 +11:00 [INF] Request finished HTTP/2 POST https://localhost:5003/apim/registration application/json 133 - 500 - text/plain;+charset=utf-8 27.1803ms
+2023-01-19 09:14:24.018 +11:00 [INF] Request starting HTTP/2 POST https://localhost:5003/apim/registration application/json 133
+2023-01-19 09:14:24.021 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /apim/registration
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 133
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:14:24.023 +11:00 [INF] ***** Authorization 
+2023-01-19 09:14:24.025 +11:00 [INF] Executing endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:14:24.028 +11:00 [INF] Proxying to https://localhost:5002/registration HTTP/2 RequestVersionOrLower no-streaming
+2023-01-19 09:14:24.062 +11:00 [INF] Received HTTP/2.0 response 500.
+2023-01-19 09:14:24.063 +11:00 [INF] Executed endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:14:24.064 +11:00 [ERR] HTTP POST /apim/registration responded 500 in 41.4752 ms
+2023-01-19 09:14:24.067 +11:00 [INF] Response:
+StatusCode: 500
+Content-Type: text/plain; charset=utf-8
+Date: Wed, 18 Jan 2023 22:14:23 GMT
+Server: Kestrel
+2023-01-19 09:14:24.068 +11:00 [INF] Request finished HTTP/2 POST https://localhost:5003/apim/registration application/json 133 - 500 - text/plain;+charset=utf-8 50.0589ms
+2023-01-19 09:14:27.748 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/ - -
+2023-01-19 09:14:27.751 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cache-Control: max-age=0
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:14:27.753 +11:00 [INF] ***** Authorization 
+2023-01-19 09:14:27.759 +11:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'C:\bitbucket\ltf-poc\src\bff\wwwroot\index.html'
+2023-01-19 09:14:27.761 +11:00 [INF] HTTP GET /index.html responded 200 in 8.0004 ms
+2023-01-19 09:14:27.762 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 18 Jan 2023 03:32:36 GMT
+Content-Length: 697
+2023-01-19 09:14:27.764 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/ - - - 200 - text/html 15.9684ms
+2023-01-19 09:14:27.784 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 09:14:27.784 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 09:14:27.788 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 3.5621ms
+2023-01-19 09:14:27.795 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 09:14:27.816 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:14:27.819 +11:00 [INF] ***** Authorization 
+2023-01-19 09:14:27.824 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:14:27.830 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:14:27.832 +11:00 [INF] HTTP GET /bff/user responded 200 in 12.8097 ms
+2023-01-19 09:14:27.836 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json
+Date: Wed, 18 Jan 2023 22:14:27 GMT
+Server: Kestrel
+2023-01-19 09:14:27.838 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 200 - application/json 42.7544ms
+2023-01-19 09:14:27.838 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 53.9278ms
+2023-01-19 09:14:30.261 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/local/identity - -
+2023-01-19 09:14:30.262 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /local/identity
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:14:30.264 +11:00 [INF] ***** Authorization 
+2023-01-19 09:14:30.270 +11:00 [INF] Executing endpoint 'HTTP: GET /local/identity => LocalIdentityHandler'
+2023-01-19 09:14:30.320 +11:00 [INF] Writing value of type '<>f__AnonymousType0`2' as Json.
+2023-01-19 09:14:30.326 +11:00 [INF] Executed endpoint 'HTTP: GET /local/identity => LocalIdentityHandler'
+2023-01-19 09:14:30.327 +11:00 [INF] HTTP GET /local/identity responded 200 in 63.7020 ms
+2023-01-19 09:14:30.329 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Date: Wed, 18 Jan 2023 22:14:30 GMT
+Server: Kestrel
+2023-01-19 09:14:30.330 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/local/identity - - - 200 - application/json;+charset=utf-8 69.8359ms
+2023-01-19 09:14:31.744 +11:00 [INF] Request starting HTTP/2 POST https://localhost:5003/apim/registration application/json 133
+2023-01-19 09:14:31.746 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /apim/registration
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 133
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:14:31.747 +11:00 [INF] ***** Authorization 
+2023-01-19 09:14:31.749 +11:00 [INF] Executing endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:14:31.751 +11:00 [INF] Proxying to https://localhost:5002/registration HTTP/2 RequestVersionOrLower no-streaming
+2023-01-19 09:14:31.770 +11:00 [INF] Received HTTP/2.0 response 500.
+2023-01-19 09:14:31.772 +11:00 [INF] Executed endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:14:31.773 +11:00 [ERR] HTTP POST /apim/registration responded 500 in 25.9429 ms
+2023-01-19 09:14:31.775 +11:00 [INF] Response:
+StatusCode: 500
+Content-Type: text/plain; charset=utf-8
+Date: Wed, 18 Jan 2023 22:14:31 GMT
+Server: Kestrel
+2023-01-19 09:14:31.776 +11:00 [INF] Request finished HTTP/2 POST https://localhost:5003/apim/registration application/json 133 - 500 - text/plain;+charset=utf-8 31.6715ms
+2023-01-19 09:18:12.449 +11:00 [WRN] You do not have a valid license key for the Duende software. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please start a conversation with us: https://duendesoftware.com/contact
+2023-01-19 09:18:12.485 +11:00 [INF] RemoteUri is https://localhost:5002
+2023-01-19 09:18:12.540 +11:00 [INF] User profile is available. Using 'C:\Users\sboulter\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-19 09:18:12.567 +11:00 [WRN] BFF session cleanup is enabled, but no IUserSessionStoreCleanup is registered in DI. BFF session cleanup will not run.
+2023-01-19 09:18:12.743 +11:00 [INF] Now listening on: https://localhost:5003
+2023-01-19 09:18:12.744 +11:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-19 09:18:12.746 +11:00 [INF] Hosting environment: Development
+2023-01-19 09:18:12.747 +11:00 [INF] Content root path: C:\bitbucket\ltf-poc\src\bff
+2023-01-19 09:18:13.425 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 09:18:13.425 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 09:18:13.425 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 09:18:13.489 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 61.7474ms
+2023-01-19 09:18:13.489 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:18:13.494 +11:00 [INF] ***** Authorization 
+2023-01-19 09:18:13.588 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 165.8929ms
+2023-01-19 09:18:13.614 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:18:13.695 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:18:13.699 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:18:13.701 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:18:13.703 +11:00 [INF] HTTP GET /bff/user responded 401 in 208.6651 ms
+2023-01-19 09:18:13.707 +11:00 [INF] Response:
+StatusCode: 401
+2023-01-19 09:18:13.710 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 401 0 - 288.1971ms
+2023-01-19 09:18:23.108 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/login - -
+2023-01-19 09:18:23.122 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/login
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:18:23.125 +11:00 [INF] ***** Authorization 
+2023-01-19 09:18:23.131 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:18:23.135 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/login'
+2023-01-19 09:18:24.152 +11:00 [INF] AuthenticationScheme: oidc was challenged.
+2023-01-19 09:18:24.158 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/login'
+2023-01-19 09:18:24.162 +11:00 [INF] HTTP GET /bff/login responded 302 in 1037.6349 ms
+2023-01-19 09:18:24.165 +11:00 [INF] Response:
+StatusCode: 302
+Location: https://localhost:5001/connect/authorize?client_id=js-host&redirect_uri=https%3A%2F%2Flocalhost%3A5003%2Fsignin-oidc&response_type=code&scope=openid%20profile%20api1%20apim%20registration%20offline_access&code_challenge=CB8BoroXpOmzWAaHfuLdPsUqgzcoiJcOT4eevr999cc&code_challenge_method=S256&nonce=638096771041359312.YzYyNGJkYmYtMjcwMy00ZTRkLTg3NDYtYzUzNWVmMGUyMDFkMjkxOGJlYjktNGJmOS00MjdhLTg5MGMtNjI3OWNhM2QxMDgw&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2zXY7pEp7ErYmFPuC1O3vKXayQmdKBzI1EKGLNKQdT1udby6X5937c6eJQxuBaso7eSr5YvQJn5fcSLWP2bOPTL_tpoh4jm_-pqGzHIylh15SbmmkhIgTc8eirhlRurqkrQsjnMl1ZvHv86WucpMG47zgSpuuxUE9CwAQNaZd5r1CAkBLBT6LMRfGG_mCwKRJsy9vbpIMsTNF6F7Wo7QbLk7MsM7QBqarSV8cRfZ1fgc8YuBiLZbXW2wecKdsLXqbM7IkWoyNk9xYUzjOH0QgWs7a4lJwswAsOdOvv5buuUjpMjrdJq-bPh-gDYXdwZhUe75stwJdhBXegOVH8P2QspIxtlGE4t2i6dc5iewaQpWQ&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.15.1.0
+Set-Cookie: [Redacted]
+2023-01-19 09:18:24.170 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/login - - - 302 0 - 1062.5108ms
+2023-01-19 09:18:24.262 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/login - -
+2023-01-19 09:18:24.264 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/login
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:18:24.266 +11:00 [INF] ***** Authorization 
+2023-01-19 09:18:24.269 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:18:24.271 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/login'
+2023-01-19 09:18:24.273 +11:00 [INF] AuthenticationScheme: oidc was challenged.
+2023-01-19 09:18:24.274 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/login'
+2023-01-19 09:18:24.275 +11:00 [INF] HTTP GET /bff/login responded 302 in 9.6022 ms
+2023-01-19 09:18:24.278 +11:00 [INF] Response:
+StatusCode: 302
+Location: https://localhost:5001/connect/authorize?client_id=js-host&redirect_uri=https%3A%2F%2Flocalhost%3A5003%2Fsignin-oidc&response_type=code&scope=openid%20profile%20api1%20apim%20registration%20offline_access&code_challenge=usSpnUOa5OtMe6SdpztC1fYMA5L_GdQBOz1uYlWza_o&code_challenge_method=S256&nonce=638096771042731001.ODZkNTYwOTktODhlMC00NjUzLTg0ZmQtMTIwOWY2M2JlNGRlYmVhNTgzZDQtZjI4Zi00NmNiLTlhMTItNTMyY2M2ZDM0MTAz&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2w-ymHxuRw-8vjUi_l5rSSGECWBJqOoqUfw7hKmzYKLRDcVj8YUKiI7U5BR8GTfi9XyX_6xK1VniwCtNgtZNHTmXJDTeOHQuxMmnMfpYCCtrbK4mPCQg585kaVEVKYxQMxcb5_8aUMIAzkAaplZZgn0MOCR55wov_NIz7tosSISMe00jlKtD8PgeQoJF_E4C182-ZDbryo5LvIZM7U60Ba1wDK5hAOoe3GoZX8avcAhMF3xWIUlm_xRDP4kvdxANBT3vx115AEXrgVjw1UNGgICZFhbaDslCV1N3TCOkcWFVJQUsFQKqtGpE1oYgQ1DNUBvzjtvSJLSlU9SfCmMxXTSIRz5ITVWRJ4RYQwZSq9h0g&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.15.1.0
+Set-Cookie: [Redacted]
+2023-01-19 09:18:24.279 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/login - - - 302 0 - 17.3962ms
+2023-01-19 09:18:24.432 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/signin-oidc?code=1F1EE3DD3A50F239FF46E2411F6BAFFA56DC17E09838FE1AED9037A3BD4E35A4-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2w-ymHxuRw-8vjUi_l5rSSGECWBJqOoqUfw7hKmzYKLRDcVj8YUKiI7U5BR8GTfi9XyX_6xK1VniwCtNgtZNHTmXJDTeOHQuxMmnMfpYCCtrbK4mPCQg585kaVEVKYxQMxcb5_8aUMIAzkAaplZZgn0MOCR55wov_NIz7tosSISMe00jlKtD8PgeQoJF_E4C182-ZDbryo5LvIZM7U60Ba1wDK5hAOoe3GoZX8avcAhMF3xWIUlm_xRDP4kvdxANBT3vx115AEXrgVjw1UNGgICZFhbaDslCV1N3TCOkcWFVJQUsFQKqtGpE1oYgQ1DNUBvzjtvSJLSlU9SfCmMxXTSIRz5ITVWRJ4RYQwZSq9h0g&session_state=0qSdN24QIYXmRe_q0V-9oVrdcNK0zH6k9Y3b_l23U14.9C8EE2DF768FE15231F955CFEC621882&iss=https%3A%2F%2Flocalhost%3A5001 - -
+2023-01-19 09:18:24.434 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /signin-oidc
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+2023-01-19 09:18:24.436 +11:00 [INF] ***** Authorization 
+2023-01-19 09:18:25.113 +11:00 [INF] AuthenticationScheme: Cookies signed in.
+2023-01-19 09:18:25.117 +11:00 [INF] HTTP GET /signin-oidc responded 302 in 681.3768 ms
+2023-01-19 09:18:25.118 +11:00 [INF] Response:
+StatusCode: 302
+Cache-Control: [Redacted]
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: /
+Pragma: [Redacted]
+Set-Cookie: [Redacted]
+2023-01-19 09:18:25.119 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/signin-oidc?code=1F1EE3DD3A50F239FF46E2411F6BAFFA56DC17E09838FE1AED9037A3BD4E35A4-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2w-ymHxuRw-8vjUi_l5rSSGECWBJqOoqUfw7hKmzYKLRDcVj8YUKiI7U5BR8GTfi9XyX_6xK1VniwCtNgtZNHTmXJDTeOHQuxMmnMfpYCCtrbK4mPCQg585kaVEVKYxQMxcb5_8aUMIAzkAaplZZgn0MOCR55wov_NIz7tosSISMe00jlKtD8PgeQoJF_E4C182-ZDbryo5LvIZM7U60Ba1wDK5hAOoe3GoZX8avcAhMF3xWIUlm_xRDP4kvdxANBT3vx115AEXrgVjw1UNGgICZFhbaDslCV1N3TCOkcWFVJQUsFQKqtGpE1oYgQ1DNUBvzjtvSJLSlU9SfCmMxXTSIRz5ITVWRJ4RYQwZSq9h0g&session_state=0qSdN24QIYXmRe_q0V-9oVrdcNK0zH6k9Y3b_l23U14.9C8EE2DF768FE15231F955CFEC621882&iss=https%3A%2F%2Flocalhost%3A5001 - - - 302 0 - 687.2876ms
+2023-01-19 09:18:25.133 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 09:18:25.133 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 09:18:25.136 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 09:18:25.137 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 3.8119ms
+2023-01-19 09:18:25.139 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:18:25.141 +11:00 [INF] ***** Authorization 
+2023-01-19 09:18:25.158 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:18:25.172 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.8762ms
+2023-01-19 09:18:25.176 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:18:25.177 +11:00 [INF] HTTP GET /bff/user responded 200 in 36.0164 ms
+2023-01-19 09:18:25.179 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json
+Date: Wed, 18 Jan 2023 22:18:24 GMT
+Server: Kestrel
+2023-01-19 09:18:25.180 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 200 - application/json 43.2933ms
+2023-01-19 09:18:27.251 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/local/identity - -
+2023-01-19 09:18:27.254 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /local/identity
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:18:27.255 +11:00 [INF] ***** Authorization 
+2023-01-19 09:18:27.262 +11:00 [INF] Executing endpoint 'HTTP: GET /local/identity => LocalIdentityHandler'
+2023-01-19 09:18:27.274 +11:00 [INF] Writing value of type '<>f__AnonymousType0`2' as Json.
+2023-01-19 09:18:27.281 +11:00 [INF] Executed endpoint 'HTTP: GET /local/identity => LocalIdentityHandler'
+2023-01-19 09:18:27.282 +11:00 [INF] HTTP GET /local/identity responded 200 in 27.0832 ms
+2023-01-19 09:18:27.284 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Date: Wed, 18 Jan 2023 22:18:26 GMT
+Server: Kestrel
+2023-01-19 09:18:27.285 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/local/identity - - - 200 - application/json;+charset=utf-8 33.4576ms
+2023-01-19 09:18:28.291 +11:00 [INF] Request starting HTTP/2 POST https://localhost:5003/apim/registration application/json 133
+2023-01-19 09:18:28.293 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /apim/registration
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 133
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:18:28.296 +11:00 [INF] ***** Authorization 
+2023-01-19 09:18:28.298 +11:00 [INF] Executing endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:18:28.366 +11:00 [INF] Proxying to https://localhost:5002/registration HTTP/2 RequestVersionOrLower no-streaming
+2023-01-19 09:18:39.268 +11:00 [INF] Received HTTP/2.0 response 500.
+2023-01-19 09:18:39.287 +11:00 [INF] Executed endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:18:39.291 +11:00 [ERR] HTTP POST /apim/registration responded 500 in 10994.9716 ms
+2023-01-19 09:18:39.294 +11:00 [INF] Response:
+StatusCode: 500
+Content-Type: text/plain; charset=utf-8
+Date: Wed, 18 Jan 2023 22:18:38 GMT
+Server: Kestrel
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2023-01-19 09:18:39.296 +11:00 [INF] Request finished HTTP/2 POST https://localhost:5003/apim/registration application/json 133 - 500 - text/plain;+charset=utf-8 11005.0557ms
+2023-01-19 09:18:43.449 +11:00 [INF] Request starting HTTP/2 POST https://localhost:5003/apim/registration application/json 133
+2023-01-19 09:18:43.450 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /apim/registration
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 133
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:18:43.452 +11:00 [INF] ***** Authorization 
+2023-01-19 09:18:43.455 +11:00 [INF] Executing endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:18:43.457 +11:00 [INF] Proxying to https://localhost:5002/registration HTTP/2 RequestVersionOrLower no-streaming
+2023-01-19 09:18:51.343 +11:00 [INF] Received HTTP/2.0 response 500.
+2023-01-19 09:18:51.345 +11:00 [INF] Executed endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:18:51.347 +11:00 [ERR] HTTP POST /apim/registration responded 500 in 7894.8605 ms
+2023-01-19 09:18:51.349 +11:00 [INF] Response:
+StatusCode: 500
+Content-Type: text/plain; charset=utf-8
+Date: Wed, 18 Jan 2023 22:18:51 GMT
+Server: Kestrel
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2023-01-19 09:18:51.351 +11:00 [INF] Request finished HTTP/2 POST https://localhost:5003/apim/registration application/json 133 - 500 - text/plain;+charset=utf-8 7901.9204ms
+2023-01-19 09:18:54.040 +11:00 [INF] Request starting HTTP/2 POST https://localhost:5003/apim/registration application/json 133
+2023-01-19 09:18:54.042 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /apim/registration
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 133
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:18:54.044 +11:00 [INF] ***** Authorization 
+2023-01-19 09:18:54.047 +11:00 [INF] Executing endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:18:54.051 +11:00 [INF] Proxying to https://localhost:5002/registration HTTP/2 RequestVersionOrLower no-streaming
+2023-01-19 09:19:28.000 +11:00 [INF] Received HTTP/2.0 response 500.
+2023-01-19 09:19:28.002 +11:00 [INF] Executed endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:19:28.003 +11:00 [ERR] HTTP POST /apim/registration responded 500 in 33958.7160 ms
+2023-01-19 09:19:28.005 +11:00 [INF] Response:
+StatusCode: 500
+Content-Type: text/plain; charset=utf-8
+Date: Wed, 18 Jan 2023 22:19:27 GMT
+Server: Kestrel
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2023-01-19 09:19:28.006 +11:00 [INF] Request finished HTTP/2 POST https://localhost:5003/apim/registration application/json 133 - 500 - text/plain;+charset=utf-8 33966.2904ms
+2023-01-19 09:22:04.432 +11:00 [WRN] You do not have a valid license key for the Duende software. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please start a conversation with us: https://duendesoftware.com/contact
+2023-01-19 09:22:04.468 +11:00 [INF] RemoteUri is https://localhost:5002
+2023-01-19 09:22:04.513 +11:00 [INF] User profile is available. Using 'C:\Users\sboulter\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-19 09:22:04.542 +11:00 [WRN] BFF session cleanup is enabled, but no IUserSessionStoreCleanup is registered in DI. BFF session cleanup will not run.
+2023-01-19 09:22:04.707 +11:00 [INF] Now listening on: https://localhost:5003
+2023-01-19 09:22:04.709 +11:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-19 09:22:04.710 +11:00 [INF] Hosting environment: Development
+2023-01-19 09:22:04.710 +11:00 [INF] Content root path: C:\bitbucket\ltf-poc\src\bff
+2023-01-19 09:22:05.452 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 09:22:05.452 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 09:22:05.452 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 09:22:05.508 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 57.3331ms
+2023-01-19 09:22:05.508 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:22:05.513 +11:00 [INF] ***** Authorization 
+2023-01-19 09:22:05.604 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 155.3377ms
+2023-01-19 09:22:05.632 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:22:05.745 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:22:05.752 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:22:05.754 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:22:05.758 +11:00 [INF] HTTP GET /bff/user responded 401 in 244.9553 ms
+2023-01-19 09:22:05.762 +11:00 [INF] Response:
+StatusCode: 401
+2023-01-19 09:22:05.765 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 401 0 - 316.1543ms
+2023-01-19 09:22:09.285 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/login - -
+2023-01-19 09:22:09.295 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/login
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:22:09.297 +11:00 [INF] ***** Authorization 
+2023-01-19 09:22:09.302 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:22:09.305 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/login'
+2023-01-19 09:22:09.890 +11:00 [INF] AuthenticationScheme: oidc was challenged.
+2023-01-19 09:22:09.893 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/login'
+2023-01-19 09:22:09.894 +11:00 [INF] HTTP GET /bff/login responded 302 in 597.2011 ms
+2023-01-19 09:22:09.896 +11:00 [INF] Response:
+StatusCode: 302
+Location: https://localhost:5001/connect/authorize?client_id=js-host&redirect_uri=https%3A%2F%2Flocalhost%3A5003%2Fsignin-oidc&response_type=code&scope=openid%20profile%20api1%20apim%20registration%20offline_access&code_challenge=W55hIT1Aoh_Pj1AEPuytvRiQUOM2yS3JH5PMBcvXGBk&code_challenge_method=S256&nonce=638096773298839283.OTZmMmRkNmEtMGUwMi00ZTIyLTlmMDktMWNiYjZkOTRkNDFmMTJhZmQ1ZDYtYmY4MC00MDhiLTgwMDQtYjU2YzUwMjhmZTky&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2wdLAEDTZHk4YrsgRZO-tEtI6ekYnTE1N2SZ8mKTg9aPAWrwRYbdNVQsWV3WD9wKzH-V-vI3h05aq_u8jS7RmDQ7Qo-oRc5elGDwET8ngASJYC3yylp4ww20Qcfe9vUbhFaHGZutroqGA9jkz71fm4xQg49dZ909C0UVzr536wq1E_pniyb9TeuuK-gLUcultHyneqcIes56eiB5KKWK3AhyJUVU0WQmtd_q0Pc80qECfy2YA0enl1ydrZwTXO0iRjPALoW3-Xua10sz114j33u55OFZRNjZaDa55NcA8QQoBbjZqHFqtE8p435vHpCfb8hOnCYRUzHOW8Be29n2IrKwAqCoVrEfuAviM5YIbFRqg&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.15.1.0
+Set-Cookie: [Redacted]
+2023-01-19 09:22:09.900 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/login - - - 302 0 - 615.3460ms
+2023-01-19 09:22:10.153 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/signin-oidc?code=D26BEAB93D24A06BE79A30FD6A8D2293FBB9DA039DB22720F1D5709ACBA05BA8-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2wdLAEDTZHk4YrsgRZO-tEtI6ekYnTE1N2SZ8mKTg9aPAWrwRYbdNVQsWV3WD9wKzH-V-vI3h05aq_u8jS7RmDQ7Qo-oRc5elGDwET8ngASJYC3yylp4ww20Qcfe9vUbhFaHGZutroqGA9jkz71fm4xQg49dZ909C0UVzr536wq1E_pniyb9TeuuK-gLUcultHyneqcIes56eiB5KKWK3AhyJUVU0WQmtd_q0Pc80qECfy2YA0enl1ydrZwTXO0iRjPALoW3-Xua10sz114j33u55OFZRNjZaDa55NcA8QQoBbjZqHFqtE8p435vHpCfb8hOnCYRUzHOW8Be29n2IrKwAqCoVrEfuAviM5YIbFRqg&session_state=FDVxNOiOWrEqmN6wBdrLkk-0mgXfOg3jjkH-sosnEcY.15DE272E7538E930E0D3BB852178BDE8&iss=https%3A%2F%2Flocalhost%3A5001 - -
+2023-01-19 09:22:10.158 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /signin-oidc
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+2023-01-19 09:22:10.159 +11:00 [INF] ***** Authorization 
+2023-01-19 09:22:10.778 +11:00 [INF] AuthenticationScheme: Cookies signed in.
+2023-01-19 09:22:10.780 +11:00 [INF] HTTP GET /signin-oidc responded 302 in 620.3030 ms
+2023-01-19 09:22:10.783 +11:00 [INF] Response:
+StatusCode: 302
+Cache-Control: [Redacted]
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: /
+Pragma: [Redacted]
+Set-Cookie: [Redacted]
+2023-01-19 09:22:10.784 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/signin-oidc?code=D26BEAB93D24A06BE79A30FD6A8D2293FBB9DA039DB22720F1D5709ACBA05BA8-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2wdLAEDTZHk4YrsgRZO-tEtI6ekYnTE1N2SZ8mKTg9aPAWrwRYbdNVQsWV3WD9wKzH-V-vI3h05aq_u8jS7RmDQ7Qo-oRc5elGDwET8ngASJYC3yylp4ww20Qcfe9vUbhFaHGZutroqGA9jkz71fm4xQg49dZ909C0UVzr536wq1E_pniyb9TeuuK-gLUcultHyneqcIes56eiB5KKWK3AhyJUVU0WQmtd_q0Pc80qECfy2YA0enl1ydrZwTXO0iRjPALoW3-Xua10sz114j33u55OFZRNjZaDa55NcA8QQoBbjZqHFqtE8p435vHpCfb8hOnCYRUzHOW8Be29n2IrKwAqCoVrEfuAviM5YIbFRqg&session_state=FDVxNOiOWrEqmN6wBdrLkk-0mgXfOg3jjkH-sosnEcY.15DE272E7538E930E0D3BB852178BDE8&iss=https%3A%2F%2Flocalhost%3A5001 - - - 302 0 - 631.2628ms
+2023-01-19 09:22:10.799 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 09:22:10.799 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 09:22:10.801 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 09:22:10.803 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 4.1610ms
+2023-01-19 09:22:10.804 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:22:10.807 +11:00 [INF] ***** Authorization 
+2023-01-19 09:22:10.826 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:22:10.838 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.6540ms
+2023-01-19 09:22:10.843 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:22:10.844 +11:00 [INF] HTTP GET /bff/user responded 200 in 37.0042 ms
+2023-01-19 09:22:10.846 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json
+Date: Wed, 18 Jan 2023 22:22:10 GMT
+Server: Kestrel
+2023-01-19 09:22:10.848 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 200 - application/json 46.6433ms
+2023-01-19 09:22:11.460 +11:00 [INF] Request starting HTTP/2 POST https://localhost:5003/apim/registration application/json 133
+2023-01-19 09:22:11.463 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /apim/registration
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 133
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:22:11.466 +11:00 [INF] ***** Authorization 
+2023-01-19 09:22:11.469 +11:00 [INF] Executing endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:22:11.539 +11:00 [INF] Proxying to https://localhost:5002/registration HTTP/2 RequestVersionOrLower no-streaming
+2023-01-19 09:22:28.612 +11:00 [INF] Received HTTP/2.0 response 500.
+2023-01-19 09:22:28.622 +11:00 [INF] Executed endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:22:28.624 +11:00 [ERR] HTTP POST /apim/registration responded 500 in 17158.6249 ms
+2023-01-19 09:22:28.626 +11:00 [INF] Response:
+StatusCode: 500
+Content-Type: text/plain; charset=utf-8
+Date: Wed, 18 Jan 2023 22:22:28 GMT
+Server: Kestrel
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2023-01-19 09:22:28.627 +11:00 [INF] Request finished HTTP/2 POST https://localhost:5003/apim/registration application/json 133 - 500 - text/plain;+charset=utf-8 17167.2614ms
+2023-01-19 09:22:37.576 +11:00 [INF] Request starting HTTP/2 POST https://localhost:5003/apim/registration application/json 133
+2023-01-19 09:22:37.579 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /apim/registration
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 133
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:22:37.581 +11:00 [INF] ***** Authorization 
+2023-01-19 09:22:37.584 +11:00 [INF] Executing endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:22:37.589 +11:00 [INF] Proxying to https://localhost:5002/registration HTTP/2 RequestVersionOrLower no-streaming
+2023-01-19 09:22:39.609 +11:00 [INF] Received HTTP/2.0 response 500.
+2023-01-19 09:22:39.611 +11:00 [INF] Executed endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:22:39.613 +11:00 [ERR] HTTP POST /apim/registration responded 500 in 2031.9039 ms
+2023-01-19 09:22:39.614 +11:00 [INF] Response:
+StatusCode: 500
+Content-Type: text/plain; charset=utf-8
+Date: Wed, 18 Jan 2023 22:22:39 GMT
+Server: Kestrel
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2023-01-19 09:22:39.615 +11:00 [INF] Request finished HTTP/2 POST https://localhost:5003/apim/registration application/json 133 - 500 - text/plain;+charset=utf-8 2039.5154ms
+2023-01-19 09:25:21.999 +11:00 [WRN] You do not have a valid license key for the Duende software. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please start a conversation with us: https://duendesoftware.com/contact
+2023-01-19 09:25:22.031 +11:00 [INF] RemoteUri is https://localhost:5002
+2023-01-19 09:25:22.075 +11:00 [INF] User profile is available. Using 'C:\Users\sboulter\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-19 09:25:22.106 +11:00 [WRN] BFF session cleanup is enabled, but no IUserSessionStoreCleanup is registered in DI. BFF session cleanup will not run.
+2023-01-19 09:25:22.280 +11:00 [INF] Now listening on: https://localhost:5003
+2023-01-19 09:25:22.282 +11:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-19 09:25:22.283 +11:00 [INF] Hosting environment: Development
+2023-01-19 09:25:22.284 +11:00 [INF] Content root path: C:\bitbucket\ltf-poc\src\bff
+2023-01-19 09:25:22.894 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 09:25:22.894 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 09:25:22.894 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 09:25:22.954 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 61.3725ms
+2023-01-19 09:25:22.954 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:25:22.959 +11:00 [INF] ***** Authorization 
+2023-01-19 09:25:23.044 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 152.7780ms
+2023-01-19 09:25:23.067 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:25:23.149 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:25:23.153 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:25:23.155 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:25:23.159 +11:00 [INF] HTTP GET /bff/user responded 401 in 199.7879 ms
+2023-01-19 09:25:23.164 +11:00 [INF] Response:
+StatusCode: 401
+2023-01-19 09:25:23.167 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 401 0 - 275.6998ms
+2023-01-19 09:25:28.678 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/login - -
+2023-01-19 09:25:28.691 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/login
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:25:28.693 +11:00 [INF] ***** Authorization 
+2023-01-19 09:25:28.700 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:25:28.704 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/login'
+2023-01-19 09:25:29.695 +11:00 [INF] AuthenticationScheme: oidc was challenged.
+2023-01-19 09:25:29.699 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/login'
+2023-01-19 09:25:29.703 +11:00 [INF] HTTP GET /bff/login responded 302 in 1009.3970 ms
+2023-01-19 09:25:29.707 +11:00 [INF] Response:
+StatusCode: 302
+Location: https://localhost:5001/connect/authorize?client_id=js-host&redirect_uri=https%3A%2F%2Flocalhost%3A5003%2Fsignin-oidc&response_type=code&scope=openid%20profile%20api1%20apim%20registration%20offline_access&code_challenge=nZJ45Ge4Ic3EPiVAj06DeGTA1G1MLB-Kv--Ok6jE0UY&code_challenge_method=S256&nonce=638096775296847392.NGUwNDg4OTEtYjM0My00MTc3LTk3NWUtN2RmZTQzZTlkOWU2MzU2YTRhZGEtYjhmMi00YTVjLWJkOTItZjc2MzE3ZjE3NmJi&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2wAnCYzjxns2p4Ly4mVzk_YG_4hrhrqiCfYp-zsw6bm3G5f7QQYbR1-Nmpw5vKx_8q0zSCoruVhQ-FNCdr2083VTRbx3KWWEC_hHICWQ7XVuKLgd1iG5MBzRHhGFC_ScQEelUjxlYyhRFag13s5EsmFgd-rggPzp17hLpMDGU7nYQVZatFtn7RNXk7GBxqmwt7b2c5CbNK1BTudYPVQHJCsYFZWNnxk1EkwhThSXlh0fOoeb045ESZZ_UYdBghzbFe6nNwWvYPCOgvbJCUi7nOrU_nMMB4bSVSzyG34xBBVTGqLxbDRH1fkNamKwsnQ5D8fvZ-8LVS6zjAF-DKy74KhK4IQbrfbV3w_G0KkY5gWnw&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.15.1.0
+Set-Cookie: [Redacted]
+2023-01-19 09:25:29.712 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/login - - - 302 0 - 1034.9079ms
+2023-01-19 09:25:30.045 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/signin-oidc?code=BAD810142F97030C107321434E886C85A6AF554D8ACF4DAF05BA5F1B053852C0-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2wAnCYzjxns2p4Ly4mVzk_YG_4hrhrqiCfYp-zsw6bm3G5f7QQYbR1-Nmpw5vKx_8q0zSCoruVhQ-FNCdr2083VTRbx3KWWEC_hHICWQ7XVuKLgd1iG5MBzRHhGFC_ScQEelUjxlYyhRFag13s5EsmFgd-rggPzp17hLpMDGU7nYQVZatFtn7RNXk7GBxqmwt7b2c5CbNK1BTudYPVQHJCsYFZWNnxk1EkwhThSXlh0fOoeb045ESZZ_UYdBghzbFe6nNwWvYPCOgvbJCUi7nOrU_nMMB4bSVSzyG34xBBVTGqLxbDRH1fkNamKwsnQ5D8fvZ-8LVS6zjAF-DKy74KhK4IQbrfbV3w_G0KkY5gWnw&session_state=DK3tqTIA5TINol-RxS4qupRD9tW7t9g6tfJvc7vTF8U.90A0CDB003FB8B656710DAE2AF1743E9&iss=https%3A%2F%2Flocalhost%3A5001 - -
+2023-01-19 09:25:30.051 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /signin-oidc
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+2023-01-19 09:25:30.052 +11:00 [INF] ***** Authorization 
+2023-01-19 09:25:30.643 +11:00 [INF] AuthenticationScheme: Cookies signed in.
+2023-01-19 09:25:30.646 +11:00 [INF] HTTP GET /signin-oidc responded 302 in 593.3273 ms
+2023-01-19 09:25:30.648 +11:00 [INF] Response:
+StatusCode: 302
+Cache-Control: [Redacted]
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: /
+Pragma: [Redacted]
+Set-Cookie: [Redacted]
+2023-01-19 09:25:30.649 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/signin-oidc?code=BAD810142F97030C107321434E886C85A6AF554D8ACF4DAF05BA5F1B053852C0-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2wAnCYzjxns2p4Ly4mVzk_YG_4hrhrqiCfYp-zsw6bm3G5f7QQYbR1-Nmpw5vKx_8q0zSCoruVhQ-FNCdr2083VTRbx3KWWEC_hHICWQ7XVuKLgd1iG5MBzRHhGFC_ScQEelUjxlYyhRFag13s5EsmFgd-rggPzp17hLpMDGU7nYQVZatFtn7RNXk7GBxqmwt7b2c5CbNK1BTudYPVQHJCsYFZWNnxk1EkwhThSXlh0fOoeb045ESZZ_UYdBghzbFe6nNwWvYPCOgvbJCUi7nOrU_nMMB4bSVSzyG34xBBVTGqLxbDRH1fkNamKwsnQ5D8fvZ-8LVS6zjAF-DKy74KhK4IQbrfbV3w_G0KkY5gWnw&session_state=DK3tqTIA5TINol-RxS4qupRD9tW7t9g6tfJvc7vTF8U.90A0CDB003FB8B656710DAE2AF1743E9&iss=https%3A%2F%2Flocalhost%3A5001 - - - 302 0 - 604.2074ms
+2023-01-19 09:25:30.665 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 09:25:30.665 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 09:25:30.665 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 09:25:30.669 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 4.0811ms
+2023-01-19 09:25:30.671 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:25:30.675 +11:00 [INF] ***** Authorization 
+2023-01-19 09:25:30.693 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:25:30.703 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.5708ms
+2023-01-19 09:25:30.709 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:25:30.710 +11:00 [INF] HTTP GET /bff/user responded 200 in 35.3264 ms
+2023-01-19 09:25:30.712 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json
+Date: Wed, 18 Jan 2023 22:25:30 GMT
+Server: Kestrel
+2023-01-19 09:25:30.713 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 200 - application/json 48.0524ms
+2023-01-19 09:25:35.991 +11:00 [INF] Request starting HTTP/2 POST https://localhost:5003/apim/registration application/json 133
+2023-01-19 09:25:35.993 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /apim/registration
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 133
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:25:35.995 +11:00 [INF] ***** Authorization 
+2023-01-19 09:25:35.998 +11:00 [INF] Executing endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:25:36.051 +11:00 [INF] Proxying to https://localhost:5002/registration HTTP/2 RequestVersionOrLower no-streaming
+2023-01-19 09:25:48.379 +11:00 [INF] Received HTTP/2.0 response 500.
+2023-01-19 09:25:48.392 +11:00 [INF] Executed endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:25:48.395 +11:00 [ERR] HTTP POST /apim/registration responded 500 in 12402.1325 ms
+2023-01-19 09:25:48.398 +11:00 [INF] Response:
+StatusCode: 500
+Content-Type: text/plain; charset=utf-8
+Date: Wed, 18 Jan 2023 22:25:48 GMT
+Server: Kestrel
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2023-01-19 09:25:48.399 +11:00 [INF] Request finished HTTP/2 POST https://localhost:5003/apim/registration application/json 133 - 500 - text/plain;+charset=utf-8 12409.9696ms
+2023-01-19 09:26:22.468 +11:00 [WRN] You do not have a valid license key for the Duende software. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please start a conversation with us: https://duendesoftware.com/contact
+2023-01-19 09:26:22.507 +11:00 [INF] RemoteUri is https://localhost:5002
+2023-01-19 09:26:22.553 +11:00 [INF] User profile is available. Using 'C:\Users\sboulter\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-19 09:26:22.583 +11:00 [WRN] BFF session cleanup is enabled, but no IUserSessionStoreCleanup is registered in DI. BFF session cleanup will not run.
+2023-01-19 09:26:22.755 +11:00 [INF] Now listening on: https://localhost:5003
+2023-01-19 09:26:22.757 +11:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-19 09:26:22.758 +11:00 [INF] Hosting environment: Development
+2023-01-19 09:26:22.759 +11:00 [INF] Content root path: C:\bitbucket\ltf-poc\src\bff
+2023-01-19 09:26:23.555 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 09:26:23.555 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 09:26:23.555 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 09:26:23.612 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 59.6244ms
+2023-01-19 09:26:23.612 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:26:23.619 +11:00 [INF] ***** Authorization 
+2023-01-19 09:26:23.716 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 165.4183ms
+2023-01-19 09:26:23.743 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:26:23.829 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:26:23.833 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:26:23.835 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:26:23.838 +11:00 [INF] HTTP GET /bff/user responded 401 in 219.5990 ms
+2023-01-19 09:26:23.842 +11:00 [INF] Response:
+StatusCode: 401
+2023-01-19 09:26:23.846 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 401 0 - 294.5796ms
+2023-01-19 09:26:25.478 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/login - -
+2023-01-19 09:26:25.488 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/login
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:26:25.491 +11:00 [INF] ***** Authorization 
+2023-01-19 09:26:25.496 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:26:25.498 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/login'
+2023-01-19 09:26:26.111 +11:00 [INF] AuthenticationScheme: oidc was challenged.
+2023-01-19 09:26:26.114 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/login'
+2023-01-19 09:26:26.116 +11:00 [INF] HTTP GET /bff/login responded 302 in 624.7566 ms
+2023-01-19 09:26:26.117 +11:00 [INF] Response:
+StatusCode: 302
+Location: https://localhost:5001/connect/authorize?client_id=js-host&redirect_uri=https%3A%2F%2Flocalhost%3A5003%2Fsignin-oidc&response_type=code&scope=openid%20profile%20api1%20apim%20registration%20offline_access&code_challenge=ie4f2IZ7IPfw6QIJGbZ9XYYuhqIVgoxFsJeSx8bwr-Y&code_challenge_method=S256&nonce=638096775861032002.NDgwOTVhNjctYzkwNC00ZjhhLWFjNWYtOWEzZDMzMDI0ZTdjODdlNjk5NDQtYjAzZC00NTY4LWI3YjItNGVlYmMyN2RmMTll&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2zzcoOtKkomSV4rHMDa0nRSmHrCUgKG1qTkx28Gcrn7fDevWJ40xB_819hJWPN9-rVTshxLTFAIHqFRyHNnxxF9qmQw98qlcE20pLv066zZXvYS9czkhZZOY_75_R2Cop90uA9i1Sy-v1095rGX9B9c_2ViDlrXuj0YOaNqf2t1TNxFKfivK_h9JcTbjsb9OdzGh4k8aYLCEeSHV-AcG4knFeKcXSor_riGpa-pJ4zZMs3k_Z1mTMyN0kbqnb0crCEehT_uMcirGPlo-aalCn5qMPMAzx9HUhYvmNcEuRsQ80thZkBms21t20GPhsOXEzbTa1l_-zfJTHlkrJ7v5Mufl_F1SwnLHhnE1KHEfvCKJg&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.15.1.0
+Set-Cookie: [Redacted]
+2023-01-19 09:26:26.123 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/login - - - 302 0 - 644.6577ms
+2023-01-19 09:26:26.309 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/signin-oidc?code=DE2525A54D94CD0E58326F8B67F7FED92B9E4C774EE5718279DF557F94497C5F-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2zzcoOtKkomSV4rHMDa0nRSmHrCUgKG1qTkx28Gcrn7fDevWJ40xB_819hJWPN9-rVTshxLTFAIHqFRyHNnxxF9qmQw98qlcE20pLv066zZXvYS9czkhZZOY_75_R2Cop90uA9i1Sy-v1095rGX9B9c_2ViDlrXuj0YOaNqf2t1TNxFKfivK_h9JcTbjsb9OdzGh4k8aYLCEeSHV-AcG4knFeKcXSor_riGpa-pJ4zZMs3k_Z1mTMyN0kbqnb0crCEehT_uMcirGPlo-aalCn5qMPMAzx9HUhYvmNcEuRsQ80thZkBms21t20GPhsOXEzbTa1l_-zfJTHlkrJ7v5Mufl_F1SwnLHhnE1KHEfvCKJg&session_state=8FU-JszkAWo1WNh-HO0hpz5i6vPfnJdJ2KjJZhmzPj4.0E0AD587D2B9F8EA46E824B555F800F3&iss=https%3A%2F%2Flocalhost%3A5001 - -
+2023-01-19 09:26:26.312 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /signin-oidc
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+2023-01-19 09:26:26.313 +11:00 [INF] ***** Authorization 
+2023-01-19 09:26:26.783 +11:00 [INF] AuthenticationScheme: Cookies signed in.
+2023-01-19 09:26:26.786 +11:00 [INF] HTTP GET /signin-oidc responded 302 in 472.9398 ms
+2023-01-19 09:26:26.789 +11:00 [INF] Response:
+StatusCode: 302
+Cache-Control: [Redacted]
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: /
+Pragma: [Redacted]
+Set-Cookie: [Redacted]
+2023-01-19 09:26:26.790 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/signin-oidc?code=DE2525A54D94CD0E58326F8B67F7FED92B9E4C774EE5718279DF557F94497C5F-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2zzcoOtKkomSV4rHMDa0nRSmHrCUgKG1qTkx28Gcrn7fDevWJ40xB_819hJWPN9-rVTshxLTFAIHqFRyHNnxxF9qmQw98qlcE20pLv066zZXvYS9czkhZZOY_75_R2Cop90uA9i1Sy-v1095rGX9B9c_2ViDlrXuj0YOaNqf2t1TNxFKfivK_h9JcTbjsb9OdzGh4k8aYLCEeSHV-AcG4knFeKcXSor_riGpa-pJ4zZMs3k_Z1mTMyN0kbqnb0crCEehT_uMcirGPlo-aalCn5qMPMAzx9HUhYvmNcEuRsQ80thZkBms21t20GPhsOXEzbTa1l_-zfJTHlkrJ7v5Mufl_F1SwnLHhnE1KHEfvCKJg&session_state=8FU-JszkAWo1WNh-HO0hpz5i6vPfnJdJ2KjJZhmzPj4.0E0AD587D2B9F8EA46E824B555F800F3&iss=https%3A%2F%2Flocalhost%3A5001 - - - 302 0 - 480.4244ms
+2023-01-19 09:26:26.804 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 09:26:26.805 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 09:26:26.806 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 09:26:26.808 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 2.8363ms
+2023-01-19 09:26:26.809 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:26:26.812 +11:00 [INF] ***** Authorization 
+2023-01-19 09:26:26.828 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:26:26.843 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.4619ms
+2023-01-19 09:26:26.846 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:26:26.848 +11:00 [INF] HTTP GET /bff/user responded 200 in 35.9511 ms
+2023-01-19 09:26:26.849 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json
+Date: Wed, 18 Jan 2023 22:26:26 GMT
+Server: Kestrel
+2023-01-19 09:26:26.850 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 200 - application/json 44.1270ms
+2023-01-19 09:26:30.180 +11:00 [INF] Request starting HTTP/2 POST https://localhost:5003/apim/registration application/json 133
+2023-01-19 09:26:30.183 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /apim/registration
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 133
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:26:30.184 +11:00 [INF] ***** Authorization 
+2023-01-19 09:26:30.186 +11:00 [INF] Executing endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:26:30.238 +11:00 [INF] Proxying to https://localhost:5002/registration HTTP/2 RequestVersionOrLower no-streaming
+2023-01-19 09:26:51.491 +11:00 [INF] Received HTTP/2.0 response 500.
+2023-01-19 09:26:51.520 +11:00 [INF] Executed endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:26:51.523 +11:00 [ERR] HTTP POST /apim/registration responded 500 in 21340.9280 ms
+2023-01-19 09:26:51.524 +11:00 [INF] Response:
+StatusCode: 500
+Content-Type: text/plain; charset=utf-8
+Date: Wed, 18 Jan 2023 22:26:51 GMT
+Server: Kestrel
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2023-01-19 09:26:51.526 +11:00 [INF] Request finished HTTP/2 POST https://localhost:5003/apim/registration application/json 133 - 500 - text/plain;+charset=utf-8 21348.7530ms
+2023-01-19 09:38:57.131 +11:00 [WRN] You do not have a valid license key for the Duende software. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please start a conversation with us: https://duendesoftware.com/contact
+2023-01-19 09:38:57.164 +11:00 [INF] RemoteUri is https://localhost:5002
+2023-01-19 09:38:57.207 +11:00 [INF] User profile is available. Using 'C:\Users\sboulter\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-19 09:38:57.234 +11:00 [WRN] BFF session cleanup is enabled, but no IUserSessionStoreCleanup is registered in DI. BFF session cleanup will not run.
+2023-01-19 09:38:57.409 +11:00 [INF] Now listening on: https://localhost:5003
+2023-01-19 09:38:57.411 +11:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-19 09:38:57.412 +11:00 [INF] Hosting environment: Development
+2023-01-19 09:38:57.413 +11:00 [INF] Content root path: C:\bitbucket\ltf-poc\src\bff
+2023-01-19 09:38:58.488 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 09:38:58.488 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 09:38:58.488 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 09:38:58.595 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:38:58.596 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 108.5663ms
+2023-01-19 09:38:58.602 +11:00 [INF] ***** Authorization 
+2023-01-19 09:38:58.705 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 219.7438ms
+2023-01-19 09:38:58.729 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:38:58.801 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:38:58.807 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:38:58.809 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:38:58.812 +11:00 [INF] HTTP GET /bff/user responded 401 in 210.4238 ms
+2023-01-19 09:38:58.816 +11:00 [INF] Response:
+StatusCode: 401
+2023-01-19 09:38:58.818 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 401 0 - 332.8820ms
+2023-01-19 09:39:01.842 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/login - -
+2023-01-19 09:39:01.851 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/login
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:39:01.853 +11:00 [INF] ***** Authorization 
+2023-01-19 09:39:01.859 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:39:01.861 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/login'
+2023-01-19 09:39:02.515 +11:00 [INF] AuthenticationScheme: oidc was challenged.
+2023-01-19 09:39:02.517 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/login'
+2023-01-19 09:39:02.520 +11:00 [INF] HTTP GET /bff/login responded 302 in 666.9234 ms
+2023-01-19 09:39:02.523 +11:00 [INF] Response:
+StatusCode: 302
+Location: https://localhost:5001/connect/authorize?client_id=js-host&redirect_uri=https%3A%2F%2Flocalhost%3A5003%2Fsignin-oidc&response_type=code&scope=openid%20profile%20api1%20apim%20registration%20offline_access&code_challenge=arPZY4fTsXcAAMzZiBEVCb6eV_EZlLkb59DkMRQGn-A&code_challenge_method=S256&nonce=638096783425089927.NGVmZDZkYmMtMWE4NC00NzM4LWE2ODEtYjhjZDM4ZGU0M2ZiYzJkYzFkY2MtYjFhYi00M2IzLWEzYmEtNDdkYTU5Mzg3M2Ew&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2xvoveIy0JykSGiHtG14VO6F4l8ROJ5KzqoxmCeNp_FXl__L6cvEpUKOFLkMJtZrPV0WJ4jPBTwypSq-dOkxp6xw0zbP89qoNsWajzU5DMA3kDs4B2wzMHbE9r5h7eR3_Vyc5aJ9Ezh4NJirQcRlmdNewVhOTJYKGjqVRcqzJrDMQPv16YLRxmE0PYaQDFR5RyHj_Iyb8iNIjTMramq1JZHUtW_dnts5ZuNmV7yVQDqIdUW2PxMr2rBcbZ6xB2PinV6IEz2aRr_D2FI19u1m8huXI8gLE96K9gn7UbeVVFIh6Vd-08jtWcLZqGh6qoem_SHShCAciWzkEPg4k1pBF25BA0CzQBi0dTJZx1JmD_Nvg&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.15.1.0
+Set-Cookie: [Redacted]
+2023-01-19 09:39:02.527 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/login - - - 302 0 - 685.5746ms
+2023-01-19 09:39:13.668 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/signin-oidc?code=17716DE6EF6A822890FDEE9AA889A7D327A2AC30E7C434A54D88A7C92DD6806D-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2xvoveIy0JykSGiHtG14VO6F4l8ROJ5KzqoxmCeNp_FXl__L6cvEpUKOFLkMJtZrPV0WJ4jPBTwypSq-dOkxp6xw0zbP89qoNsWajzU5DMA3kDs4B2wzMHbE9r5h7eR3_Vyc5aJ9Ezh4NJirQcRlmdNewVhOTJYKGjqVRcqzJrDMQPv16YLRxmE0PYaQDFR5RyHj_Iyb8iNIjTMramq1JZHUtW_dnts5ZuNmV7yVQDqIdUW2PxMr2rBcbZ6xB2PinV6IEz2aRr_D2FI19u1m8huXI8gLE96K9gn7UbeVVFIh6Vd-08jtWcLZqGh6qoem_SHShCAciWzkEPg4k1pBF25BA0CzQBi0dTJZx1JmD_Nvg&session_state=M6NgHTrUC3Jzmzrr3xGPzz4LAdV2vNuOHkSzKjHPXmk.B802A03594C80FB238504B1B59003AF3&iss=https%3A%2F%2Flocalhost%3A5001 - -
+2023-01-19 09:39:13.670 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /signin-oidc
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cache-Control: max-age=0
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+2023-01-19 09:39:13.672 +11:00 [INF] ***** Authorization 
+2023-01-19 09:39:14.306 +11:00 [INF] AuthenticationScheme: Cookies signed in.
+2023-01-19 09:39:14.309 +11:00 [INF] HTTP GET /signin-oidc responded 302 in 636.9619 ms
+2023-01-19 09:39:14.310 +11:00 [INF] Response:
+StatusCode: 302
+Cache-Control: [Redacted]
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: /
+Pragma: [Redacted]
+Set-Cookie: [Redacted]
+2023-01-19 09:39:14.312 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/signin-oidc?code=17716DE6EF6A822890FDEE9AA889A7D327A2AC30E7C434A54D88A7C92DD6806D-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2xvoveIy0JykSGiHtG14VO6F4l8ROJ5KzqoxmCeNp_FXl__L6cvEpUKOFLkMJtZrPV0WJ4jPBTwypSq-dOkxp6xw0zbP89qoNsWajzU5DMA3kDs4B2wzMHbE9r5h7eR3_Vyc5aJ9Ezh4NJirQcRlmdNewVhOTJYKGjqVRcqzJrDMQPv16YLRxmE0PYaQDFR5RyHj_Iyb8iNIjTMramq1JZHUtW_dnts5ZuNmV7yVQDqIdUW2PxMr2rBcbZ6xB2PinV6IEz2aRr_D2FI19u1m8huXI8gLE96K9gn7UbeVVFIh6Vd-08jtWcLZqGh6qoem_SHShCAciWzkEPg4k1pBF25BA0CzQBi0dTJZx1JmD_Nvg&session_state=M6NgHTrUC3Jzmzrr3xGPzz4LAdV2vNuOHkSzKjHPXmk.B802A03594C80FB238504B1B59003AF3&iss=https%3A%2F%2Flocalhost%3A5001 - - - 302 0 - 644.1509ms
+2023-01-19 09:39:14.316 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/ - -
+2023-01-19 09:39:14.318 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cache-Control: max-age=0
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+2023-01-19 09:39:14.319 +11:00 [INF] ***** Authorization 
+2023-01-19 09:39:14.373 +11:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'C:\bitbucket\ltf-poc\src\bff\wwwroot\index.html'
+2023-01-19 09:39:14.377 +11:00 [INF] HTTP GET /index.html responded 200 in 57.6388 ms
+2023-01-19 09:39:14.379 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 18 Jan 2023 03:32:36 GMT
+Content-Length: 697
+2023-01-19 09:39:14.399 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/ - - - 200 - text/html 83.1977ms
+2023-01-19 09:39:14.414 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 09:39:14.414 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 09:39:14.418 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 3.7250ms
+2023-01-19 09:39:14.418 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 09:39:14.424 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:39:14.426 +11:00 [INF] ***** Authorization 
+2023-01-19 09:39:14.444 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:39:14.461 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 47.1165ms
+2023-01-19 09:39:14.467 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:39:14.469 +11:00 [INF] HTTP GET /bff/user responded 200 in 42.9678 ms
+2023-01-19 09:39:14.472 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json
+Date: Wed, 18 Jan 2023 22:39:14 GMT
+Server: Kestrel
+2023-01-19 09:39:14.475 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 200 - application/json 56.6541ms
+2023-01-19 09:39:16.606 +11:00 [INF] Request starting HTTP/2 POST https://localhost:5003/apim/registration application/json 133
+2023-01-19 09:39:16.608 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /apim/registration
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 133
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:39:16.611 +11:00 [INF] ***** Authorization 
+2023-01-19 09:39:16.615 +11:00 [INF] Executing endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:39:16.687 +11:00 [INF] Proxying to https://localhost:5002/registration HTTP/2 RequestVersionOrLower no-streaming
+2023-01-19 09:39:19.015 +11:00 [INF] Received HTTP/2.0 response 500.
+2023-01-19 09:39:19.027 +11:00 [INF] Executed endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:39:19.029 +11:00 [ERR] HTTP POST /apim/registration responded 500 in 2417.6790 ms
+2023-01-19 09:39:19.031 +11:00 [INF] Response:
+StatusCode: 500
+Content-Type: text/plain; charset=utf-8
+Date: Wed, 18 Jan 2023 22:39:18 GMT
+Server: Kestrel
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2023-01-19 09:39:19.034 +11:00 [INF] Request finished HTTP/2 POST https://localhost:5003/apim/registration application/json 133 - 500 - text/plain;+charset=utf-8 2428.0792ms
+2023-01-19 09:41:28.069 +11:00 [WRN] You do not have a valid license key for the Duende software. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please start a conversation with us: https://duendesoftware.com/contact
+2023-01-19 09:41:28.104 +11:00 [INF] RemoteUri is https://localhost:5002
+2023-01-19 09:41:28.152 +11:00 [INF] User profile is available. Using 'C:\Users\sboulter\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-19 09:41:28.180 +11:00 [WRN] BFF session cleanup is enabled, but no IUserSessionStoreCleanup is registered in DI. BFF session cleanup will not run.
+2023-01-19 09:41:28.349 +11:00 [INF] Now listening on: https://localhost:5003
+2023-01-19 09:41:28.350 +11:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-19 09:41:28.352 +11:00 [INF] Hosting environment: Development
+2023-01-19 09:41:28.352 +11:00 [INF] Content root path: C:\bitbucket\ltf-poc\src\bff
+2023-01-19 09:41:29.068 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 09:41:29.068 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 09:41:29.068 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 09:41:29.154 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:41:29.155 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 88.1224ms
+2023-01-19 09:41:29.160 +11:00 [INF] ***** Authorization 
+2023-01-19 09:41:29.262 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 197.2245ms
+2023-01-19 09:41:29.284 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:41:29.366 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:41:29.371 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:41:29.373 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:41:29.376 +11:00 [INF] HTTP GET /bff/user responded 401 in 215.9776 ms
+2023-01-19 09:41:29.383 +11:00 [INF] Response:
+StatusCode: 401
+2023-01-19 09:41:29.386 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 401 0 - 320.9474ms
+2023-01-19 09:41:30.466 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/login - -
+2023-01-19 09:41:30.478 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/login
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:41:30.481 +11:00 [INF] ***** Authorization 
+2023-01-19 09:41:30.486 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 09:41:30.489 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/login'
+2023-01-19 09:41:31.090 +11:00 [INF] AuthenticationScheme: oidc was challenged.
+2023-01-19 09:41:31.092 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/login'
+2023-01-19 09:41:31.095 +11:00 [INF] HTTP GET /bff/login responded 302 in 614.6617 ms
+2023-01-19 09:41:31.097 +11:00 [INF] Response:
+StatusCode: 302
+Location: https://localhost:5001/connect/authorize?client_id=js-host&redirect_uri=https%3A%2F%2Flocalhost%3A5003%2Fsignin-oidc&response_type=code&scope=openid%20profile%20api1%20apim%20registration%20offline_access&code_challenge=pxK-UjCvKF-VvqMkj0Y8PupkY0fFTn0Yx32AA-IfcGs&code_challenge_method=S256&nonce=638096784910827003.NDBlYjM3NDAtZTA3MS00NDVlLTkyNWItNmQwNGEyN2IxNTJkMDIxZWY1NzctNjVhZC00NjI1LTg3N2MtOTdmMzgzZGM2N2E3&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2xhsBOQ86ptEORyJNEp6KPNl0DuDzs_U425vdPkxF16M7727sKkcuG-NT4JuFmlMAnQrNdINsQc5kvCq2PJyDgWrGbD-_JfU_hp1ECQ-S45gYk04arLYPunLU7ghlABQoLnSs_s_Umjm0Z5qgZcxR0qQrq32TeJLMYaHQZQJALuX1uQ40IOZchFBXYg3Zm18S5qLB31e7yTEXE0_CmDMMcsnqNaLsIZ_1Kuk1Vy8-dLwsC90WWuudQ14FAqcxKzhrIpEtat_KgK9G_QlTbj7ibUNkIyCP4YwyN0e-cHyitBYhw52hgkgZPKOyT1dv0j6wZQAZSMB4GH-IDu7cayxtC15wyvHlbGps4wi2UTrzkmoA&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.15.1.0
+Set-Cookie: [Redacted]
+2023-01-19 09:41:31.101 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/login - - - 302 0 - 634.4086ms
+2023-01-19 09:41:31.297 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/signin-oidc?code=25C9C591B8F2F1052824865FD13A9E450A657201EE982D81848BF10058C28A03-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2xhsBOQ86ptEORyJNEp6KPNl0DuDzs_U425vdPkxF16M7727sKkcuG-NT4JuFmlMAnQrNdINsQc5kvCq2PJyDgWrGbD-_JfU_hp1ECQ-S45gYk04arLYPunLU7ghlABQoLnSs_s_Umjm0Z5qgZcxR0qQrq32TeJLMYaHQZQJALuX1uQ40IOZchFBXYg3Zm18S5qLB31e7yTEXE0_CmDMMcsnqNaLsIZ_1Kuk1Vy8-dLwsC90WWuudQ14FAqcxKzhrIpEtat_KgK9G_QlTbj7ibUNkIyCP4YwyN0e-cHyitBYhw52hgkgZPKOyT1dv0j6wZQAZSMB4GH-IDu7cayxtC15wyvHlbGps4wi2UTrzkmoA&session_state=Ww0ROG2t3oPp0JGDHvdaViz-g9X3kU_VMEPwXQmrna4.93318BB0AA8CD901F498D2A2D5006E86&iss=https%3A%2F%2Flocalhost%3A5001 - -
+2023-01-19 09:41:31.299 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /signin-oidc
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+2023-01-19 09:41:31.300 +11:00 [INF] ***** Authorization 
+2023-01-19 09:41:31.766 +11:00 [INF] AuthenticationScheme: Cookies signed in.
+2023-01-19 09:41:31.769 +11:00 [INF] HTTP GET /signin-oidc responded 302 in 469.0640 ms
+2023-01-19 09:41:31.771 +11:00 [INF] Response:
+StatusCode: 302
+Cache-Control: [Redacted]
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: /
+Pragma: [Redacted]
+Set-Cookie: [Redacted]
+2023-01-19 09:41:31.772 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/signin-oidc?code=25C9C591B8F2F1052824865FD13A9E450A657201EE982D81848BF10058C28A03-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2xhsBOQ86ptEORyJNEp6KPNl0DuDzs_U425vdPkxF16M7727sKkcuG-NT4JuFmlMAnQrNdINsQc5kvCq2PJyDgWrGbD-_JfU_hp1ECQ-S45gYk04arLYPunLU7ghlABQoLnSs_s_Umjm0Z5qgZcxR0qQrq32TeJLMYaHQZQJALuX1uQ40IOZchFBXYg3Zm18S5qLB31e7yTEXE0_CmDMMcsnqNaLsIZ_1Kuk1Vy8-dLwsC90WWuudQ14FAqcxKzhrIpEtat_KgK9G_QlTbj7ibUNkIyCP4YwyN0e-cHyitBYhw52hgkgZPKOyT1dv0j6wZQAZSMB4GH-IDu7cayxtC15wyvHlbGps4wi2UTrzkmoA&session_state=Ww0ROG2t3oPp0JGDHvdaViz-g9X3kU_VMEPwXQmrna4.93318BB0AA8CD901F498D2A2D5006E86&iss=https%3A%2F%2Flocalhost%3A5001 - - - 302 0 - 474.9570ms
+2023-01-19 09:41:31.786 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 09:41:31.786 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 09:41:31.787 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 09:41:31.789 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 2.0588ms
+2023-01-19 09:41:31.798 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:41:31.800 +11:00 [INF] ***** Authorization 
+2023-01-19 09:41:31.810 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:41:31.833 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 46.1061ms
+2023-01-19 09:41:31.834 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:41:31.835 +11:00 [INF] HTTP GET /bff/user responded 200 in 35.0815 ms
+2023-01-19 09:41:31.837 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json
+Date: Wed, 18 Jan 2023 22:41:31 GMT
+Server: Kestrel
+2023-01-19 09:41:31.838 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 200 - application/json 51.3854ms
+2023-01-19 09:41:33.722 +11:00 [INF] Request starting HTTP/2 POST https://localhost:5003/apim/registration application/json 133
+2023-01-19 09:41:33.724 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /apim/registration
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 133
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:41:33.725 +11:00 [INF] ***** Authorization 
+2023-01-19 09:41:33.727 +11:00 [INF] Executing endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:41:33.768 +11:00 [INF] Proxying to https://localhost:5002/registration HTTP/2 RequestVersionOrLower no-streaming
+2023-01-19 09:41:35.007 +11:00 [INF] Received HTTP/2.0 response 202.
+2023-01-19 09:41:35.014 +11:00 [INF] Executed endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:41:35.015 +11:00 [INF] HTTP POST /apim/registration responded 202 in 1290.2806 ms
+2023-01-19 09:41:35.017 +11:00 [INF] Response:
+StatusCode: 202
+Content-Type: application/json; charset=utf-8
+Date: Wed, 18 Jan 2023 22:41:34 GMT
+Server: Kestrel
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Location: /registration/999
+Vary: [Redacted]
+2023-01-19 09:41:35.018 +11:00 [INF] Request finished HTTP/2 POST https://localhost:5003/apim/registration application/json 133 - 202 - application/json;+charset=utf-8 1295.4953ms
+2023-01-19 09:42:30.126 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/login - -
+2023-01-19 09:42:30.131 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/login
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:42:30.133 +11:00 [INF] ***** Authorization 
+2023-01-19 09:42:30.135 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/login'
+2023-01-19 09:42:30.137 +11:00 [INF] AuthenticationScheme: oidc was challenged.
+2023-01-19 09:42:30.138 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/login'
+2023-01-19 09:42:30.139 +11:00 [INF] HTTP GET /bff/login responded 302 in 5.8154 ms
+2023-01-19 09:42:30.140 +11:00 [INF] Response:
+StatusCode: 302
+Location: https://localhost:5001/connect/authorize?client_id=js-host&redirect_uri=https%3A%2F%2Flocalhost%3A5003%2Fsignin-oidc&response_type=code&scope=openid%20profile%20api1%20apim%20registration%20offline_access&code_challenge=CKy-sxIUKhOTuRpoYXryredEaueJJwH5fHnKZRTKKdA&code_challenge_method=S256&nonce=638096785501370668.MGFlNjBmMTYtMTc0Mi00MDA0LWJlNDAtMzQzYjJkYzVjODVlNWU5YjdkZTgtNzllYS00MmQ2LWE5NGQtNDRiMGNhOGY0OWUz&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2yMJaiX6hPWrADZS_f7mMNOgRL0Lp9CwMhrjxz-0BB2PEbbady8bS6LgpTQ9fdTl_io7wGthqEKru93jCSs26o70g3Q0cuwKpHN7V21vnN1J7GX9z_zwOKhNA5idyqgZ5fnbFxHoCMJfUJhJwnqRnzoL-l4bwAdFPKlwuOXv8tdF4I35D2CFpFP2A_MZH_He5zWRreV6u4Qn0OQ2NrULL9nXwsHN3QuVWqKVWY2jFJk2fB6_Gxam3EL0ShOHLz3_MRMUnJIAVYqzlEK_WWF_zav-EuAH7UGrGmNdNsSiT45AsmoXoe8Fo7wJ2wPrF5uloXPMy_KzDWiIXsZFAIDLWtN_Cc8dtbgKRZnA03wO7f9Sw&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.15.1.0
+Set-Cookie: [Redacted]
+2023-01-19 09:42:30.141 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/login - - - 302 0 - 21.7506ms
+2023-01-19 09:42:30.193 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/signin-oidc?code=30B60D2A64F3C846AE7F63FFAE5A920706EF24C924BAE8B16E7E1BECB0141592-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2yMJaiX6hPWrADZS_f7mMNOgRL0Lp9CwMhrjxz-0BB2PEbbady8bS6LgpTQ9fdTl_io7wGthqEKru93jCSs26o70g3Q0cuwKpHN7V21vnN1J7GX9z_zwOKhNA5idyqgZ5fnbFxHoCMJfUJhJwnqRnzoL-l4bwAdFPKlwuOXv8tdF4I35D2CFpFP2A_MZH_He5zWRreV6u4Qn0OQ2NrULL9nXwsHN3QuVWqKVWY2jFJk2fB6_Gxam3EL0ShOHLz3_MRMUnJIAVYqzlEK_WWF_zav-EuAH7UGrGmNdNsSiT45AsmoXoe8Fo7wJ2wPrF5uloXPMy_KzDWiIXsZFAIDLWtN_Cc8dtbgKRZnA03wO7f9Sw&session_state=QzrKPsLVQ3Wd1NBTQz_Td7vdnB3Nk0o2VM0dM2zknko.F623DFC5EFB8B83A644A1BA5DC7DC2D6&iss=https%3A%2F%2Flocalhost%3A5001 - -
+2023-01-19 09:42:30.195 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /signin-oidc
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+2023-01-19 09:42:30.196 +11:00 [INF] ***** Authorization 
+2023-01-19 09:42:30.293 +11:00 [INF] AuthenticationScheme: Cookies signed in.
+2023-01-19 09:42:30.294 +11:00 [INF] HTTP GET /signin-oidc responded 302 in 97.7062 ms
+2023-01-19 09:42:30.295 +11:00 [INF] Response:
+StatusCode: 302
+Cache-Control: [Redacted]
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: /
+Pragma: [Redacted]
+Set-Cookie: [Redacted]
+2023-01-19 09:42:30.296 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/signin-oidc?code=30B60D2A64F3C846AE7F63FFAE5A920706EF24C924BAE8B16E7E1BECB0141592-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2yMJaiX6hPWrADZS_f7mMNOgRL0Lp9CwMhrjxz-0BB2PEbbady8bS6LgpTQ9fdTl_io7wGthqEKru93jCSs26o70g3Q0cuwKpHN7V21vnN1J7GX9z_zwOKhNA5idyqgZ5fnbFxHoCMJfUJhJwnqRnzoL-l4bwAdFPKlwuOXv8tdF4I35D2CFpFP2A_MZH_He5zWRreV6u4Qn0OQ2NrULL9nXwsHN3QuVWqKVWY2jFJk2fB6_Gxam3EL0ShOHLz3_MRMUnJIAVYqzlEK_WWF_zav-EuAH7UGrGmNdNsSiT45AsmoXoe8Fo7wJ2wPrF5uloXPMy_KzDWiIXsZFAIDLWtN_Cc8dtbgKRZnA03wO7f9Sw&session_state=QzrKPsLVQ3Wd1NBTQz_Td7vdnB3Nk0o2VM0dM2zknko.F623DFC5EFB8B83A644A1BA5DC7DC2D6&iss=https%3A%2F%2Flocalhost%3A5001 - - - 302 0 - 103.1159ms
+2023-01-19 09:42:30.314 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 09:42:30.314 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 09:42:30.319 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 5.3120ms
+2023-01-19 09:42:30.333 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 09:42:30.354 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:42:30.357 +11:00 [INF] ***** Authorization 
+2023-01-19 09:42:30.362 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:42:30.371 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 09:42:30.373 +11:00 [INF] HTTP GET /bff/user responded 200 in 16.1945 ms
+2023-01-19 09:42:30.377 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json
+Date: Wed, 18 Jan 2023 22:42:29 GMT
+Server: Kestrel
+2023-01-19 09:42:30.380 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 200 - application/json 46.7465ms
+2023-01-19 09:42:30.384 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 69.9142ms
+2023-01-19 09:42:34.145 +11:00 [INF] Request starting HTTP/2 POST https://localhost:5003/apim/registration application/json 133
+2023-01-19 09:42:34.149 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /apim/registration
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 133
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 09:42:34.151 +11:00 [INF] ***** Authorization 
+2023-01-19 09:42:34.152 +11:00 [INF] Executing endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:42:34.156 +11:00 [INF] Proxying to https://localhost:5002/registration HTTP/2 RequestVersionOrLower no-streaming
+2023-01-19 09:42:35.905 +11:00 [INF] Received HTTP/2.0 response 202.
+2023-01-19 09:42:35.913 +11:00 [INF] Executed endpoint '/apim/registration/{**catch-all}'
+2023-01-19 09:42:35.915 +11:00 [INF] HTTP POST /apim/registration responded 202 in 1764.4144 ms
+2023-01-19 09:42:35.918 +11:00 [INF] Response:
+StatusCode: 202
+Content-Type: application/json; charset=utf-8
+Date: Wed, 18 Jan 2023 22:42:35 GMT
+Server: Kestrel
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Location: /registration/999
+Vary: [Redacted]
+2023-01-19 09:42:35.921 +11:00 [INF] Request finished HTTP/2 POST https://localhost:5003/apim/registration application/json 133 - 202 - application/json;+charset=utf-8 1776.3660ms
+2023-01-19 14:41:09.296 +11:00 [WRN] You do not have a valid license key for the Duende software. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please start a conversation with us: https://duendesoftware.com/contact
+2023-01-19 14:41:09.331 +11:00 [INF] RemoteUri is https://localhost:5002
+2023-01-19 14:41:09.382 +11:00 [INF] User profile is available. Using 'C:\Users\sboulter\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-19 14:41:09.409 +11:00 [WRN] BFF session cleanup is enabled, but no IUserSessionStoreCleanup is registered in DI. BFF session cleanup will not run.
+2023-01-19 14:41:09.670 +11:00 [INF] Now listening on: https://localhost:5003
+2023-01-19 14:41:09.672 +11:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-19 14:41:09.673 +11:00 [INF] Hosting environment: Development
+2023-01-19 14:41:09.674 +11:00 [INF] Content root path: C:\bitbucket\ltf-poc\src\bff
+2023-01-19 14:41:10.656 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/ - -
+2023-01-19 14:41:10.726 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 14:41:10.731 +11:00 [INF] ***** Authorization 
+2023-01-19 14:41:10.864 +11:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'C:\bitbucket\ltf-poc\src\bff\wwwroot\index.html'
+2023-01-19 14:41:10.868 +11:00 [INF] HTTP GET /index.html responded 200 in 137.2003 ms
+2023-01-19 14:41:10.872 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 18 Jan 2023 03:32:36 GMT
+Content-Length: 697
+2023-01-19 14:41:10.888 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/ - - - 200 - text/html 235.1239ms
+2023-01-19 14:41:10.919 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 14:41:10.919 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/app.js - -
+2023-01-19 14:41:10.919 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 14:41:10.924 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /app.js
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+If-Modified-Since: [Redacted]
+If-None-Match: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 14:41:10.927 +11:00 [INF] ***** Authorization 
+2023-01-19 14:41:10.961 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 50.2399ms
+2023-01-19 14:41:10.980 +11:00 [INF] The file /app.js was not modified
+2023-01-19 14:41:10.985 +11:00 [INF] HTTP GET /app.js responded 304 in 57.7906 ms
+2023-01-19 14:41:10.990 +11:00 [INF] Response:
+StatusCode: 304
+Content-Type: text/javascript
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 18 Jan 2023 03:34:42 GMT
+2023-01-19 14:41:10.993 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/app.js - - - 304 - text/javascript 74.1792ms
+2023-01-19 14:41:10.994 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 75.1975ms
+2023-01-19 14:41:11.001 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 14:41:11.004 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 14:41:11.006 +11:00 [INF] ***** Authorization 
+2023-01-19 14:41:11.195 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 14:41:11.264 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 14:41:11.268 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 14:41:11.269 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 14:41:11.270 +11:00 [INF] HTTP GET /bff/user responded 401 in 264.2089 ms
+2023-01-19 14:41:11.271 +11:00 [INF] Response:
+StatusCode: 401
+2023-01-19 14:41:11.272 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 401 0 - 271.3308ms
+2023-01-19 14:41:29.312 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/login - -
+2023-01-19 14:41:29.317 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/login
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 14:41:29.320 +11:00 [INF] ***** Authorization 
+2023-01-19 14:41:29.328 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 14:41:29.333 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/login'
+2023-01-19 14:41:30.656 +11:00 [INF] AuthenticationScheme: oidc was challenged.
+2023-01-19 14:41:30.660 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/login'
+2023-01-19 14:41:30.661 +11:00 [INF] HTTP GET /bff/login responded 302 in 1340.6374 ms
+2023-01-19 14:41:30.663 +11:00 [INF] Response:
+StatusCode: 302
+Location: https://localhost:5001/connect/authorize?client_id=js-host&redirect_uri=https%3A%2F%2Flocalhost%3A5003%2Fsignin-oidc&response_type=code&scope=openid%20profile%20api1%20apim%20registration%20offline_access&code_challenge=TXVQdPNKXoB6z_bvbWfKPrgGJ0rz6LMNiMuPhYIMHaE&code_challenge_method=S256&nonce=638096964906484051.NDMzNjg5OTQtYjQ4Yy00ZjAyLTliYjItMTZiMjgzMjgyNTNmNGE4MzAxNGMtYmExMi00ZjNiLTgzMjMtYTFlNWJlMGVjYjg2&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2yX4ruCMyXZpQzPahk2OjMN6Vn0tyTNiePUWGbR-p2GHCpdyOC2xVtU_8HZBXSblQ7pg240N6tYeRUcERDkih5umZtKLRsg2KgIvGxLZP5NVF8ewr3Wlb_FWQkXxwHsy68IVeDI6fQdN22NTJETc9eq_u9r3Kv1MMDTlOGWht6YKZr76AdSB4d6Go7XbUNUVpl1Uiel2NtN5DpianEh4NR2SFVG8grTk8lAYsnF6qNHF_f46pSuX-KB2J5DBA_NRsjPrZyYcUEOmteuW2tH6JBlaZa_10Eusa5qhL3VzKS99JtMMLx78wu60MXO9wJLYPuBLQz3iOS0NpL4EC7cDdWrTUI7AmtnYzDbmbdSiy-ATw&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.15.1.0
+Set-Cookie: [Redacted]
+2023-01-19 14:41:30.667 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/login - - - 302 0 - 1355.0724ms
+2023-01-19 15:00:47.466 +11:00 [WRN] You do not have a valid license key for the Duende software. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please start a conversation with us: https://duendesoftware.com/contact
+2023-01-19 15:00:47.510 +11:00 [INF] RemoteUri is https://localhost:5002
+2023-01-19 15:00:47.561 +11:00 [INF] User profile is available. Using 'C:\Users\sboulter\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-19 15:00:47.605 +11:00 [WRN] BFF session cleanup is enabled, but no IUserSessionStoreCleanup is registered in DI. BFF session cleanup will not run.
+2023-01-19 15:00:47.803 +11:00 [INF] Now listening on: https://localhost:5003
+2023-01-19 15:00:47.805 +11:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-19 15:00:47.806 +11:00 [INF] Hosting environment: Development
+2023-01-19 15:00:47.807 +11:00 [INF] Content root path: C:\bitbucket\ltf-poc\src\bff
+2023-01-19 15:00:48.752 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 15:00:48.752 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 15:00:48.752 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 15:00:48.830 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 79.3420ms
+2023-01-19 15:00:48.830 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 15:00:48.836 +11:00 [INF] ***** Authorization 
+2023-01-19 15:00:48.926 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 177.3703ms
+2023-01-19 15:00:48.950 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 15:00:49.023 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 15:00:49.028 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 15:00:49.031 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 15:00:49.035 +11:00 [INF] HTTP GET /bff/user responded 401 in 198.4081 ms
+2023-01-19 15:00:49.041 +11:00 [INF] Response:
+StatusCode: 401
+2023-01-19 15:00:49.044 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 401 0 - 294.8008ms
+2023-01-19 16:34:24.092 +11:00 [WRN] You do not have a valid license key for the Duende software. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please start a conversation with us: https://duendesoftware.com/contact
+2023-01-19 16:34:24.125 +11:00 [INF] RemoteUri is https://localhost:5002
+2023-01-19 16:34:24.169 +11:00 [INF] User profile is available. Using 'C:\Users\sboulter\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-19 16:34:24.195 +11:00 [WRN] BFF session cleanup is enabled, but no IUserSessionStoreCleanup is registered in DI. BFF session cleanup will not run.
+2023-01-19 16:34:24.585 +11:00 [INF] Now listening on: https://localhost:5003
+2023-01-19 16:34:24.588 +11:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-19 16:34:24.590 +11:00 [INF] Hosting environment: Development
+2023-01-19 16:34:24.590 +11:00 [INF] Content root path: C:\bitbucket\ltf-poc\src\bff
+2023-01-19 16:34:25.865 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 16:34:25.865 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 16:34:25.865 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 16:34:25.937 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 73.8197ms
+2023-01-19 16:34:25.938 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 16:34:25.944 +11:00 [INF] ***** Authorization 
+2023-01-19 16:34:26.040 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 178.6697ms
+2023-01-19 16:34:26.156 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 16:34:26.223 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 16:34:26.227 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 16:34:26.229 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 16:34:26.244 +11:00 [INF] HTTP GET /bff/user responded 401 in 299.9884 ms
+2023-01-19 16:34:26.250 +11:00 [INF] Response:
+StatusCode: 401
+2023-01-19 16:34:26.253 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 401 0 - 391.0873ms
+2023-01-19 16:34:52.395 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/login - -
+2023-01-19 16:34:52.407 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/login
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 16:34:52.409 +11:00 [INF] ***** Authorization 
+2023-01-19 16:34:52.415 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 16:34:52.420 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/login'
+2023-01-19 16:34:53.697 +11:00 [INF] AuthenticationScheme: oidc was challenged.
+2023-01-19 16:34:53.705 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/login'
+2023-01-19 16:34:53.709 +11:00 [INF] HTTP GET /bff/login responded 302 in 1299.7098 ms
+2023-01-19 16:34:53.712 +11:00 [INF] Response:
+StatusCode: 302
+Location: https://localhost:5001/connect/authorize?client_id=js-host&redirect_uri=https%3A%2F%2Flocalhost%3A5003%2Fsignin-oidc&response_type=code&scope=openid%20profile%20api1%20apim%20registration%20offline_access&code_challenge=FmVzur7pC7KIBbh5vuD_CJQEQ9RXjWayi2YSuQ12VHY&code_challenge_method=S256&nonce=638097032936843840.YTJhNzg5MDYtNDc1YS00NGYzLTkwNjgtMWU2NmFmYzk5NGJhYzc3YzQ1NGMtZThjNy00ZmM0LWI0NGEtNzcyMDdmOWY1YWU0&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2wc6orTOesOIzhNbbpGCqwJoyx773_FqTlTZEVh3aKE3vjLtGQRD2IzH_xs_6BcAcmyM5LGymYOwM7YphEPuycwvqI-6rOFrhxOnSqJfW6czld6bZ-F2r9LYkGlaQqqbSkBDqiNgNkVvExJAdjKEWOT60KyPTnHJSRqAEht4PFpKeLolPW6w6LzD53EIhnhd7z1lXvsDyP_Up5efrDEwVYe86Kqgpb9Hj8WQN2N5zn5wXxLaJ8t-4kBIqaINgqz5L7dBT5fcdkRZ4ZZN_qKVnTHhw3330JGamKdJ2SlThPxwPzRj9UCR3tOSuK-zZjRTRZ3VjJjReRYJN0uXehpJH5YO_1Y_oWlaaPoC4x8CotUXQ&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.15.1.0
+Set-Cookie: [Redacted]
+2023-01-19 16:34:53.719 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/login - - - 302 0 - 1323.8252ms
+2023-01-19 16:34:59.241 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/signin-oidc?code=81B46FA9A5DA60673BC90AE537087A0565A32692DAC55BBC3F553BF1067EAB7C-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2wc6orTOesOIzhNbbpGCqwJoyx773_FqTlTZEVh3aKE3vjLtGQRD2IzH_xs_6BcAcmyM5LGymYOwM7YphEPuycwvqI-6rOFrhxOnSqJfW6czld6bZ-F2r9LYkGlaQqqbSkBDqiNgNkVvExJAdjKEWOT60KyPTnHJSRqAEht4PFpKeLolPW6w6LzD53EIhnhd7z1lXvsDyP_Up5efrDEwVYe86Kqgpb9Hj8WQN2N5zn5wXxLaJ8t-4kBIqaINgqz5L7dBT5fcdkRZ4ZZN_qKVnTHhw3330JGamKdJ2SlThPxwPzRj9UCR3tOSuK-zZjRTRZ3VjJjReRYJN0uXehpJH5YO_1Y_oWlaaPoC4x8CotUXQ&session_state=ZKODuoAw_ZbyL_uudnO8WMxCWbrqaHjRfmgXVVrF-QU.9AD700D7CDFBAD780288146A80B68944&iss=https%3A%2F%2Flocalhost%3A5001 - -
+2023-01-19 16:34:59.244 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /signin-oidc
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cache-Control: max-age=0
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+2023-01-19 16:34:59.246 +11:00 [INF] ***** Authorization 
+2023-01-19 16:34:59.969 +11:00 [INF] AuthenticationScheme: Cookies signed in.
+2023-01-19 16:34:59.971 +11:00 [INF] HTTP GET /signin-oidc responded 302 in 725.1663 ms
+2023-01-19 16:34:59.973 +11:00 [INF] Response:
+StatusCode: 302
+Cache-Control: [Redacted]
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: /
+Pragma: [Redacted]
+Set-Cookie: [Redacted]
+2023-01-19 16:34:59.975 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/signin-oidc?code=81B46FA9A5DA60673BC90AE537087A0565A32692DAC55BBC3F553BF1067EAB7C-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2wc6orTOesOIzhNbbpGCqwJoyx773_FqTlTZEVh3aKE3vjLtGQRD2IzH_xs_6BcAcmyM5LGymYOwM7YphEPuycwvqI-6rOFrhxOnSqJfW6czld6bZ-F2r9LYkGlaQqqbSkBDqiNgNkVvExJAdjKEWOT60KyPTnHJSRqAEht4PFpKeLolPW6w6LzD53EIhnhd7z1lXvsDyP_Up5efrDEwVYe86Kqgpb9Hj8WQN2N5zn5wXxLaJ8t-4kBIqaINgqz5L7dBT5fcdkRZ4ZZN_qKVnTHhw3330JGamKdJ2SlThPxwPzRj9UCR3tOSuK-zZjRTRZ3VjJjReRYJN0uXehpJH5YO_1Y_oWlaaPoC4x8CotUXQ&session_state=ZKODuoAw_ZbyL_uudnO8WMxCWbrqaHjRfmgXVVrF-QU.9AD700D7CDFBAD780288146A80B68944&iss=https%3A%2F%2Flocalhost%3A5001 - - - 302 0 - 734.0596ms
+2023-01-19 16:34:59.980 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/ - -
+2023-01-19 16:34:59.982 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cache-Control: max-age=0
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+2023-01-19 16:34:59.985 +11:00 [INF] ***** Authorization 
+2023-01-19 16:35:00.056 +11:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'C:\bitbucket\ltf-poc\src\bff\wwwroot\index.html'
+2023-01-19 16:35:00.060 +11:00 [INF] HTTP GET /index.html responded 200 in 74.5087 ms
+2023-01-19 16:35:00.061 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 18 Jan 2023 03:32:36 GMT
+Content-Length: 697
+2023-01-19 16:35:00.071 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/ - - - 200 - text/html 91.2787ms
+2023-01-19 16:35:00.088 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 16:35:00.088 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 16:35:00.091 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 2.7321ms
+2023-01-19 16:35:00.103 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 16:35:00.110 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 16:35:00.113 +11:00 [INF] ***** Authorization 
+2023-01-19 16:35:00.137 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 16:35:00.137 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 49.2596ms
+2023-01-19 16:35:00.149 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 16:35:00.151 +11:00 [INF] HTTP GET /bff/user responded 200 in 38.1534 ms
+2023-01-19 16:35:00.153 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json
+Date: Thu, 19 Jan 2023 05:34:59 GMT
+Server: Kestrel
+2023-01-19 16:35:00.155 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 200 - application/json 51.2452ms
+2023-01-19 16:35:04.297 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/apim/identity - -
+2023-01-19 16:35:04.299 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /apim/identity
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 16:35:04.301 +11:00 [INF] ***** Authorization 
+2023-01-19 16:35:04.304 +11:00 [INF] Executing endpoint '/apim/identity/{**catch-all}'
+2023-01-19 16:35:04.373 +11:00 [INF] Proxying to https://localhost:5002/api/identity HTTP/2 RequestVersionOrLower no-streaming
+2023-01-19 16:35:15.661 +11:00 [INF] Received HTTP/2.0 response 404.
+2023-01-19 16:35:15.676 +11:00 [INF] Executed endpoint '/apim/identity/{**catch-all}'
+2023-01-19 16:35:15.678 +11:00 [INF] HTTP GET /apim/identity responded 404 in 11376.3800 ms
+2023-01-19 16:35:15.682 +11:00 [INF] Response:
+StatusCode: 404
+Date: Thu, 19 Jan 2023 05:35:15 GMT
+Server: Kestrel
+Content-Length: 0
+2023-01-19 16:35:15.684 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/apim/identity - - - 404 0 - 11386.6214ms
+2023-01-19 17:02:24.515 +11:00 [WRN] You do not have a valid license key for the Duende software. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please start a conversation with us: https://duendesoftware.com/contact
+2023-01-19 17:02:24.606 +11:00 [INF] RemoteUri is https://localhost:5002
+2023-01-19 17:02:24.667 +11:00 [INF] User profile is available. Using 'C:\Users\sboulter\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-19 17:02:25.168 +11:00 [WRN] BFF session cleanup is enabled, but no IUserSessionStoreCleanup is registered in DI. BFF session cleanup will not run.
+2023-01-19 17:02:25.745 +11:00 [INF] Now listening on: https://localhost:5003
+2023-01-19 17:02:25.747 +11:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-19 17:02:25.748 +11:00 [INF] Hosting environment: Development
+2023-01-19 17:02:25.749 +11:00 [INF] Content root path: C:\bitbucket\ltf-poc\src\bff
+2023-01-19 17:02:26.763 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 17:02:26.763 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 17:02:26.763 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 17:02:26.840 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 79.7287ms
+2023-01-19 17:02:26.841 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 17:02:26.847 +11:00 [INF] ***** Authorization 
+2023-01-19 17:02:27.011 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 250.9985ms
+2023-01-19 17:02:27.053 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 17:02:27.076 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/favicon.ico - -
+2023-01-19 17:02:27.086 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /favicon.ico
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 17:02:27.087 +11:00 [INF] ***** Authorization 
+2023-01-19 17:02:27.096 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 17:02:27.152 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 17:02:27.153 +11:00 [INF] HTTP GET /favicon.ico responded 404 in 62.1317 ms
+2023-01-19 17:02:27.160 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 17:02:27.161 +11:00 [INF] Response:
+StatusCode: 404
+2023-01-19 17:02:27.162 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 17:02:27.164 +11:00 [INF] HTTP GET /bff/user responded 401 in 318.4797 ms
+2023-01-19 17:02:27.164 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/favicon.ico - - - 404 0 - 88.1406ms
+2023-01-19 17:02:27.166 +11:00 [INF] Response:
+StatusCode: 401
+2023-01-19 17:02:27.169 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 401 0 - 409.1971ms
+2023-01-19 17:02:29.792 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/login - -
+2023-01-19 17:02:29.802 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/login
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 17:02:29.804 +11:00 [INF] ***** Authorization 
+2023-01-19 17:02:29.806 +11:00 [INF] Cookies was not authenticated. Failure message: Identity missing in session store
+2023-01-19 17:02:29.810 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/login'
+2023-01-19 17:02:30.441 +11:00 [INF] AuthenticationScheme: oidc was challenged.
+2023-01-19 17:02:30.443 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/login'
+2023-01-19 17:02:30.445 +11:00 [INF] HTTP GET /bff/login responded 302 in 641.1389 ms
+2023-01-19 17:02:30.447 +11:00 [INF] Response:
+StatusCode: 302
+Location: https://localhost:5001/connect/authorize?client_id=js-host&redirect_uri=https%3A%2F%2Flocalhost%3A5003%2Fsignin-oidc&response_type=code&scope=openid%20profile%20api1%20apim%20registration%20offline_access&code_challenge=_SabnVMP_x8kBhudrrzkru9SZm3Dh5rq7VxxgZ01pjw&code_challenge_method=S256&nonce=638097049504346568.YjhhMmU1MzUtZWE4Zi00NjY1LTg5MmMtNWZmOGM2MzNiMTdiODBjYzg4NTYtZTVmOS00MDFjLWEzZTAtNDk4NWJkMWQ1ZjQ2&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2zDYrbe9v1Z06WJocHPTKQa1QNvQXxemG21x-ufJd8-gsTptMuIjI8oowcJFjcTg6YtYXWVtGHD6_gLnYd8B1OuqHnNQ4iyk1gZRWplLKIR1eJoQrT3qH1PESpFpbhQZ5ahmePAE5Su7i0yNdFnDSlQNxxxIqiikKrd03M1jGiwxPW4Op13JxY5fDe_LBcLjWfS1TkbZ5TPGrgBq468Fbi6MxIqDU92kKX24izkLmljkl5UdmTKcEOE49IYapei80V8kXyfpQF6yX1G5Y1Z40Mmj63mKb5GkzL-5aidmpnWdp_tbd2HVztmXhJzNkiePH68REdDJPhJiA6cFviXGI9sJIazkYfsGyptTxrWGadefg&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.15.1.0
+Set-Cookie: [Redacted]
+2023-01-19 17:02:30.451 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/login - - - 302 0 - 659.1806ms
+2023-01-19 17:02:34.776 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/signin-oidc?code=A4BB6D3509DE1E0443A361AD27B6E8E2569D282617887DCDB05B73998D95BCC9-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2zDYrbe9v1Z06WJocHPTKQa1QNvQXxemG21x-ufJd8-gsTptMuIjI8oowcJFjcTg6YtYXWVtGHD6_gLnYd8B1OuqHnNQ4iyk1gZRWplLKIR1eJoQrT3qH1PESpFpbhQZ5ahmePAE5Su7i0yNdFnDSlQNxxxIqiikKrd03M1jGiwxPW4Op13JxY5fDe_LBcLjWfS1TkbZ5TPGrgBq468Fbi6MxIqDU92kKX24izkLmljkl5UdmTKcEOE49IYapei80V8kXyfpQF6yX1G5Y1Z40Mmj63mKb5GkzL-5aidmpnWdp_tbd2HVztmXhJzNkiePH68REdDJPhJiA6cFviXGI9sJIazkYfsGyptTxrWGadefg&session_state=DtChf3IMFpERve0Fu5F9XZU45jGzSSWP1otGQW5aZUQ.913DE3FA61148D4C510438BA5CDDAABF&iss=https%3A%2F%2Flocalhost%3A5001 - -
+2023-01-19 17:02:34.779 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /signin-oidc
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cache-Control: max-age=0
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+2023-01-19 17:02:34.780 +11:00 [INF] ***** Authorization 
+2023-01-19 17:02:35.237 +11:00 [INF] AuthenticationScheme: Cookies signed in.
+2023-01-19 17:02:35.239 +11:00 [INF] HTTP GET /signin-oidc responded 302 in 458.7374 ms
+2023-01-19 17:02:35.240 +11:00 [INF] Response:
+StatusCode: 302
+Cache-Control: [Redacted]
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: /
+Pragma: [Redacted]
+Set-Cookie: [Redacted]
+2023-01-19 17:02:35.242 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/signin-oidc?code=A4BB6D3509DE1E0443A361AD27B6E8E2569D282617887DCDB05B73998D95BCC9-1&scope=openid%20profile%20api1%20apim%20registration%20offline_access&state=CfDJ8EWzp3bdJ5JLugFto_7Xz2zDYrbe9v1Z06WJocHPTKQa1QNvQXxemG21x-ufJd8-gsTptMuIjI8oowcJFjcTg6YtYXWVtGHD6_gLnYd8B1OuqHnNQ4iyk1gZRWplLKIR1eJoQrT3qH1PESpFpbhQZ5ahmePAE5Su7i0yNdFnDSlQNxxxIqiikKrd03M1jGiwxPW4Op13JxY5fDe_LBcLjWfS1TkbZ5TPGrgBq468Fbi6MxIqDU92kKX24izkLmljkl5UdmTKcEOE49IYapei80V8kXyfpQF6yX1G5Y1Z40Mmj63mKb5GkzL-5aidmpnWdp_tbd2HVztmXhJzNkiePH68REdDJPhJiA6cFviXGI9sJIazkYfsGyptTxrWGadefg&session_state=DtChf3IMFpERve0Fu5F9XZU45jGzSSWP1otGQW5aZUQ.913DE3FA61148D4C510438BA5CDDAABF&iss=https%3A%2F%2Flocalhost%3A5001 - - - 302 0 - 465.1839ms
+2023-01-19 17:02:35.245 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/ - -
+2023-01-19 17:02:35.248 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cache-Control: max-age=0
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+2023-01-19 17:02:35.249 +11:00 [INF] ***** Authorization 
+2023-01-19 17:02:35.300 +11:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'C:\bitbucket\ltf-poc\src\bff\wwwroot\index.html'
+2023-01-19 17:02:35.301 +11:00 [INF] HTTP GET /index.html responded 200 in 52.0467 ms
+2023-01-19 17:02:35.303 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 18 Jan 2023 03:32:36 GMT
+Content-Length: 697
+2023-01-19 17:02:35.311 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/ - - - 200 - text/html 65.1673ms
+2023-01-19 17:02:35.325 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_vs/browserLink - -
+2023-01-19 17:02:35.326 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - -
+2023-01-19 17:02:35.326 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/bff/user - -
+2023-01-19 17:02:35.341 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 14.9702ms
+2023-01-19 17:02:35.341 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /bff/user
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 17:02:35.347 +11:00 [INF] ***** Authorization 
+2023-01-19 17:02:35.367 +11:00 [INF] Executing endpoint 'HTTP: GET /bff/user'
+2023-01-19 17:02:35.376 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 51.3632ms
+2023-01-19 17:02:35.381 +11:00 [INF] Executed endpoint 'HTTP: GET /bff/user'
+2023-01-19 17:02:35.383 +11:00 [INF] HTTP GET /bff/user responded 200 in 35.9384 ms
+2023-01-19 17:02:35.385 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json
+Date: Thu, 19 Jan 2023 06:02:34 GMT
+Server: Kestrel
+2023-01-19 17:02:35.386 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/bff/user - - - 200 - application/json 60.1759ms
+2023-01-19 17:02:36.608 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/local/identity - -
+2023-01-19 17:02:36.609 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /local/identity
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 17:02:36.611 +11:00 [INF] ***** Authorization 
+2023-01-19 17:02:36.617 +11:00 [INF] Executing endpoint 'HTTP: GET /local/identity => LocalIdentityHandler'
+2023-01-19 17:02:36.656 +11:00 [INF] Writing value of type '<>f__AnonymousType0`2' as Json.
+2023-01-19 17:02:36.661 +11:00 [INF] Executed endpoint 'HTTP: GET /local/identity => LocalIdentityHandler'
+2023-01-19 17:02:36.662 +11:00 [INF] HTTP GET /local/identity responded 200 in 51.0213 ms
+2023-01-19 17:02:36.664 +11:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Date: Thu, 19 Jan 2023 06:02:35 GMT
+Server: Kestrel
+2023-01-19 17:02:36.664 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/local/identity - - - 200 - application/json;+charset=utf-8 56.6581ms
+2023-01-19 17:02:38.095 +11:00 [INF] Request starting HTTP/2 GET https://localhost:5003/apim/identity - -
+2023-01-19 17:02:38.098 +11:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /apim/identity
+Accept: */*
+Host: localhost:5003
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+x-csrf: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-01-19 17:02:38.099 +11:00 [INF] ***** Authorization 
+2023-01-19 17:02:38.102 +11:00 [INF] Executing endpoint '/apim/identity/{**catch-all}'
+2023-01-19 17:02:38.136 +11:00 [INF] Proxying to https://localhost:5002/api/identity HTTP/2 RequestVersionOrLower no-streaming
+2023-01-19 17:02:51.565 +11:00 [INF] Received HTTP/2.0 response 404.
+2023-01-19 17:02:51.575 +11:00 [INF] Executed endpoint '/apim/identity/{**catch-all}'
+2023-01-19 17:02:51.577 +11:00 [INF] HTTP GET /apim/identity responded 404 in 13477.4193 ms
+2023-01-19 17:02:51.578 +11:00 [INF] Response:
+StatusCode: 404
+Date: Thu, 19 Jan 2023 06:02:51 GMT
+Server: Kestrel
+Content-Length: 0
+2023-01-19 17:02:51.579 +11:00 [INF] Request finished HTTP/2 GET https://localhost:5003/apim/identity - - - 404 0 - 13483.6903ms

@@ -76,7 +76,6 @@ resource "azuredevops_build_definition" "infra" {
     yml_path              = "src/azure-pipelines.yml" # var.ado_pipeline_yaml_path_1
     service_connection_id = azuredevops_serviceendpoint_github.serviceendpoint_github.id
   }
-
 }
 
 resource "azuredevops_serviceendpoint_azurerm" "key_vault" {
@@ -108,3 +107,22 @@ resource "azuredevops_resource_authorization" "kv_auth" {
   ]
 }
 # # Key Vault task is here: https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/deploy/azure-key-vault?view=azure-devops
+
+resource "azuredevops_build_definition" "identity" {
+
+  depends_on = [azuredevops_resource_authorization.auth]
+  project_id = azuredevops_project.project.id
+  name       = local.ado_identity_pipeline
+
+  ci_trigger {
+    use_yaml = true
+  }
+
+  repository {
+    repo_type             = "GitHub"
+    repo_id               = var.ado_github_repo
+    branch_name           = "azure-yaml-pipeline"
+    yml_path              = "ltf-poc/src/identity/azure-pipelines.yml"
+    service_connection_id = azuredevops_serviceendpoint_github.serviceendpoint_github.id
+  }
+}
