@@ -4,7 +4,7 @@ variables:
 trigger:
   branches:
     include:
-    - azure-yaml-pipeline
+    - master
   paths:
     include:
     - src
@@ -64,4 +64,3 @@ steps:
     ARM_CLIENT_ID:       $(az-client-id)
     ARM_CLIENT_SECRET:   $(az-client-secret)
     ARM_TENANT_ID:       $(az-tenant)
-
