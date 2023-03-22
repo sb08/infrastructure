@@ -11,7 +11,7 @@ locals {
   vnet                = lower("vnet-${local.name_prefix}-${terraform.workspace}-${var.location}")
   apim_name           = lower("apim-${local.name_prefix}-${terraform.workspace}-${var.location}")
   sb_name             = lower("sb-${local.name_prefix}-${terraform.workspace}-${var.location}")
-  public_ip           = lower("publicip-${local.name_prefix}-${terraform.workspace}-${var.location}")
+  public_ip           = lower("pip-${local.name_prefix}-${terraform.workspace}-${var.location}")
   # webapp infrustructure
   sp_name             = lower("sp${local.name_prefix}${terraform.workspace}${var.location}")
   api_name            = lower("api-${local.name_prefix}-${terraform.workspace}")
