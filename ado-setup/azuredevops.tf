@@ -72,7 +72,7 @@ resource "azuredevops_build_definition" "infra" {
   repository {
     repo_type             = "GitHub"
     repo_id               = var.ado_github_repo
-    branch_name           = "azure-yaml-pipeline"
+    branch_name           = "master"
     yml_path              = "src/azure-pipelines.yml" # var.ado_pipeline_yaml_path_1
     service_connection_id = azuredevops_serviceendpoint_github.serviceendpoint_github.id
   }
@@ -121,7 +121,7 @@ resource "azuredevops_build_definition" "identity" {
   repository {
     repo_type             = "GitHub"
     repo_id               = var.ado_github_repo
-    branch_name           = "azure-yaml-pipeline"
+    branch_name           = "master"
     yml_path              = "ltf-poc/src/identity/azure-pipelines.yml"
     service_connection_id = azuredevops_serviceendpoint_github.serviceendpoint_github.id
   }
