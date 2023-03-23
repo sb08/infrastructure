@@ -34,17 +34,17 @@ data "azurerm_api_management" "apim" {
   resource_group_name = var.resource_group_name
 }
 
-data "external" "generate-servicebus-sas" {
-  program = ["Powershell.exe", "Set-ExecutionPolicy Bypass -Scope Process -Force; C://bitbucket//infrastructure//gensas.ps1"]
-
-  query = {
-    servicebusUri = "${azurerm_servicebus_namespace.sb.name}.servicebus.windows.net"
-    sbName        = azurerm_servicebus_namespace.sb.name
-    policyName    = "messagebus-policy"
-    policyKey     = azurerm_servicebus_namespace_authorization_rule.authRule.primary_key
-    sasExpiresInSeconds = 5256000
-  }
-}
+# data "external" "generate-servicebus-sas" {
+#   program = ["Powershell.exe", "Set-ExecutionPolicy Bypass -Scope Process -Force; C://bitbucket//infrastructure//gensas.ps1"]
+#
+#   query = {
+#     servicebusUri = "${azurerm_servicebus_namespace.sb.name}.servicebus.windows.net"
+#     sbName        = azurerm_servicebus_namespace.sb.name
+#     policyName    = "messagebus-policy"
+#     policyKey     = azurerm_servicebus_namespace_authorization_rule.authRule.primary_key
+#     sasExpiresInSeconds = 5256000
+#   }
+# }
 
 # Create an apim api which sends a message to service bus.
 resource "azurerm_api_management_api" "registration" {
@@ -124,9 +124,6 @@ resource "azurerm_api_management_api_policy" "apiPolicy" {
             <set-header name="Content-Type" exists-action="override">
                 <value>application/atom+xml;type=entry;charset=utf-8</value>
             </set-header>
-            <set-header name="Authorization" exists-action="override">
-                <value>@((string)"${data.external.generate-servicebus-sas.result.sas}")</value>
-            </set-header>
         </inbound>
         <backend>
             <forward-request />
@@ -140,6 +137,10 @@ resource "azurerm_api_management_api_policy" "apiPolicy" {
     </policies>
   XML
 }
+# todo: add through portal after deployment
+# <set-header name="Authorization" exists-action="override">
+#     <value>@((string)"${data.external.generate-servicebus-sas.result.sas}")</value>
+# </set-header>
 
 resource "azurerm_api_management_api_operation_policy" "operationPolicyRegistration" {
   api_name            = "service-bus"
