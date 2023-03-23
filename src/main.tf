@@ -69,15 +69,15 @@ module "apim" {
   depends_on           = [module.vnet, azurerm_public_ip.public_ip_addr]
 }
 
-# module "sb" {
-#   source              = "./modules/service-bus"
-#   sb_name             = local.sb_name
-#   apim_name           = local.apim_name
-#   resource_group_name = azurerm_resource_group.rg.name
-#   location            = azurerm_resource_group.rg.location
-#   common_tags         = local.common_tags
-#   depends_on          = [module.apim]
-# }
+module "sb" {
+  source              = "./modules/service-bus"
+  sb_name             = local.sb_name
+  apim_name           = local.apim_name
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.rg.location
+  common_tags         = local.common_tags
+  depends_on          = [module.apim]
+}
 
 # module "apps" {
 #   source                = "./modules/apps"
