@@ -57,16 +57,16 @@ module "vnet" {
   depends_on = [azurerm_resource_group.rg, module.nsg-config]
 }
 
-module "apim" {
-  source               = "./modules/apim"
-  resource_group_name  = azurerm_resource_group.rg.name
-  location             = azurerm_resource_group.rg.location
-  apim_name            = local.apim_name
-  common_tags          = local.common_tags
-  vnet                 = module.vnet.vnet_name
-  subnet               = var.subnet_names[0]
-  public_ip_address_id = azurerm_public_ip.public_ip_addr.id
-  depends_on           = [module.vnet, azurerm_public_ip.public_ip_addr]
+# module "apim" {
+#   source               = "./modules/apim"
+#   resource_group_name  = azurerm_resource_group.rg.name
+#   location             = azurerm_resource_group.rg.location
+#   apim_name            = local.apim_name
+#   common_tags          = local.common_tags
+#   vnet                 = module.vnet.vnet_name
+#   subnet               = var.subnet_names[0]
+#   public_ip_address_id = azurerm_public_ip.public_ip_addr.id
+#   depends_on           = [module.vnet, azurerm_public_ip.public_ip_addr]
 }
 
 # module "sb" {
@@ -79,16 +79,16 @@ module "apim" {
 #   depends_on          = [module.apim]
 # }
 
-module "apps" {
-  source                = "./modules/apps"
-  app_service_plan_name = local.sp_name
-  auth_name             = local.auth_name
-  api_name              = local.api_name
-  js_name               = local.js_name
-  resource_group_name   = azurerm_resource_group.rg.name
-  location              = azurerm_resource_group.rg.location
-  common_tags           = local.common_tags
-  sku_name              = var.sku_name
-  sb_name               = local.sb_name
-  depends_on            = [module.apim]
-}
+# module "apps" {
+#   source                = "./modules/apps"
+#   app_service_plan_name = local.sp_name
+#   auth_name             = local.auth_name
+#   api_name              = local.api_name
+#   js_name               = local.js_name
+#   resource_group_name   = azurerm_resource_group.rg.name
+#   location              = azurerm_resource_group.rg.location
+#   common_tags           = local.common_tags
+#   sku_name              = var.sku_name
+#   sb_name               = local.sb_name
+#   depends_on            = [module.apim]
+# }
