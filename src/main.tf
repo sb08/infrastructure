@@ -67,7 +67,7 @@ module "vnet" {
 #   subnet               = var.subnet_names[0]
 #   public_ip_address_id = azurerm_public_ip.public_ip_addr.id
 #   depends_on           = [module.vnet, azurerm_public_ip.public_ip_addr]
-}
+# }
 
 # module "sb" {
 #   source              = "./modules/service-bus"
