@@ -55,7 +55,7 @@ steps:
 
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: $(az-subscription)
+    azureSubscription: 'key_vault'
     appType: 'webAppLinux'
     appName: 'id-2694-destin-dev'
     package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
