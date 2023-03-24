@@ -1,6 +1,5 @@
 variables:
-  buildConfiguration: 'Release'
-  group: infrastructure
+  - group: infrastructure
 
 trigger:
   branches:
