@@ -40,7 +40,7 @@ steps:
   inputs:
     azureSubscription: $(az-subscription)
     appType: 'webAppLinux'
-    appName: 'identity'
+    appName: 'id-2694-destin-dev'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
 
 
