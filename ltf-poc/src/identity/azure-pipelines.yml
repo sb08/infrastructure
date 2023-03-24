@@ -42,7 +42,7 @@ steps:
 - bash: ls -l
   displayName: 'list'
 
-- bash: cd ltf-poc/src/identity
+- bash: cd .\ltf-poc\src\identity\
   displayName: 'change directory'
 
 - bash: ls -l
