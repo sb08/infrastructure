@@ -53,9 +53,9 @@ steps:
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: True
 
-# - task: AzureWebApp@1
-#   inputs:
-#     azureSubscription: $(az-subscription)
-#     appType: 'webAppLinux'
-#     appName: 'id-2694-destin-dev'
-#     package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: $(az-subscription)
+    appType: 'webAppLinux'
+    appName: 'id-2694-destin-dev'
+    package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
