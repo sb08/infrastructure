@@ -74,6 +74,7 @@ KV
 * Access policy to grant the pipeline access to [get,list] secrets from the KV
 * Access policy with get and list access Policy
 * List of secrets from Terraform Cloud or EVs
+* After creating key vault, add logged in user to access policies in portal - https://stackoverflow.com/questions/42902130/azure-keyvault-operation-list-is-not-allowed-by-vault-policy-but-all-permi
 
 ADO
 * project and pipeline

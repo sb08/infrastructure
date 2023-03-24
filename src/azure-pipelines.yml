@@ -50,11 +50,6 @@ steps:
     ARM_CLIENT_SECRET:   $(az-client-secret)
     ARM_TENANT_ID:       $(az-tenant)
 
-- bash:
-    ls -l
-  displayName: 'list'
-  workingDirectory: '$(System.DefaultWorkingDirectory)/src'
-
 - bash: terraform apply -auto-approve
   displayName: Terraform Apply
   workingDirectory: '$(System.DefaultWorkingDirectory)/src'
