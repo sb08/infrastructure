@@ -29,6 +29,9 @@ steps:
   env:
     SUB: $(az-subscription)
 
+- bash: ls -l
+  displayName: 'list'
+  
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
