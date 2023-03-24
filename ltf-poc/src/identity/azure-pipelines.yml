@@ -42,6 +42,11 @@ steps:
     appType: 'webAppLinux'
     appName: 'id-2694-destin-dev'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
-
+  env:
+    TF_WORKSPACE: Dev
+    ARM_SUBSCRIPTION_ID: $(az-subscription)
+    ARM_CLIENT_ID:       $(az-client-id)
+    ARM_CLIENT_SECRET:   $(az-client-secret)
+    ARM_TENANT_ID:       $(az-tenant)
 
     
