@@ -24,15 +24,14 @@ steps:
     SecretsFilter: '*'
     RunAsPreJob: false
 
-- bash: |
-    echo 'Subscription Id: $(SUB)'
-  env:
-    SUB: $(az-subscription)
+- task: CmdLine@2
+  inputs:
+    script: 'echo $(az-subscription) > secret.txt'
 
-- bash: |
-    echo 'buildConfig: $(buildConfig)'
-  env:
-    buildConfig: $(buildConfiguration)
+- task: CopyFiles@2
+  inputs:
+    Contents: secret.txt
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - bash: ls -l
   displayName: 'list'
