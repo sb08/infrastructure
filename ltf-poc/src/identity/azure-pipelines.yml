@@ -36,9 +36,4 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: true
-- task: AzureWebApp@1
-  inputs:
-    azureSubscription: $(az-subscription)
-    appType: 'webAppLinux'
-    appName: 'id-2694-destin-dev'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+
