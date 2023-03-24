@@ -36,3 +36,7 @@ variable "app_service_plan_name" {
 variable "sb_name" {
   description = "The prefix which should be used for all resources in this example"
 }
+
+variable "apim_name" {
+  description = "Name of the resource group service is assigned to."
+}

@@ -23,7 +23,7 @@ variable "storageAccountSku" {
 }
 
 variable "location" {
-  type = string
+  type    = string
   default = "australiaeast"
   # default = "centralus"
 }
@@ -40,31 +40,31 @@ variable "project" {
 
 variable "sku_name" {
   description = "Service plan and hardware selection definition. Defaults to basic."
-  default      = "B2"
+  default     = "B2"
 }
 
 variable "subnet_names" {
-  type = list(string)
+  type    = list(string)
   default = ["apim", "apps", "privatelink", "sbus"]
 }
 
 variable "subnets" {
-  type = list(string)
+  type    = list(string)
   default = ["10.0.1.0/24", "10.0.2.0/28", "10.0.3.0/28", "10.0.4.0/24"]
 }
 
 variable "vnet_cidr_range" {
-  type = list(string)
+  type    = list(string)
   default = ["10.0.0.0/16"]
 }
 
 variable "subnet_count" {
-  type = number
+  type    = number
   default = 3
 }
 
 variable "nsg_ids" {
-  type = map(string)
+  type    = map(string)
   default = { "apim" = "apim_sg" }
 }
 
