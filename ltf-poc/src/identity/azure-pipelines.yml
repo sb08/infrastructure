@@ -24,21 +24,27 @@ steps:
     SecretsFilter: '*'
     RunAsPreJob: false
 
-- task: CmdLine@2
-  inputs:
-    script: 'echo $(az-subscription) > secret.txt'
+# - task: CmdLine@2
+#   inputs:
+#     script: 'echo $(az-subscription) > secret.txt'
 
-- task: CopyFiles@2
-  inputs:
-    Contents: secret.txt
-    targetFolder: '$(Build.ArtifactStagingDirectory)'
+# - task: CopyFiles@2
+#   inputs:
+#     Contents: secret.txt
+#     targetFolder: '$(Build.ArtifactStagingDirectory)'
 
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+# - task: PublishBuildArtifacts@1
+#   inputs:
+#     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+#     ArtifactName: 'drop'
+#     publishLocation: 'Container'
     
+- bash: ls -l
+  displayName: 'list'
+
+- bash: cd ltf-poc/src/identity
+  displayName: 'change directory'
+
 - bash: ls -l
   displayName: 'list'
   
@@ -48,5 +54,13 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
-    publishWebProjects: true
+    publishWebProjects: True
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: True
 
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: $(az-subscription)
+    appType: 'webAppLinux'
+    appName: 'id-2694-destin-dev'
+    package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
