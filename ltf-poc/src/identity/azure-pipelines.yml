@@ -25,12 +25,12 @@ steps:
     RunAsPreJob: false
 
 - bash: |
-    echo "Subscription Id: $SUB"
+    echo 'Subscription Id: $(SUB)'
   env:
     SUB: $(az-subscription)
 
 - bash: |
-    echo "buildConfig: $buildConfig"
+    echo 'buildConfig: $(buildConfig)'
   env:
     buildConfig: $(buildConfiguration)
 
