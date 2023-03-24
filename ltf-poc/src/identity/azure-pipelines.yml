@@ -1,5 +1,6 @@
 variables:
-  - group: infrastructure
+  buildConfiguration: 'Release'
+  group: infrastructure
 
 trigger:
   branches:
@@ -25,9 +26,14 @@ steps:
     RunAsPreJob: false
 
 - bash: |
-    echo "Secret Found! $SUB"
+    echo "Subscription Id: $SUB"
   env:
     SUB: $(az-subscription)
+
+- bash: |
+    echo "buildConfig: $buildConfig"
+  env:
+    buildConfig: $(buildConfiguration)
 
 - bash: ls -l
   displayName: 'list'
