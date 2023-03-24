@@ -87,6 +87,14 @@ terraform state rm azurerm_resource_group.rg
 ```
 
 Notes:
-Once Api Management is running, apis should have terraform deployment step to update api management accordingly
+
+auth credential expires before deploying apim completes. once apim is activated, tf state in az storage needs can be fixed from local machine with below command. then run the pipeline again, outcome should be no changes in tf apply step and blob lease status is 'Unlocked'
+```bash
+terraform import module.apim.azurerm_api_management.apim /subscriptions/26949461-ce0f-417c-9706-68a3ed9f3dd6/resourceGroups/rg-destin-dev-australiaeast/providers/Microsoft.ApiManagement/service/apim-2694-destin-dev-australiaeast
+```
+idea: perhaps terraform import command in pipeline and/or separate apim pipeline
+
+todo:
+Once Api Management is running, apps should have terraform deployment step to update api management accordingly
 Create a sas policy via portal for service bus to get connection string until ps script can be executed via dev ops
-Bug - gensas.ps1 needs relative reference
+Bug - gensas.ps1 needs relative reference. Currently removed from azdo pipeline

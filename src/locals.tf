@@ -17,6 +17,6 @@ locals {
   # webapp infrustructure
   sp_name   = lower("sp${local.name_prefix}${terraform.workspace}${var.location}")
   api_name  = lower("api-${local.name_prefix}-${terraform.workspace}")
-  auth_name = lower("id-${local.name_prefix}-${terraform.workspace}")
+  auth_name = lower("id-${local.sub}-${local.name_prefix}-${terraform.workspace}")
   js_name   = lower("bff-${local.name_prefix}-${terraform.workspace}")
 }
