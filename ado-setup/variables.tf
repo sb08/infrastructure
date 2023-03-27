@@ -72,6 +72,7 @@ locals {
     az-client-secret = random_password.resource_creation.result
     az-subscription  = data.azurerm_client_config.current.subscription_id
     az-tenant        = data.azurerm_client_config.current.tenant_id
+    buildConfiguration = "Release"
   }
 
   azad_service_connection_sp_name = "ad-${var.prefix}-service-connection"

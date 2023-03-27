@@ -110,3 +110,6 @@ terraform plan
 terraform apply
 terraform destroy -auto-approve
 ```
+
+update tf cloud state example
+terraform import azurerm_key_vault_access_policy.you /subscriptions/26949461-ce0f-417c-9706-68a3ed9f3dd6/resourceGroups/rg-destin-destin-dev/providers/Microsoft.KeyVault/service/kv-destin-dev
