@@ -58,4 +58,4 @@ steps:
     azureSubscription: 'key_vault'
     appType: 'webAppLinux'
     appName: 'id-2694-destin-dev'
-    package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
+    package: '$(Build.ArtifactStagingDirectory)/**/identity.zip'
