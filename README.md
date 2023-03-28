@@ -88,8 +88,10 @@ terraform state rm azurerm_resource_group.rg
 
 Notes:
 
-auth credential expires before deploying apim completes. once apim is activated, tf state in az storage needs can be fixed from local machine with below command. then run the pipeline again, outcome should be no changes in tf apply step and blob lease status is 'Unlocked'
+auth credential expires before deploying apim completes. once apim is activated, tf state in az storage can be fixed from local machine by altering provider.tf backend block to point to az storage and exec the below commands. then run the pipeline again, outcome should be no changes in tf apply step and blob lease status is 'Unlocked'
 ```bash
+terraform init
+
 terraform import module.apim.azurerm_api_management.apim /subscriptions/26949461-ce0f-417c-9706-68a3ed9f3dd6/resourceGroups/rg-destin-dev-australiaeast/providers/Microsoft.ApiManagement/service/apim-2694-destin-dev-australiaeast
 ```
 idea: perhaps terraform import command in pipeline and/or separate apim pipeline

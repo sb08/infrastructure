@@ -69,27 +69,27 @@ module "apim" {
   depends_on           = [module.vnet, azurerm_public_ip.public_ip_addr]
 }
 
-module "sb" {
-  source              = "./modules/service-bus"
-  sb_name             = local.sb_name
-  apim_name           = local.apim_name
-  resource_group_name = azurerm_resource_group.rg.name
-  location            = azurerm_resource_group.rg.location
-  common_tags         = local.common_tags
-  depends_on          = [module.apim]
-}
-
-module "apps" {
-  source                = "./modules/apps"
-  app_service_plan_name = local.sp_name
-  auth_name             = local.auth_name
-  api_name              = local.api_name
-  js_name               = local.js_name
-  resource_group_name   = azurerm_resource_group.rg.name
-  location              = azurerm_resource_group.rg.location
-  common_tags           = local.common_tags
-  sku_name              = var.sku_name
-  sb_name               = local.sb_name
-  apim_name             = local.apim_name
-  depends_on            = [module.apim]
-}
+# module "sb" {
+#   source              = "./modules/service-bus"
+#   sb_name             = local.sb_name
+#   apim_name           = local.apim_name
+#   resource_group_name = azurerm_resource_group.rg.name
+#   location            = azurerm_resource_group.rg.location
+#   common_tags         = local.common_tags
+#   depends_on          = [module.apim]
+# }
+#
+# module "apps" {
+#   source                = "./modules/apps"
+#   app_service_plan_name = local.sp_name
+#   auth_name             = local.auth_name
+#   api_name              = local.api_name
+#   js_name               = local.js_name
+#   resource_group_name   = azurerm_resource_group.rg.name
+#   location              = azurerm_resource_group.rg.location
+#   common_tags           = local.common_tags
+#   sku_name              = var.sku_name
+#   sb_name               = local.sb_name
+#   apim_name             = local.apim_name
+#   depends_on            = [module.apim]
+# }
