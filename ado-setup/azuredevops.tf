@@ -126,3 +126,41 @@ resource "azuredevops_build_definition" "identity" {
     service_connection_id = azuredevops_serviceendpoint_github.serviceendpoint_github.id
   }
 }
+
+resource "azuredevops_build_definition" "bff" {
+
+  depends_on = [azuredevops_resource_authorization.auth]
+  project_id = azuredevops_project.project.id
+  name       = local.ado_identity_pipeline
+
+  ci_trigger {
+    use_yaml = true
+  }
+
+  repository {
+    repo_type             = "GitHub"
+    repo_id               = var.ado_github_repo
+    branch_name           = "master"
+    yml_path              = "ltf-poc/src/bff/azure-pipelines.yml"
+    service_connection_id = azuredevops_serviceendpoint_github.serviceendpoint_github.id
+  }
+}
+
+resource "azuredevops_build_definition" "api" {
+
+  depends_on = [azuredevops_resource_authorization.auth]
+  project_id = azuredevops_project.project.id
+  name       = local.ado_identity_pipeline
+
+  ci_trigger {
+    use_yaml = true
+  }
+
+  repository {
+    repo_type             = "GitHub"
+    repo_id               = var.ado_github_repo
+    branch_name           = "master"
+    yml_path              = "ltf-poc/src/api/azure-pipelines.yml"
+    service_connection_id = azuredevops_serviceendpoint_github.serviceendpoint_github.id
+  }
+}

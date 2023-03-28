@@ -7,7 +7,7 @@ trigger:
     - master
   paths:
     include:
-    - src/ltf-poc/api
+    - src/ltf-poc/bff
 
 pool:
   vmImage: ubuntu-latest
@@ -24,11 +24,26 @@ steps:
     SecretsFilter: '*'
     RunAsPreJob: false
 
+# - task: CmdLine@2
+#   inputs:
+#     script: 'echo $(az-subscription) > secret.txt'
+
+# - task: CopyFiles@2
+#   inputs:
+#     Contents: secret.txt
+#     targetFolder: '$(Build.ArtifactStagingDirectory)'
+
+# - task: PublishBuildArtifacts@1
+#   inputs:
+#     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+#     ArtifactName: 'drop'
+#     publishLocation: 'Container'
+
 - bash: ls -l
   displayName: 'list'
 
 - script: dotnet build --configuration $(buildConfiguration)
-  workingDirectory: ltf-poc/src/identity
+  workingDirectory: ltf-poc/src/bff
   displayName: 'dotnet build $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
@@ -42,5 +57,5 @@ steps:
   inputs:
     azureSubscription: 'key_vault'
     appType: 'webAppLinux'
-    appName: 'api-2694-destin-dev'
-    package: '$(Build.ArtifactStagingDirectory)/**/api.zip'
+    appName: 'bff-2694-destin-dev'
+    package: '$(Build.ArtifactStagingDirectory)/**/bff.zip'
