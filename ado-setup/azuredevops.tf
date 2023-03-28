@@ -131,7 +131,7 @@ resource "azuredevops_build_definition" "bff" {
 
   depends_on = [azuredevops_resource_authorization.auth]
   project_id = azuredevops_project.project.id
-  name       = local.ado_identity_pipeline
+  name       = local.ado_bff_pipeline
 
   ci_trigger {
     use_yaml = true
@@ -150,7 +150,7 @@ resource "azuredevops_build_definition" "api" {
 
   depends_on = [azuredevops_resource_authorization.auth]
   project_id = azuredevops_project.project.id
-  name       = local.ado_identity_pipeline
+  name       = local.ado_api_pipeline
 
   ci_trigger {
     use_yaml = true

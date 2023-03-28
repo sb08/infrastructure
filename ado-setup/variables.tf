@@ -58,6 +58,8 @@ locals {
   ado_project_visibility  = "private"
   ado_pipeline_name_1     = "${var.prefix}-pipeline-1"
   ado_identity_pipeline     = "${var.prefix}-identity"
+  ado_bff_pipeline     = "${var.prefix}-bff"
+  ado_api_pipeline     = "${var.prefix}-api"
 
   az_resource_group_name  = "rg-${var.prefix}-${terraform.workspace}"
   az_storage_account_name = "sa${lower(var.prefix)}"
