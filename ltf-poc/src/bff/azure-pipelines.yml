@@ -42,7 +42,7 @@ steps:
 - bash: ls -l
   displayName: 'list'
 
-- script: dotnet build --configuration $(buildConfiguration)
+- script: dotnet build --configuration $(buildConfiguration) --runtime linux-x64
   workingDirectory: ltf-poc/src/bff
   displayName: 'dotnet build $(buildConfiguration)'
 

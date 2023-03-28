@@ -15,7 +15,10 @@ resource "azurerm_linux_web_app" "identity" {
     azurerm_service_plan.app_sp,
   ]
   site_config {
-        app_command_line = "dotnet identity.dll"
+    app_command_line = "dotnet identity.dll"
+    application_stack {
+      dotnet_version = "7.0"
+    }
   }
   app_settings = {
     BffRedirectUri = "https://${var.js_name}.azurewebsites.net/signin-oidc"
@@ -48,6 +51,9 @@ resource "azurerm_linux_web_app" "api" {
   ]
   site_config {
         app_command_line = "dotnet api.dll"
+        application_stack {
+          dotnet_version = "7.0"
+        }
   }
   app_settings = {
     "Authority" = "https://${var.auth_name}.azurewebsites.net"
@@ -66,6 +72,9 @@ resource "azurerm_linux_web_app" "bff" {
   ]
   site_config {
     app_command_line = "dotnet bff.dll"
+    application_stack {
+      dotnet_version = "7.0"
+    }
   }
   app_settings = {
     "Authority" = "https://${var.auth_name}.azurewebsites.net"
