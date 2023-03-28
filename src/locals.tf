@@ -16,7 +16,7 @@ locals {
   public_ip = lower("pip-${local.name_prefix}-${terraform.workspace}-${var.location}")
   # webapp infrustructure
   sp_name   = lower("sp${local.name_prefix}${terraform.workspace}${var.location}")
-  api_name  = lower("api-${local.name_prefix}-${terraform.workspace}")
+  api_name  = lower("api-${local.sub}-${local.name_prefix}-${terraform.workspace}")
   auth_name = lower("id-${local.sub}-${local.name_prefix}-${terraform.workspace}")
-  js_name   = lower("bff-${local.name_prefix}-${terraform.workspace}")
+  js_name   = lower("bff-${local.sub}-${local.name_prefix}-${terraform.workspace}")
 }
