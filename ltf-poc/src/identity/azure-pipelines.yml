@@ -42,7 +42,7 @@ steps:
 - bash: ls -l
   displayName: 'list'
   
-- script: dotnet build --configuration $(buildConfiguration)
+- script: dotnet build --configuration $(buildConfiguration) --runtime ubuntu.16.04-x64
   workingDirectory: ltf-poc/src/identity
   displayName: 'dotnet build $(buildConfiguration)'
 
