@@ -1,13 +1,13 @@
 variable "naming_prefix" {
   type        = string
   description = "Naming prefix for resources"
-  default     = "destin"
+  default     = "ltf"
 }
 
 variable "company" {
   type        = string
   description = "Company name for resource tagging"
-  default     = "destin"
+  default     = "ltf"
 }
 
 variable "rg" {

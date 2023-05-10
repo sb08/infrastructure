@@ -59,22 +59,24 @@ resource "azuredevops_variable_group" "variablegroup" {
   }
 }
 
-resource "azuredevops_build_definition" "infra" {
+resource "azuredevops_build_definition" "pipeline" {
 
   depends_on = [azuredevops_resource_authorization.auth]
-  project_id = azuredevops_project.project.id
-  name       = local.ado_pipeline_name_1
+
+  for_each = { for o in local.pipelines : o.name => o }
+  project_id = data.azuredevops_project.project.id
+  name       = each.key
 
   ci_trigger {
     use_yaml = true
   }
 
   repository {
-    repo_type             = "GitHub"
-    repo_id               = var.ado_github_repo
+    repo_type             = "Bitbucket"
+    repo_id               = var.ado_bitbucket_repo
     branch_name           = "master"
-    yml_path              = "src/azure-pipelines.yml" # var.ado_pipeline_yaml_path_1
-    service_connection_id = azuredevops_serviceendpoint_github.serviceendpoint_github.id
+    yml_path              = each.value.yml_path
+    service_connection_id = azuredevops_serviceendpoint_bitbucket.serviceendpoint_bitbucket.id
   }
 }
 
@@ -107,60 +109,3 @@ resource "azuredevops_resource_authorization" "kv_auth" {
   ]
 }
 # # Key Vault task is here: https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/deploy/azure-key-vault?view=azure-devops
-
-resource "azuredevops_build_definition" "identity" {
-
-  depends_on = [azuredevops_resource_authorization.auth]
-  project_id = azuredevops_project.project.id
-  name       = local.ado_identity_pipeline
-
-  ci_trigger {
-    use_yaml = true
-  }
-
-  repository {
-    repo_type             = "GitHub"
-    repo_id               = var.ado_github_repo
-    branch_name           = "master"
-    yml_path              = "ltf-poc/src/identity/azure-pipelines.yml"
-    service_connection_id = azuredevops_serviceendpoint_github.serviceendpoint_github.id
-  }
-}
-
-resource "azuredevops_build_definition" "bff" {
-
-  depends_on = [azuredevops_resource_authorization.auth]
-  project_id = azuredevops_project.project.id
-  name       = local.ado_bff_pipeline
-
-  ci_trigger {
-    use_yaml = true
-  }
-
-  repository {
-    repo_type             = "GitHub"
-    repo_id               = var.ado_github_repo
-    branch_name           = "master"
-    yml_path              = "ltf-poc/src/bff/azure-pipelines.yml"
-    service_connection_id = azuredevops_serviceendpoint_github.serviceendpoint_github.id
-  }
-}
-
-resource "azuredevops_build_definition" "api" {
-
-  depends_on = [azuredevops_resource_authorization.auth]
-  project_id = azuredevops_project.project.id
-  name       = local.ado_api_pipeline
-
-  ci_trigger {
-    use_yaml = true
-  }
-
-  repository {
-    repo_type             = "GitHub"
-    repo_id               = var.ado_github_repo
-    branch_name           = "master"
-    yml_path              = "ltf-poc/src/api/azure-pipelines.yml"
-    service_connection_id = azuredevops_serviceendpoint_github.serviceendpoint_github.id
-  }
-}

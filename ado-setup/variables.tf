@@ -77,6 +77,29 @@ locals {
     buildConfiguration = "Release"
   }
 
+  pipelines = [
+    {
+        name  = "${var.prefix}-azure-infrastructure",
+        yml_path = "src/azure-pipelines.yml"
+    },
+    {
+        name  = "${var.prefix}-identity",
+        yml_path = "ltf-poc/src/identity/azure-pipelines.yml"
+    },
+        {
+        name  = "${var.prefix}-bff",
+        yml_path = "ltf-poc/src/bff/azure-pipelines.yml"
+    },
+    {
+        name  = "${var.prefix}-api",
+        yml_path = "ltf-poc/src/api/azure-pipelines.yml"
+    },
+    {
+        name  = "${var.prefix}-fn-broker-registration",
+        yml_path = "ltf-poc/src/fn/broker-registration/azure-pipelines.yml"
+    }
+  ]
+
   azad_service_connection_sp_name = "ad-${var.prefix}-service-connection"
   azad_resource_creation_sp_name  = "ad-${var.prefix}-resource-creation"
 }

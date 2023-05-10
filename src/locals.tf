@@ -15,8 +15,10 @@ locals {
   sb_name   = lower("sb-${local.name_prefix}-${terraform.workspace}-${var.location}")
   public_ip = lower("pip-${local.name_prefix}-${terraform.workspace}-${var.location}")
   # webapp infrustructure
-  sp_name   = lower("sp${local.name_prefix}${terraform.workspace}${var.location}")
-  api_name  = lower("api-${local.sub}-${local.name_prefix}-${terraform.workspace}")
-  auth_name = lower("id-${local.sub}-${local.name_prefix}-${terraform.workspace}")
-  js_name   = lower("bff-${local.sub}-${local.name_prefix}-${terraform.workspace}")
+  sp_name         = lower("sp${local.name_prefix}${terraform.workspace}${var.location}")
+  api_name        = lower("api-${local.sub}-${local.name_prefix}-${terraform.workspace}")
+  auth_name       = lower("id-${local.sub}-${local.name_prefix}-${terraform.workspace}")
+  js_name         = lower("bff-${local.sub}-${local.name_prefix}-${terraform.workspace}")
+  broker_reg_name = lower("fn-${local.sub}-${local.name_prefix}-${terraform.workspace}-${var.location}")
+  broker_db_name  = lower("docdb-${local.sub}-${local.name_prefix}-${terraform.workspace}-${var.location}")
 }
